@@ -31,7 +31,7 @@ function change_logo_class( $html ) {
 
 //Register and load CSS
 function load_styles(){
-	wp_enqueue_style('fontawesome', get_template_directory_uri().'/static/fontawesome/css/fontawesome.min.css');
+	wp_enqueue_style('fontawesome', get_template_directory_uri().'/static/fontawesome/css/all.css');
   	wp_enqueue_style('style_min', get_template_directory_uri().'/static/css/style.min.css');
   	wp_enqueue_style('slick', get_template_directory_uri().'/static/libs/slick/slick.min.css');
   	wp_enqueue_style('slick_theme', get_template_directory_uri().'/static/libs/slick/slick-theme.min.css');
@@ -54,3 +54,79 @@ function load_scripts(){
   wp_enqueue_script('maskedinput', get_template_directory_uri().'/static/js/maskedinput.min.js', array('jquery'), NULL, true); 
 } 
 add_action('wp_enqueue_scripts', 'load_scripts', 10);
+
+
+add_action('wp_head', 'phone_front', 1); 
+function phone_front($phone) {
+    $phone = trim($phone);  
+    $res = preg_replace(
+      array(
+        '/[\+]?([7|8])[-|\s]?\([-|\s]?(\d{3})[-|\s]?\)[-|\s]?(\d{3})[-|\s]?(\d{2})[-|\s]?(\d{2})/',
+        '/[\+]?([7|8])[-|\s]?(\d{3})[-|\s]?(\d{3})[-|\s]?(\d{2})[-|\s]?(\d{2})/',
+        '/[\+]?([7|8])[-|\s]?\([-|\s]?(\d{4})[-|\s]?\)[-|\s]?(\d{2})[-|\s]?(\d{2})[-|\s]?(\d{2})/',
+        '/[\+]?([7|8])[-|\s]?(\d{4})[-|\s]?(\d{2})[-|\s]?(\d{2})[-|\s]?(\d{2})/',	
+        '/[\+]?([7|8])[-|\s]?\([-|\s]?(\d{4})[-|\s]?\)[-|\s]?(\d{3})[-|\s]?(\d{3})/',
+        '/[\+]?([7|8])[-|\s]?(\d{4})[-|\s]?(\d{3})[-|\s]?(\d{3})/',					
+      ), 
+      array(
+        '+7 ($2) $3-$4-$5', 
+        '+7 ($2) $3-$4-$5', 
+        '+7 ($2) $3-$4-$5', 
+        '+7 ($2) $3-$4-$5', 	
+        '+7 ($2) $3-$4', 
+        '+7 ($2) $3-$4', 
+      ), 
+      $phone
+    );  
+    return $res;
+}
+
+add_action('wp_head', 'phone_href', 1); 
+function phone_href($phone) {
+    $phone = trim($phone); 
+	$res = preg_replace(
+		array(
+			'/[\+]?([7|8])[-|\s]?\([-|\s]?(\d{3})[-|\s]?\)[-|\s]?(\d{3})[-|\s]?(\d{2})[-|\s]?(\d{2})/',
+			'/[\+]?([7|8])[-|\s]?(\d{3})[-|\s]?(\d{3})[-|\s]?(\d{2})[-|\s]?(\d{2})/',
+			'/[\+]?([7|8])[-|\s]?\([-|\s]?(\d{4})[-|\s]?\)[-|\s]?(\d{2})[-|\s]?(\d{2})[-|\s]?(\d{2})/',
+			'/[\+]?([7|8])[-|\s]?(\d{4})[-|\s]?(\d{2})[-|\s]?(\d{2})[-|\s]?(\d{2})/',	
+			'/[\+]?([7|8])[-|\s]?\([-|\s]?(\d{4})[-|\s]?\)[-|\s]?(\d{3})[-|\s]?(\d{3})/',
+			'/[\+]?([7|8])[-|\s]?(\d{4})[-|\s]?(\d{3})[-|\s]?(\d{3})/',					
+		), 
+		array(
+			'+7$2$3$4$5', 
+			'+7$2$3$4$5', 
+			'+7$2$3$4$5', 
+			'+7$2$3$4$5', 	
+			'+7$2$3$4', 
+			'+7$2$3$4', 
+		), 
+		$phone
+	); 
+	return $res;
+}
+
+add_action('wp_head', 'phone_wa', 1); 
+function phone_wa($phone) {
+    $phone = trim($phone); 
+	$res = preg_replace(
+		array(
+			'/[\+]?([7|8])[-|\s]?\([-|\s]?(\d{3})[-|\s]?\)[-|\s]?(\d{3})[-|\s]?(\d{2})[-|\s]?(\d{2})/',
+			'/[\+]?([7|8])[-|\s]?(\d{3})[-|\s]?(\d{3})[-|\s]?(\d{2})[-|\s]?(\d{2})/',
+			'/[\+]?([7|8])[-|\s]?\([-|\s]?(\d{4})[-|\s]?\)[-|\s]?(\d{2})[-|\s]?(\d{2})[-|\s]?(\d{2})/',
+			'/[\+]?([7|8])[-|\s]?(\d{4})[-|\s]?(\d{2})[-|\s]?(\d{2})[-|\s]?(\d{2})/',	
+			'/[\+]?([7|8])[-|\s]?\([-|\s]?(\d{4})[-|\s]?\)[-|\s]?(\d{3})[-|\s]?(\d{3})/',
+			'/[\+]?([7|8])[-|\s]?(\d{4})[-|\s]?(\d{3})[-|\s]?(\d{3})/',					
+		), 
+		array(
+			'7$2$3$4$5', 
+			'7$2$3$4$5', 
+			'7$2$3$4$5', 
+			'7$2$3$4$5', 	
+			'7$2$3$4', 
+			'7$2$3$4', 
+		), 
+		$phone
+	); 
+	return $res;
+}

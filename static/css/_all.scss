@@ -1,1 +1,24 @@
-$black: #0400ff;
+$orange: #ffa500;
+$black: #000;
+$blue: #2467ef;
+$gray: #F0F0F0;
+$white: #fff;
+$main_font: "Montserrat";
+
+body{
+    font-family: $main_font;
+}
+
+.container{
+    max-width: 1470px;
+    width: 100%;
+    padding: 10px;
+}
+
+a{
+    color: $blue;
+}
+
+a:hover{
+    color: $orange;
+}

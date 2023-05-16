@@ -2,6 +2,99 @@
 @import "fonts";
 @import "all";
 
+// HEADER 
 
+.header_container{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 2px 20px -10px $black;
+
+    &.fix{
+        position: fixed;
+        z-index: 5;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 100%;
+        padding: 5px 20px;
+    }    
+    .header_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .header_top{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .city_list{
+                display: none;
+            }
+            .header_contacts{
+                display: flex;
+                gap: 20px;
+            }
+            .header_social{
+                .socials_links{
+                    display: flex;
+                    gap: 5px;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .header_middle{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo_img {
+                z-index: 2;
+                
+                img {
+                  height: 60px;
+                  width: auto
+                }
+            }
+
+            .mini_cart{
+
+                a.dropdown_cart{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    // border: 1px solid $blue;
+                    border-radius: 5px;
+                    justify-content: center;
+                    padding: 5px;
+                    background-color: $blue;
+                    color: $white;
+
+                    &:hover{
+                        transition: all 0.2s ease-out;
+                        background-color: $orange;
+                        color: $blue;
+                        box-shadow: 0px 0px 10px 5px $gray;
+                    }
+                }
+
+                .mini_cart_modal{
+                    display: none;
+                }
+            }
+        }
+
+        .header_bottom{
+
+        }
+
+
+        
+    }
+}
 
 @import "adaptive";

@@ -68,4 +68,165 @@ select {
 hr {
   padding: 0;
   margin: 0;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/MontserratLight.eot");
+  src: url("../fonts/MontserratLight.eot?#iefix") format("embedded-opentype"), url("../fonts/MontserratLight.woff2") format("woff2"), url("../fonts/MontserratLight.woff") format("woff"), url("../fonts/MontserratLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/MontserratRegular.eot");
+  src: url("../fonts/MontserratRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MontserratRegular.woff2") format("woff2"), url("../fonts/MontserratRegular.woff") format("woff"), url("../fonts/MontserratRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/MontserratMedium.eot");
+  src: url("../fonts/MontserratMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/MontserratMedium.woff2") format("woff2"), url("../fonts/MontserratMedium.woff") format("woff"), url("../fonts/MontserratMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/MontserratSemiBold.eot");
+  src: url("../fonts/MontserratSemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MontserratSemiBold.woff2") format("woff2"), url("../fonts/MontserratSemiBold.woff") format("woff"), url("../fonts/MontserratSemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+}
+body {
+  font-family: "Montserrat";
+}
+
+.container {
+  max-width: 1470px;
+  width: 100%;
+  padding: 10px;
+}
+
+a {
+  color: #2467ef;
+}
+
+a:hover {
+  color: #ffa500;
+}
+
+.header_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 2px 20px -10px #000;
+          box-shadow: 0px 2px 20px -10px #000;
+}
+.header_container.fix {
+  position: fixed;
+  z-index: 5;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  padding: 5px 20px;
+}
+.header_container .header_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.header_container .header_wrapper .header_top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header_container .header_wrapper .header_top .city_list {
+  display: none;
+}
+.header_container .header_wrapper .header_top .header_contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.header_container .header_wrapper .header_top .header_social .socials_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  font-size: 20px;
+}
+.header_container .header_wrapper .header_middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header_container .header_wrapper .header_middle .logo_img {
+  z-index: 2;
+}
+.header_container .header_wrapper .header_middle .logo_img img {
+  height: 60px;
+  width: auto;
+}
+.header_container .header_wrapper .header_middle .mini_cart a.dropdown_cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+  background-color: #2467ef;
+  color: #fff;
+}
+.header_container .header_wrapper .header_middle .mini_cart a.dropdown_cart:hover {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background-color: #ffa500;
+  color: #2467ef;
+  -webkit-box-shadow: 0px 0px 10px 5px #F0F0F0;
+          box-shadow: 0px 0px 10px 5px #F0F0F0;
+}
+.header_container .header_wrapper .header_middle .mini_cart .mini_cart_modal {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
