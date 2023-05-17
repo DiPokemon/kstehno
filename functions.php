@@ -18,6 +18,7 @@ add_theme_support('post-thumbnails');
 
 //Register menu areas
 register_nav_menus([
+	'middle_menu' => 'Top menu',
     'main_menu' => 'Main menu',
     'footer_menu' => 'Footer menu'
 ]);
@@ -25,7 +26,8 @@ register_nav_menus([
 //Add class for logo
 add_filter( 'get_custom_logo', 'change_logo_class' );
 function change_logo_class( $html ) {
-       $html = str_replace( 'custom-logo-link', 'header__logo_img', $html );
+		$html = str_replace( 'custom-logo', 'logo_img', $html );
+       $html = str_replace( 'custom-logo-link', 'header_logo_link', $html );
     return $html;
 };
 

@@ -17,7 +17,8 @@
         margin: 0 auto;
         width: 100%;
         padding: 5px 20px;
-    }    
+    }
+
     .header_wrapper {
         display: flex;
         flex-direction: column;
@@ -25,24 +26,102 @@
         justify-content: space-between;
         width: 100%;
 
+        &>div{
+            padding: 5px 0px;
+        }
+
+        &>div:not(:last-child){
+            border-bottom: 1px solid $gray;            
+        }
+
         .header_top{
             width: 100%;
             display: flex;
             justify-content: space-between;
+            align-items: center;
 
-            .city_list{
-                display: none;
-            }
+            .header_top_left{
+                display: flex;
+                align-items: center;
+
+                .logo_wrapper{
+                    padding-right: 10px;                    
+
+                    .logo_img {
+                        width: 150px;
+                        object-fit: contain;
+                        height: auto;
+                    }
+                }
+    
+                .city_list{
+                    
+                }                
+            }           
+
             .header_contacts{
                 display: flex;
-                gap: 20px;
-            }
-            .header_social{
+                flex-direction: column;
+                gap: 5px;
+                align-items: center;
+
+
+                .header_phone-link{
+
+                }
+
                 .socials_links{
                     display: flex;
                     gap: 5px;
                     font-size: 20px;
                 }
+            }
+
+            .header_actions{
+                display: flex;
+                gap: 20px;
+
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 24px;
+                    border: 1px solid $orange;
+                    border-radius: 50%;
+                    padding: 5px;
+                    color: $orange;
+                    background: linear-gradient(135deg, white 50%, $blue 50%);
+                    background-size: 300%;
+                    background-position: left;
+                    transition:all .5s;
+                    position: relative;
+
+                    &:hover{
+                        border-color: $blue;
+                        background-color: $blue;
+                        color: $white;
+                        background-position: right;
+
+                        &::after{
+                            content: attr(data-title);
+                            position: absolute;
+                            z-index: 1; 
+                            background: $white;                             
+                            font-size: 11px;
+                            padding: 5px; 
+                            border: 1px solid $blue;
+                            border-radius: 5px;
+                            color: $blue;
+                            left: 50%;
+                            transform: translate(-50%, 40px);
+                        }
+                    }
+
+
+                }
+
             }
         }
 
@@ -50,41 +129,31 @@
             display: flex;
             width: 100%;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-between;                 
 
-            .logo_img {
-                z-index: 2;
-                
-                img {
-                  height: 60px;
-                  width: auto
+            .middle_menu{
+
+                .menu_list{
+                    display: flex;                    
+
+                    .menu-item{
+
+                        &::after{
+                            content: "";
+                            border-left: 1px solid $gray;
+                            align-self: stretch;
+                            margin: 0px 5px;
+                        }
+
+                        &:last-child::after{
+                            display: none;
+                        }
+                    }
                 }
             }
 
-            .mini_cart{
+            .header_search{
 
-                a.dropdown_cart{
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    // border: 1px solid $blue;
-                    border-radius: 5px;
-                    justify-content: center;
-                    padding: 5px;
-                    background-color: $blue;
-                    color: $white;
-
-                    &:hover{
-                        transition: all 0.2s ease-out;
-                        background-color: $orange;
-                        color: $blue;
-                        box-shadow: 0px 0px 10px 5px $gray;
-                    }
-                }
-
-                .mini_cart_modal{
-                    display: none;
-                }
             }
         }
 
