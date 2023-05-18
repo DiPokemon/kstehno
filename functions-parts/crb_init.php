@@ -10,7 +10,7 @@ add_action( 'carbon_fields_register_fields', 'register_custom_fields' );
 function register_custom_fields() {
 	require get_template_directory() . '/inc/custom-fields/theme-options.php';
 	//require get_template_directory() . '/inc/custom-fields/post-options.php';
-    //require get_template_directory() . '/inc/custom-fields/page-options.php';
+    require get_template_directory() . '/inc/custom-fields/page-options.php';
     //require get_template_directory() . '/inc/custom-fields/product-options.php';
     //require get_template_directory() . '/inc/custom-fields/category-options.php';
 }

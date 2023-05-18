@@ -36,4 +36,8 @@
 
   $portfolio_page_items = carbon_get_the_post_meta( 'portfolio_page' );
   $text_404 = carbon_get_theme_option( 'text_404' );
+
+
+  //Main page fields
+  $main_banners = carbon_get_the_post_meta( 'main_banners' );
 ?>

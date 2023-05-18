@@ -166,4 +166,39 @@
     }
 }
 
+// MAIN PAGE
+
+.main_banner{
+
+    .banner{
+        box-shadow: 0px 0px 12px -10px $black;
+        border-radius: 10px;
+
+        img{
+            border-radius: 10px;
+
+            &.main_banner_desk{
+                height: 300px;
+                object-fit: cover;
+            }
+
+            &.main_banner_mob{
+                display: none;
+            }
+        }
+    }
+}
+
+.categories{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+
+    .category{
+        border: 1px solid $gray;
+        border-radius: 10px;
+        padding: 10px;
+    }
+}
+
 @import "adaptive";
