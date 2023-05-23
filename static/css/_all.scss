@@ -22,3 +22,8 @@ a{
 a:hover{
     color: $orange;
 }
+
+section{
+    display: flex;
+    justify-content: center;
+}

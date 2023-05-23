@@ -67,35 +67,77 @@ Template Name: Шаблон главной страницы
 
                 <?php endforeach; ?>
 
-            <?php endif; ?>
-
-
-            <!--
-                <?php
-                $args = array(
-                    'taxonomy' => 'product_cat',
-                    'orderby'    => 'count',
-                    'order'      => 'DESC',
-                    'hide_empty' => false
-                );
-
-                $product_categories = get_terms( $args );
-
-                $count = count($product_categories);
-            ?>
-            <?php if ( $count > 0 ) : ?>
-                <?php foreach ( $product_categories as $product_category ) : ?>
-                    <div class="category">
-                        <a class="category_link" href="<?= get_term_link( $product_category ) ?>"><?= $product_category->name ?></a>
-
-                    </div>
-                                                      
-                    <?php endforeach ?>               
-            <?php endif; ?>
-        -->
+            <?php endif; ?>            
         </div>
     </div>   
 
 </section>
+
+<section>
+    <div class="container">
+        <div class="slider_wrapper">
+            <div class="featured_products">                
+                    <?php
+                        $args = array(
+                            'featured' => true,
+                        );
+                        $featured_products = wc_get_products( $args );
+                    ?>
+                    <?php foreach ($featured_products as $featured_product) : ?>
+                        <a class="featured_product" href="<?= get_permalink( $featured_product->get_id() ); ?>" >
+                            <div class="featured_product_img">
+                                <?= $featured_product->get_image(); ?>
+                            </div>
+                            <div class="featured_product_content">
+                                <h3><?= $featured_product->get_name(); ?></h3>
+                                <div class="featured_product_desc">
+                                    <!--<?= $featured_product->get_description(); ?>-->
+                                </div>
+                            </div>                            
+                        </a>
+                    <?php endforeach; ?>     
+            </div>       
+        </div>
+    </div>
+</section>
+
+<?php if ($info_blocks) :?>
+    <section>
+        <div class="container">
+            <div class="slider_wrapper">
+                <?php foreach( $info_blocks as $info_block ) : ?>
+                    <div class="info_block">
+                                                
+
+                        <?php if ($info_block['info_block_title']): ?>
+                            <h3 class="info_block_title">
+                                <?= $info_block['info_block_title'] ?> 
+                            </h3>
+                        <?php endif; ?>
+                        
+                        <?php if ($info_block['info_block_text']): ?>
+                            <p class="info_block_text"><?= $info_block['info_block_text'] ?></p>
+                        <?php endif; ?>
+
+                        <?php if ($info_block['info_block_url']): ?>
+                            <a class="info_block_btn" href="<?= $info_block['info_block_url'] ?>">
+                                <?= $info_block['info_block_btn_text'] ?>
+                            </a>                        
+                        <?php endif; ?>   
+                        
+                        
+                        <?php if ($info_block['info_block_desk_img']): ?>
+                            <div class="info_block_img"  style="background-image: url('<?=$info_block['info_block_desk_img']?>')">
+
+                            </div>
+
+                           
+                        <?php endif; ?> 
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
 
 <?php get_footer(); ?>

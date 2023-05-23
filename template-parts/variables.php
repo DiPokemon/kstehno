@@ -40,4 +40,6 @@
 
   //Main page fields
   $main_banners = carbon_get_the_post_meta( 'main_banners' );
+
+  $info_blocks = carbon_get_the_post_meta( 'info_blocks' );
 ?>
