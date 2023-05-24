@@ -1,7 +1,8 @@
 $(document).ready(function () {       
     $('.slider_wrapper').each(function (index, sliderWrap) {
         var $main_banner = $(sliderWrap).find('.main_banner');    
-        var $featured_products = $(sliderWrap).find('.featured_products');  
+        var $featured_products = $(sliderWrap).find('.featured_products');
+        var $advantages = $(sliderWrap).find('.advantages');
 
         $main_banner.slick({
             infinite: true,
@@ -20,7 +21,17 @@ $(document).ready(function () {
             arrows: false,
             cssEase: 'linear',
             slidesToShow: 3,
-            slidesToScroll: 1,            
+            slidesToScroll: 1,
+        });
+
+        $advantages.slick({
+            infinite: true,
+            autoplay: true,
+            dots: false,
+            arrows: false,
+            cssEase: 'linear',
+            slidesToShow: 4,
+            slidesToScroll: 1,
         });
     }); 
 });

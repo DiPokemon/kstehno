@@ -107,8 +107,6 @@ Template Name: Шаблон главной страницы
             <div class="slider_wrapper">
                 <?php foreach( $info_blocks as $info_block ) : ?>
                     <div class="info_block">
-                                                
-
                         <?php if ($info_block['info_block_title']): ?>
                             <h3 class="info_block_title">
                                 <?= $info_block['info_block_title'] ?> 
@@ -120,7 +118,7 @@ Template Name: Шаблон главной страницы
                         <?php endif; ?>
 
                         <?php if ($info_block['info_block_url']): ?>
-                            <a class="info_block_btn" href="<?= $info_block['info_block_url'] ?>">
+                            <a class="btn info_block_btn" href="<?= $info_block['info_block_url'] ?>">
                                 <?= $info_block['info_block_btn_text'] ?>
                             </a>                        
                         <?php endif; ?>   
@@ -129,9 +127,7 @@ Template Name: Шаблон главной страницы
                         <?php if ($info_block['info_block_desk_img']): ?>
                             <div class="info_block_img"  style="background-image: url('<?=$info_block['info_block_desk_img']?>')">
 
-                            </div>
-
-                           
+                            </div>                           
                         <?php endif; ?> 
                     </div>
                 <?php endforeach; ?>
@@ -139,5 +135,65 @@ Template Name: Шаблон главной страницы
         </div>
     </section>
 <?php endif; ?>
+
+<?php if ($advantages) :?>
+    <section>
+        <div class="container">
+            <div class="slider_wrapper">
+                <div class="advantages">
+                    <?php foreach( $advantages as $advantage ) : ?>
+                        <div class="advantage">
+                            <?= $advantage['advantage_icon']; ?>
+                            <span class="advantage_text">
+                                <?= $advantage['advantage_text']; ?>
+                            </span>
+                        </div>
+                    <?php endforeach; ?>
+                </div>                
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
+
+<?php if ($testimonials) :?>
+    <section>
+        <?php foreach($testimonials as $i => $testimonial): ?>
+            <div id="testimonial_<?= $i; ?>" class="testimonial" itemscope itemtype="https://schema.org/Review">
+                <div class="testimonial_header" itemprop="author" itemscope itemtype="https://schema.org/Person">                  
+                    <img loading="lazy" height="100px" width="100px" class="testimonial_author_img" src="<?= $testimonial['testimonial_img']; ?>" alt="Отзыв о тату-студии Black Jack от <?= $testimonial['testimonial_name']; ?> <?= $testimonial['testimonial_second_name']; ?>">
+                <div class="testimonial_aquthor_name">
+                    <span itemprop="name"><?= $testimonial['testimonial_name']; ?></span>
+                    <?php if($testimonial['testimonial_second_name']):?>
+                      <span itemprop="familyName"><?= $testimonial['testimonial_second_name']; ?></span>
+                    <?php endif; ?>
+                  </div>                  
+                </div>
+                <meta itemprop="datePublished" content="<?= $testimonial['testimonial_date']; ?>"/>
+                <meta itemprop="name" content="Отзыв о тату-студии Black Jack">
+                <link itemprop="url" href="<?= get_site_url() ?>/#testimonial_<?= $i; ?>">
+                <div class="testimonial_text" itemprop="reviewBody">
+                  <?= $testimonial['testimonial_text']; ?>
+                </div>
+                <div class="textimonial_organization" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="Отзыв о тату студии Black Jack">
+                    <meta itemprop="telephone" content="<?= $contacts_main_phone ?>">
+                    <link itemprop="url" href="<?= get_site_url() ?>"/>
+                    <meta itemprop="email" content="<?= $contacts_mail ?>">
+                    <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                        <meta itemprop="addressLocality" content="<?= $address_city ?>">
+                        <meta itemprop="streetAddress" content="<?= $address_street ?>, <?= $address_building ?>">
+                    </p>
+                </div>
+                <div class="testimonial_rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                  <meta itemprop="worstRating" content="1">
+                  <meta itemprop="ratingValue" content="<?= $testimonial['testimonial_rating']; ?>">
+                  <meta itemprop="bestRating" content="5"/>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </section>
+
+<?php endif; ?>
+
 
 <?php get_footer(); ?>

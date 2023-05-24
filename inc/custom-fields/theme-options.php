@@ -53,4 +53,23 @@ $basic_options_container = Container::make( 'theme_options', __( 'Theme options'
             ->set_width(50),
         Field::make( 'text', 'address_longitude', __( 'Longitude (for maps)', 'kstehno' ) )
             ->set_width(50),
+    ) )
+    ->add_tab( __( 'Testimonials', 'kstehno' ), array(
+        Field::make('image','testimonial_img',__('Photo', 'kstehno') )
+            ->set_value_type( 'url' )
+            ->set_width(33),
+        Field::make('text','testimonial_name',__('Name', 'kstehno') )
+            ->set_width(33),
+        Field::make('text','testimonial_second_name',__('Second name', 'kstehno') )
+            ->set_width(33),
+        Field::make('textarea','testimonial_text',__('Testimonial text', 'kstehno'))
+            ->set_width(60)
+            ->set_rows(1),
+        Field::make('date','testimonial_date',__('Date', 'kstehno'))
+            ->set_width(30),
+        Field::make('text','testimonial_rating',__('Rating', 'kstehno'))
+            ->set_attribute('type', 'number')
+            ->set_attribute('min', '0')
+            ->set_attribute('max', '5')
+            ->set_width(10),
     ) );

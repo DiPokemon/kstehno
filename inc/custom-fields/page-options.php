@@ -21,6 +21,7 @@ Container::make( 'post_meta', __( 'Main page fields', 'kstehno' ) )
                     ->set_attribute( 'placeholder', 'https://ks-tehno.ru/example/' )
                     ->set_width(100),
             ) ),
+            
         Field::make( 'complex', 'info_blocks',  __('Info blocks', 'kstehno') )
             ->add_fields( 'info_blocks_items', __('Info block', 'kstehno'), array(                
                 Field::make( 'image', 'info_block_desk_img', __( 'Info block for desktop', 'kstehno' ) )
@@ -44,5 +45,14 @@ Container::make( 'post_meta', __( 'Main page fields', 'kstehno' ) )
                 Field::make( 'text', 'info_block_btn_text', __( 'Button text', 'kstehno' ) )
                     ->set_attribute( 'placeholder', 'https://ks-tehno.ru/example/' )
                     ->set_width(50),
+            ) ),
+
+        Field::make( 'complex', 'advantages',  __('Advantages', 'kstehno') )
+            ->add_fields( 'advantages_items', __('Advantages items', 'kstehno'), array(
+                Field::make( 'text', 'advantage_icon', __( 'Icons code', 'kstehno' ) )
+                    ->set_attribute( 'placeholder', '<i class="fa-brands fa-whatsapp"></i>' )
+                    ->set_width(50),
+                Field::make( 'text', 'advantage_text', __( 'Text', 'kstehno' ) )
+                    ->set_width(50),                
             ) )
 	));

@@ -17,6 +17,22 @@ body{
 
 a{
     color: $blue;
+
+    &.btn{
+        background: linear-gradient(135deg, $blue 50%, $orange 50%);
+        background-size: 300%;
+        border: 1px solid $blue;
+        background-position: left;
+        transition:all .5s;
+        border-radius: 5px;
+        color: $white;
+
+        &:hover{
+            border: 1px solid $orange;
+            color: $white;
+            background-position: right;
+        }
+    }
 }
 
 a:hover{
@@ -26,4 +42,9 @@ a:hover{
 section{
     display: flex;
     justify-content: center;
+}
+
+.btn{
+    background: linear-gradient(135deg, $blue 50%, $orange 50%);
+    background-size: 300%;
 }
