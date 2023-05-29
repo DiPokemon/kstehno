@@ -20,7 +20,7 @@ add_theme_support('post-thumbnails');
 register_nav_menus([
 	'middle_menu' => 'Top menu',
     'main_menu' => 'Main menu',
-    'footer_menu' => 'Footer menu'
+	'footer_right_menu' => 'Footer right menu'
 ]);
 
 //Add class for logo

@@ -1,6 +1,13 @@
 <?php
+  $currenturl = get_permalink();
+
   $head_code = carbon_get_theme_option( 'head_code' );
   $footer_code = carbon_get_theme_option( 'footer_code' );
+  $htmlsitemap_link = carbon_get_theme_option( 'html_sitemap_link' );
+  $htmlsitemap_text = carbon_get_theme_option( 'html_sitemap_text' );
+  $policy_link = carbon_get_theme_option( 'policy_privacy_link' );
+  $policy_text = carbon_get_theme_option( 'policy_privacy_text' );
+  $copyright = carbon_get_theme_option( 'copyright' );
   $title = carbon_get_theme_option( 'main_title' );
 
   $description = carbon_get_theme_option( 'main_description' );
@@ -42,5 +49,6 @@
   $main_banners = carbon_get_the_post_meta( 'main_banners' );
   $info_blocks = carbon_get_the_post_meta( 'info_blocks' );
   $advantages = carbon_get_the_post_meta( 'advantages' );
+  $testimonials = carbon_get_theme_option( 'testimonials' );
 
 ?>

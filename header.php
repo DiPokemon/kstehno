@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php include 'template-parts/variables.php' ?>
-<html lang="ru">
+<html lang="ru" itemscope itemtype="http://schema.org/WebPage">
     <head itemscope itemtype="http://schema.org/WPHeader">
+        <link itemprop="url" href="<?= $currenturl ?>" />
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />    
@@ -9,8 +10,11 @@
         <?php wp_head();?>
         
     </head>
-    <body>
-        <header>      
+    <body itemprop="mainContentOfPage">
+        <div itemprop="isPartOf" itemscope itemtype="https://schema.org/WebSite">
+            <link itemprop="url" href="<?= get_site_url() ?>" />
+        </div>
+        <header itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WPHeader">      
             <div class="header_container">
                 <div class="header_wrapper container">
                     <div class="header_top">
@@ -104,4 +108,4 @@
             </div>            
         </header>
     
-        <main>
+        <main role="main">

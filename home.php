@@ -157,40 +157,52 @@ Template Name: Шаблон главной страницы
 
 <?php if ($testimonials) :?>
     <section>
-        <?php foreach($testimonials as $i => $testimonial): ?>
-            <div id="testimonial_<?= $i; ?>" class="testimonial" itemscope itemtype="https://schema.org/Review">
-                <div class="testimonial_header" itemprop="author" itemscope itemtype="https://schema.org/Person">                  
-                    <img loading="lazy" height="100px" width="100px" class="testimonial_author_img" src="<?= $testimonial['testimonial_img']; ?>" alt="Отзыв о тату-студии Black Jack от <?= $testimonial['testimonial_name']; ?> <?= $testimonial['testimonial_second_name']; ?>">
-                <div class="testimonial_aquthor_name">
-                    <span itemprop="name"><?= $testimonial['testimonial_name']; ?></span>
-                    <?php if($testimonial['testimonial_second_name']):?>
-                      <span itemprop="familyName"><?= $testimonial['testimonial_second_name']; ?></span>
-                    <?php endif; ?>
-                  </div>                  
-                </div>
-                <meta itemprop="datePublished" content="<?= $testimonial['testimonial_date']; ?>"/>
-                <meta itemprop="name" content="Отзыв о тату-студии Black Jack">
-                <link itemprop="url" href="<?= get_site_url() ?>/#testimonial_<?= $i; ?>">
-                <div class="testimonial_text" itemprop="reviewBody">
-                  <?= $testimonial['testimonial_text']; ?>
-                </div>
-                <div class="textimonial_organization" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
-                    <meta itemprop="name" content="Отзыв о тату студии Black Jack">
-                    <meta itemprop="telephone" content="<?= $contacts_main_phone ?>">
-                    <link itemprop="url" href="<?= get_site_url() ?>"/>
-                    <meta itemprop="email" content="<?= $contacts_mail ?>">
-                    <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                        <meta itemprop="addressLocality" content="<?= $address_city ?>">
-                        <meta itemprop="streetAddress" content="<?= $address_street ?>, <?= $address_building ?>">
-                    </p>
-                </div>
-                <div class="testimonial_rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                  <meta itemprop="worstRating" content="1">
-                  <meta itemprop="ratingValue" content="<?= $testimonial['testimonial_rating']; ?>">
-                  <meta itemprop="bestRating" content="5"/>
+        <div class="container">
+            <div class="slider_wrapper">
+                <div class="testimonials">
+                    
+                        <?php foreach($testimonials as $i => $testimonial): ?>
+                            <div class="testimonial" id="testimnial_<?= $i; ?>" itemscope itemtype="https://schema.org/Review">                
+                                <div class="testimonial_img">
+                                    <img loading="lazy" class="testimonial_author_img" src="<?= $testimonial['testimonial_img']; ?>" alt="Отзыв о KS-TEHNO от <?= $testimonial['testimonial_name']; ?> <?= $testimonial['testimonial_second_name']; ?>">
+                                </div>
+                                <div class="testimonial_content">
+                                    <div class="testimonial_author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                        <span itemprop="name"><?= $testimonial['testimonial_name']; ?></span>
+                                        <?php if($testimonial['testimonial_second_name']):?>
+                                            <span itemprop="familyName"><?= $testimonial['testimonial_second_name']; ?></span>
+                                        <?php endif; ?>
+                                    </div>
+                                    <div class="testimonial_text" itemprop="reviewBody">
+                                        <?= $testimonial['testimonial_text']; ?>
+                                    </div>
+
+                                    <meta itemprop="datePublished" content="<?= $testimonial['testimonial_date']; ?>"/>
+                                    <meta itemprop="name" content="Отзыв о компании KS-TEHNO">
+                                    <link itemprop="url" href="<?= get_site_url() ?>/#testimonial_<?= $i; ?>">
+
+                                    <div class="testimonial_organization" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+                                        <meta itemprop="name" content="Отзыв о компании KS-TEHNO">
+                                        <meta itemprop="telephone" content="<?= $contacts_main_phone ?>">
+                                        <link itemprop="url" href="<?= get_site_url() ?>"/>
+                                        <meta itemprop="email" content="<?= $contacts_mail ?>">
+                                        <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                            <meta itemprop="addressLocality" content="<?= $address_city ?>">
+                                            <meta itemprop="streetAddress" content="<?= $address_street ?>, <?= $address_building ?>">
+                                        </p>
+                                    </div>
+                                    <div class="testimonial_rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                                        <meta itemprop="worstRating" content="1">
+                                        <meta itemprop="ratingValue" content="<?= $testimonial['testimonial_rating']; ?>">
+                                        <meta itemprop="bestRating" content="5"/>
+                                    </div>                    
+                                </div>
+                            </div>            
+                        <?php endforeach; ?>
+                    
                 </div>
             </div>
-        <?php endforeach; ?>
+        </div>
     </section>
 
 <?php endif; ?>
