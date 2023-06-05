@@ -49,3 +49,12 @@ section{
     background: linear-gradient(135deg, $blue 50%, $orange 50%);
     background-size: 300%;
 }
+
+
+
+body *:not(.slick-track):not(.slick-list){
+    transition: all 0.2s;
+}
+// *{
+//     transition: all 0.2s;
+// }

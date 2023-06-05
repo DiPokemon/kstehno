@@ -1,4 +1,6 @@
 <?php
+  	
+  $shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) );
   $currenturl = get_permalink();
 
   $head_code = carbon_get_theme_option( 'head_code' );
@@ -9,6 +11,8 @@
   $policy_text = carbon_get_theme_option( 'policy_privacy_text' );
   $copyright = carbon_get_theme_option( 'copyright' );
   $title = carbon_get_theme_option( 'main_title' );
+  $catalog_icon = carbon_get_theme_option( 'catalog_icon' );
+  $catalog_text = carbon_get_theme_option( 'catalog_text' );
 
   $description = carbon_get_theme_option( 'main_description' );
   $org_name = carbon_get_theme_option( 'org_name' );

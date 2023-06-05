@@ -21,6 +21,12 @@ $basic_options_container = Container::make( 'theme_options', __( 'Theme options'
             ->set_width(50),
         Field::make( 'text', 'copyright', __('Copyright', 'kstehno') )
             ->set_attribute( 'placeholder', 'Все права защищены...' ),
+        Field::make( 'text', 'catalog_icon', __('Catalog icon', 'kstehno') )
+            ->set_width(50)
+            ->set_attribute( 'placeholder', '<i class="fa-brands fa-whatsapp"></i>' ),
+        Field::make( 'text', 'catalog_text', __('Catalog text', 'kstehno') )
+            ->set_width(50)
+            ->set_attribute( 'placeholder', 'Каталог' ),
     ) )
     ->add_tab( __( 'Contacts', 'kstehno' ), array(
         Field::make( 'text', 'org_name', __('Organization name', 'kstehno'))

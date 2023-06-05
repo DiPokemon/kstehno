@@ -22,19 +22,31 @@
                             <div class="logo_wrapper">
                                 <?php the_custom_logo() ?>
                             </div>
+                            
                             <div class="city_list">
                                 Брянск                            
                             </div>
                         </div>
                         
                         <div class="header_contacts">
-                            <a href="tel:<?= $contacts_main_phone_href ?>" class="header_phone-link"><i class="fa-solid fa-phone"></i><?= $contacts_main_phone_front ?></a>            
+                            <?php if($contacts_main_phone_href) : ?>
+                                <a href="tel:<?= $contacts_main_phone_href ?>" class="header_phone-link"><i class="fa-solid fa-phone"></i><?= $contacts_main_phone_front ?></a>
+                                <a href="tel:<?= $contacts_main_phone_href ?>" class="header_phone-link-mob"><i class="fa-solid fa-phone"></i></a>
+                            <?php endif; ?>
                             <?php get_template_part( 'template-parts/socials' ); ?>  
                         </div>  
                         <div class="header_actions">
+                            <a onclick="openModal()" href="javascript:void(0)" class="search_icon_mob"><i class="fa-solid fa-magnifying-glass"></i></a>
                             <a href="" class="btn_compare" data-title="Сравнение"><i class="fa-solid fa-code-compare"></i></a>
                             <a href="" class="btn_favorites" data-title="Избранное"><i class="fa-regular fa-heart"></i></a>
-                            <a href="#" class="btn_mini_cart" data-title="Корзина"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="#" class="btn_mini_cart" data-title="Корзина"><i class="fa-solid fa-cart-shopping"></i></a>                            
+                           
+                            <div  id="header_search_modal" class="search_modal_mob">
+                                <div class="search_modal_close_wrapper">
+                                    <a class="search_modal_close" onclick="closeModal(event)" href="javascript:void(0)"><i class="fa-solid fa-xmark"></i></a>
+                                </div>
+                                <?= do_shortcode('[aws_search_form]'); ?>
+                            </div>
 
                         </div>                      
                     </div>
@@ -49,7 +61,7 @@
                                     'link_class'     => 'menu_link',           
                                     'theme_location'  => 'middle_menu',
                                     'add_li_class'    => 'menu_item',
-                                    'echo'          => false,               
+                                    'echo'          => false,
                                 );
                                 $temp_menu = wp_nav_menu($args);
                                 preg_match_all("~<a (.*?)>(.*)</a>~", $temp_menu, $matches);
@@ -66,7 +78,7 @@
                             ?>      
                         
                         <div class="header_search">
-                            Поиск
+                            <?= do_shortcode('[aws_search_form]'); ?>
                         </div>
                     </div>
 
@@ -97,7 +109,24 @@
                                 }
                             }
                             echo $temp_menu;
-                        ?>      
+                        ?>
+                        
+                        <div class="shop_link_wrapper">
+                            <a href="<?= $shop_page_url ?>" class="shop_link btn">
+                                <?php if($catalog_icon && $catalog_text) :?>
+                                    <?= $catalog_icon.$catalog_text ?>
+                                <?php elseif ($catalog_icon && !$catalog_text) : ?>
+                                    <?= $catalog_icon.__('Каталог','kstehno') ?>
+                                <?php elseif (!$catalog_icon && $catalog_text) : ?>
+                                    <?= '<i class="fa-solid fa-gear"></i>'.$catalog_text ?>
+                                <?php else: ?>
+                                    <i class="fa-solid fa-gear"></i> <?= __('Каталог','kstehno') ?>
+                                <?php endif; ?>
+                            </a>
+                        </div>
+                        
+
+                        
                     </div>
                     
                     
