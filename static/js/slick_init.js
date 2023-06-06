@@ -49,6 +49,29 @@ $(document).ready(function () {
       cssEase: 'linear',
       slidesToShow: 4,
       slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
 
     $testimonials.slick({
@@ -57,12 +80,12 @@ $(document).ready(function () {
       dots: false,
       slidesToShow: 3,
       slidesToScroll: 1,
-      centerMode: true,
-      //draggable: true,
+      //centerMode: true,
+      draggable: true,
       infinite: true,
       pauseOnHover: false,
-      // swipe: true,
-      // touchMove: true,
+      swipe: true,
+      touchMove: true,
       vertical: true,
       speed: 1000,
       autoplaySpeed: 3000,
@@ -70,6 +93,24 @@ $(document).ready(function () {
       //cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
       cssEase: 'linear',
       adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            vertical: false,
+            centerMode: false,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
   });
 })

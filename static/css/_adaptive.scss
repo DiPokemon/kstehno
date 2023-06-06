@@ -1,4 +1,9 @@
 
+@media(max-width: 1024px){
+    .categories{
+        grid-template-columns: 1fr 1fr 1fr;    
+    }
+}
 
 @media(max-width: 768px){
     .header_container{
@@ -52,6 +57,50 @@
 
                 .header_search{
                     max-width: 150px;
+                }
+            }
+        }
+    }
+
+
+    .main_banner{
+    
+        .slick-track{
+            .banner{
+                img{
+    
+                    &.main_banner_desk{
+                        display: none;
+                    }
+    
+                    &.main_banner_mob{
+                        display: block;
+                        height: 250px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }        
+    }
+
+    .categories{
+        grid-template-columns: 1fr 1fr;    
+    }
+
+    .featured_products{
+
+        .slick-track{           
+    
+            .featured_product{    
+                .featured_product_img{
+    
+                    img{
+                        height: 200px;
+                    }
+                }
+    
+                .featured_product_content{
+                    padding: 10px; 
                 }
             }
         }
@@ -121,5 +170,56 @@
                 }
             }
         }
+    }
+
+    footer{    
+        .footer_top{
+            flex-wrap: wrap;
+            .footer_top_left{
+                width: 100%;
+                margin-bottom: 20px;
+
+                .menu_list{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    align-items: center;
+                    justify-content: center;
+                }    
+            }
+    
+            .footer_top_middle{
+                width: 50%;
+            }
+    
+            .footer_top_right{
+                width: 50%;
+    
+                .contacts{
+    
+                    .socials_links{
+                        
+                    }
+                }
+    
+                .footer_html_sitemap{
+
+                }            
+            }
+        }
+        
+        .footer_bottom{
+            justify-content: space-between;
+    
+            a{
+
+            }    
+        }
+    }
+}
+
+@media(max-width: 500px){
+    .categories{
+        grid-template-columns: 1fr;    
     }
 }

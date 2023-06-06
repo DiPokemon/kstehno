@@ -373,7 +373,7 @@
 
 .categories{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
 
     .category{
@@ -496,7 +496,9 @@
 .advantages{
 
     .slick-track{
-        padding: 10px 0px
+        padding: 10px 0px;
+        display: flex;
+        gap: 10px;        
     }
 
     .advantage.slick-slide{

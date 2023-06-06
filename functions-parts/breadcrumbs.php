@@ -1,4 +1,8 @@
 <?php
+if (! defined ('ABSPATH')){
+    exit;
+}
+
 //Breadcrumbs with Schema.ORG
 function breadcrumbs() {
 	/* === ОПЦИИ === */

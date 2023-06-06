@@ -34,7 +34,7 @@
                             <?php
                                 $args = array(
                                     'container'       => 'nav',          
-                                    'container_class' => 'middle_menu menu',           
+                                    'container_class' => 'footer_right_menu menu',           
                                     'menu_class'      => 'menu_list',          
                                     'fallback_cb'     => 'wp_page_menu',            
                                     'link_class'     => 'menu_link',           
@@ -54,7 +54,7 @@
                                     }
                                 }
                                 echo $temp_menu;
-                            ?> 
+                            ?>      
                     </div>
                     <div class="footer_top_right">
                         <?php include 'template-parts/contacts.php' ?>

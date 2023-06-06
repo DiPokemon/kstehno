@@ -518,7 +518,7 @@ body *:not(.slick-track):not(.slick-list) {
 
 .categories {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
 }
 .categories .category {
@@ -623,6 +623,10 @@ body *:not(.slick-track):not(.slick-list) {
 
 .advantages .slick-track {
   padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
 }
 .advantages .advantage.slick-slide {
   display: -webkit-box;
@@ -778,6 +782,11 @@ footer .footer_bottom a {
           text-decoration: underline dotted;
 }
 
+@media (max-width: 1024px) {
+  .categories {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 @media (max-width: 768px) {
   .header_container .header_wrapper .header_top .header_contacts {
     gap: 10px;
@@ -821,6 +830,24 @@ footer .footer_bottom a {
   }
   .header_container .header_wrapper .header_middle .header_search {
     max-width: 150px;
+  }
+  .main_banner .slick-track .banner img.main_banner_desk {
+    display: none;
+  }
+  .main_banner .slick-track .banner img.main_banner_mob {
+    display: block;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .categories {
+    grid-template-columns: 1fr 1fr;
+  }
+  .featured_products .slick-track .featured_product .featured_product_img img {
+    height: 200px;
+  }
+  .featured_products .slick-track .featured_product .featured_product_content {
+    padding: 10px;
   }
 }
 @media (max-width: 600px) {
@@ -873,5 +900,43 @@ footer .footer_bottom a {
   }
   .header_container .header_wrapper .header_middle .middle_menu .menu_list .menu_item::after {
     display: none;
+  }
+  footer .footer_top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .footer_top .footer_top_left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  footer .footer_top .footer_top_left .menu_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .footer_top .footer_top_middle {
+    width: 50%;
+  }
+  footer .footer_top .footer_top_right {
+    width: 50%;
+  }
+  footer .footer_bottom {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media (max-width: 500px) {
+  .categories {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,8 @@
 <?php
+if (! defined ('ABSPATH')){
+    exit;
+}
+
 // Carbon Fields initialization
 add_action( 'after_setup_theme', 'crb_load' );
 function crb_load() {

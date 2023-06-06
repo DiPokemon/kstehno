@@ -1,4 +1,8 @@
 <?php
+if (! defined ('ABSPATH')){
+    exit;
+}
+
 //Add classes for LI and A in nav menu + integrate Schema.ORG
 
 //add class for LI in nav menu
