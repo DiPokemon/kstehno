@@ -300,6 +300,28 @@ body *:not(.slick-track):not(.slick-list) {
   -webkit-transform: translate(-50%, 40px);
           transform: translate(-50%, 40px);
 }
+.header_container .header_wrapper .header_top .header_actions a.btn_mini_cart .cart-contents {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 10px;
+  border: 1px solid;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  z-index: 2;
+  background: #ffa500;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .header_container .header_wrapper .header_top .header_actions .search_icon_mob {
   display: none;
   -webkit-box-align: center;
@@ -381,6 +403,7 @@ body *:not(.slick-track):not(.slick-list) {
   width: 100%;
 }
 .header_container .header_wrapper .header_top .header_actions #header_search_modal .aws-container .aws-search-form .aws-search-field {
+  background-color: unset;
   border: none;
 }
 .header_container .header_wrapper .header_top .header_actions #header_search_modal .aws-container .aws-search-form .aws-form-btn {
@@ -395,6 +418,28 @@ body *:not(.slick-track):not(.slick-list) {
 }
 .header_container .header_wrapper .header_top .header_actions #header_search_modal.active {
   top: 0;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel {
+  padding: 100px 10px 10px 10px;
+  position: absolute;
+  z-index: 9;
+  right: -400px;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 0px 50px #F0F0F0;
+          box-shadow: 5px 0px 50px #F0F0F0;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .close_mini_cart::after {
+  display: none;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel.active {
+  right: 0;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .woocommerce-mini-cart a {
+  border: none;
+  font-size: 14px;
 }
 .header_container .header_wrapper .header_middle {
   padding: 0;
@@ -428,6 +473,7 @@ body *:not(.slick-track):not(.slick-list) {
   border-left: 1px solid #F0F0F0;
 }
 .header_container .header_wrapper .header_middle .header_search .aws-container .aws-search-form .aws-search-field {
+  background-color: unset;
   border: none;
 }
 .header_container .header_wrapper .header_middle .header_search .aws-container .aws-search-form .aws-form-btn {

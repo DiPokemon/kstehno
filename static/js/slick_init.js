@@ -81,7 +81,7 @@ $(document).ready(function () {
       slidesToShow: 3,
       slidesToScroll: 1,
       //centerMode: true,
-      draggable: true,
+      // draggable: true,
       infinite: true,
       pauseOnHover: false,
       swipe: true,

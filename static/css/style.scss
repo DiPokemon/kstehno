@@ -127,6 +127,27 @@
                         }
                     }
 
+                    &.btn_mini_cart{
+
+                        .cart-contents{
+                            
+                            position: absolute;
+                            top: -5px;
+                            right: -5px;
+                            font-size: 10px;
+                            border: 1px solid;
+                            height: 20px;
+                            width: 20px;
+                            border-radius: 50%;
+                            z-index: 2;
+                            background: $orange;
+                            color: $white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
 
                 }
 
@@ -201,6 +222,7 @@
                         .aws-search-form{
     
                             .aws-search-field{
+                                background-color: unset;
                                 border: none;
                             }
     
@@ -224,6 +246,38 @@
                     &.active{
                         top: 0;
                     }
+                }
+
+                .mini_cart_panel{
+                    padding: 100px 10px 10px 10px;
+                    position: absolute;
+                    z-index: 9;
+                    right: -400px;
+                    top: 0;
+                    bottom: 0;
+                    width: 200px;
+                    background-color: $white;
+                    box-shadow: 5px 0px 50px $gray;
+
+                    .close_mini_cart{
+
+                        &::after{
+                            display: none;
+                        }
+                    }
+
+                    &.active{
+                        right: 0;
+                    }
+
+                    .woocommerce-mini-cart{
+
+                        a{
+                            border: none;
+                            font-size: 14px;
+                        }
+                    }
+
                 }
 
             }
@@ -267,6 +321,7 @@
                     .aws-search-form{
 
                         .aws-search-field{
+                            background-color: unset;
                             border: none;
                         }
 
