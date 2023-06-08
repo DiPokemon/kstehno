@@ -249,22 +249,43 @@
                 }
 
                 .mini_cart_panel{
-                    padding: 100px 10px 10px 10px;
+                    padding: 10px 10px 10px 10px;
                     position: absolute;
                     z-index: 9;
                     right: -400px;
                     top: 0;
                     bottom: 0;
-                    width: 200px;
+                    width: 300px;
                     background-color: $white;
                     box-shadow: 5px 0px 50px $gray;
 
-                    .close_mini_cart{
+                    .mini_cart_top{
+                        border: 1px solid $gray;
+                        border-radius: 3px;
+                        display: flex;
+                        justify-content: space-between;
+                        box-shadow: 0px 0px 5px $gray;
+                        padding: 10px;
+                        align-items: center;
+                        margin-bottom: 30px;
 
-                        &::after{
-                            display: none;
+                        span{
+                            text-transform: uppercase;
+                            font-size: 12px;
+                        }
+
+                        .close_mini_cart{
+                            font-size: 16px;
+                            width: 25px;
+                            height: 25px;
+
+                            &::after{
+                                display: none;
+                            }
                         }
                     }
+
+                    
 
                     &.active{
                         right: 0;
@@ -272,14 +293,88 @@
 
                     .woocommerce-mini-cart{
 
+
                         a{
                             border: none;
                             font-size: 14px;
+                            width: unset;
+                            height: unset;
+                            background: unset;
+                            &::after{
+                                display: none;
+                            }
                         }
+
+                        .woocommerce-mini-cart-item{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            border-bottom: 1px solid $gray;
+
+                            a {
+                                &:hover{
+                                    color: $blue;
+                                }
+                            }
+
+                            .remove_from_cart_button{
+                                font-size: 20px;
+                                background: unset;
+                            }
+
+                            img{
+                                max-width: 50px;
+                                max-height: 50px;
+                            }
+
+                            .quantity{
+                                font-size: 12px;
+                            }
+                        }                        
                     }
 
+                    .woocommerce-mini-cart__total{
+                        margin-top: 10px;
+                        padding: 5px;
+                        border: 1px solid $gray;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        box-shadow: 0px 0px 5px $gray;
+                    }
                 }
 
+                .woocommerce-mini-cart__buttons{
+                    a{
+                        border: 1px solid;
+                        font-size: 14px;
+                        width: unset;
+                        height: unset;
+
+                        &::after{
+                            display: none;
+                        }
+                    }   
+                    
+                    .wc-forward{
+                        border-color: $orange;
+                        border-radius: 3px;
+                        margin-top: 5px;
+
+                        &:hover{
+                            border-color: $blue;
+                        }
+
+                        &.checkout{
+                            border-color: $blue;
+                            color: $blue;
+
+                            &:hover{
+                                color: $white;
+                            }
+                        
+                        }
+                    }
+                }
             }
 
             

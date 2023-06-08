@@ -420,18 +420,44 @@ body *:not(.slick-track):not(.slick-list) {
   top: 0;
 }
 .header_container .header_wrapper .header_top .header_actions .mini_cart_panel {
-  padding: 100px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
   position: absolute;
   z-index: 9;
   right: -400px;
   top: 0;
   bottom: 0;
-  width: 200px;
+  width: 300px;
   background-color: #fff;
   -webkit-box-shadow: 5px 0px 50px #F0F0F0;
           box-shadow: 5px 0px 50px #F0F0F0;
 }
-.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .close_mini_cart::after {
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .mini_cart_top {
+  border: 1px solid #F0F0F0;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0px 0px 5px #F0F0F0;
+          box-shadow: 0px 0px 5px #F0F0F0;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .mini_cart_top span {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .mini_cart_top .close_mini_cart {
+  font-size: 16px;
+  width: 25px;
+  height: 25px;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .mini_cart_top .close_mini_cart::after {
   display: none;
 }
 .header_container .header_wrapper .header_top .header_actions .mini_cart_panel.active {
@@ -440,6 +466,71 @@ body *:not(.slick-track):not(.slick-list) {
 .header_container .header_wrapper .header_top .header_actions .mini_cart_panel .woocommerce-mini-cart a {
   border: none;
   font-size: 14px;
+  width: unset;
+  height: unset;
+  background: unset;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .woocommerce-mini-cart a::after {
+  display: none;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .woocommerce-mini-cart .woocommerce-mini-cart-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #F0F0F0;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .woocommerce-mini-cart .woocommerce-mini-cart-item a:hover {
+  color: #2467ef;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .woocommerce-mini-cart .woocommerce-mini-cart-item .remove_from_cart_button {
+  font-size: 20px;
+  background: unset;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .woocommerce-mini-cart .woocommerce-mini-cart-item img {
+  max-width: 50px;
+  max-height: 50px;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .woocommerce-mini-cart .woocommerce-mini-cart-item .quantity {
+  font-size: 12px;
+}
+.header_container .header_wrapper .header_top .header_actions .mini_cart_panel .woocommerce-mini-cart__total {
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #F0F0F0;
+  border-radius: 5px;
+  font-size: 14px;
+  -webkit-box-shadow: 0px 0px 5px #F0F0F0;
+          box-shadow: 0px 0px 5px #F0F0F0;
+}
+.header_container .header_wrapper .header_top .header_actions .woocommerce-mini-cart__buttons a {
+  border: 1px solid;
+  font-size: 14px;
+  width: unset;
+  height: unset;
+}
+.header_container .header_wrapper .header_top .header_actions .woocommerce-mini-cart__buttons a::after {
+  display: none;
+}
+.header_container .header_wrapper .header_top .header_actions .woocommerce-mini-cart__buttons .wc-forward {
+  border-color: #ffa500;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+.header_container .header_wrapper .header_top .header_actions .woocommerce-mini-cart__buttons .wc-forward:hover {
+  border-color: #2467ef;
+}
+.header_container .header_wrapper .header_top .header_actions .woocommerce-mini-cart__buttons .wc-forward.checkout {
+  border-color: #2467ef;
+  color: #2467ef;
+}
+.header_container .header_wrapper .header_top .header_actions .woocommerce-mini-cart__buttons .wc-forward.checkout:hover {
+  color: #fff;
 }
 .header_container .header_wrapper .header_middle {
   padding: 0;
