@@ -7,8 +7,7 @@
 .header_container{
     display: flex;
     justify-content: center;
-    box-shadow: 0px 2px 20px -10px $black;
-    
+    box-shadow: 0px 2px 20px -10px $black;     
 
     &.fix{
         position: fixed;
@@ -27,6 +26,48 @@
         justify-content: space-between;
         width: 100%;
         padding: 10px 10px 0px;
+
+        li.menu-item-has-children>.menu_link:after {
+            font-family: 'Font Awesome 6 Free';
+            content: '\f078';
+            font-weight: 900;
+            font-size: 12px;
+            padding: 0px 5px;
+        }
+
+        li.menu-item-has-children:hover>.menu_link:after {            
+            content: '\f077';            
+        }
+
+
+        li.menu-item-has-children {
+            position: relative;
+
+            .sub-menu{
+                display: none;
+                position: absolute;
+                min-width: 160px;
+                background-color: $white;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                border: 1px solid $gray;
+                border-radius: 3px;
+                padding: 12px 16px;
+                z-index: 1;
+
+                .menu_item{
+
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+
+            &:hover{
+                .sub-menu{
+                    display: block;
+                }
+            }
+        }        
 
         &>div{
             padding: 5px 0px;
@@ -410,6 +451,7 @@
 
             .header_search{
                 border-left: 1px solid $gray;
+                width: 300px;
 
                 .aws-container{
 
