@@ -43,10 +43,15 @@
   $sidebar_title = carbon_get_theme_option( 'sidebar_title' );
   $sidebar_description = carbon_get_theme_option( 'sidebar_description' );
   $advantages = carbon_get_theme_option( 'advantages' );
-  $cf7 = carbon_get_theme_option( 'cf7' );
+ 
 
   $portfolio_page_items = carbon_get_the_post_meta( 'portfolio_page' );
   $text_404 = carbon_get_theme_option( 'text_404' );
+
+
+  $cf_title = carbon_get_theme_option( 'cf_title' );
+  $cf_subtitle = carbon_get_theme_option( 'cf_subtitle' );
+  $cf_shortcode = carbon_get_theme_option( 'cf_shortcode' );
 
 
   //Main page fields
@@ -54,5 +59,11 @@
   $info_blocks = carbon_get_the_post_meta( 'info_blocks' );
   $advantages = carbon_get_the_post_meta( 'advantages' );
   $testimonials = carbon_get_theme_option( 'testimonials' );
+
+  //Pages
+  $page_images = carbon_get_the_post_meta( 'page_images' );
+
+  // Product page
+  $price_text = carbon_get_theme_option( 'price_text' );
 
 ?>

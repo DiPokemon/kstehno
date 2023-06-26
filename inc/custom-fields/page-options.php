@@ -56,3 +56,18 @@ Container::make( 'post_meta', __( 'Main page fields', 'kstehno' ) )
                     ->set_width(50),                
             ) )
 	));
+
+Container::make( 'post_meta', __( 'Page fields', 'kstehno' ) )
+    ->show_on_template('page.php')
+    ->add_fields(array(
+		Field::make( 'complex', 'page_images',  __('Page images', 'kstehno') )
+            ->add_fields( 'page_image', __('Page image', 'kstehno'), array(
+                Field::make( 'image', 'page_image_img', __( 'Page image', 'kstehno' ) )
+                    ->set_value_type( 'url' )
+                    ->set_width(30),
+                Field::make( 'text', 'page_image_alt', __( 'Alt', 'kstehno' ) )
+                    ->set_width(35),
+                Field::make( 'text', 'page_image_title', __( 'Title', 'kstehno' ) )
+                    ->set_width(35)
+            ) ),
+	));

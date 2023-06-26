@@ -13,7 +13,7 @@ Template Name: Шаблон главной страницы
             <div class="main_banner">
                 <?php foreach( $main_banners as $banner ) : ?>
                     <?php if ($banner['main_banner_url']) : ?>
-                        <a href="<?=$banner['main_banner_url']?>" class="banner">
+                        <a href="<?= $banner['main_banner_url'] ?>" class="banner">
                             <img class="main_banner_desk" src="<?=$banner['main_banner_desk']?>" alt="<?=$banner['main_banner_alt']?>" title="<?=$banner['main_banner_title']?>">
                             <img class="main_banner_mob" src="<?=$banner['main_banner_mob']?>" alt="<?=$banner['main_banner_alt']?>" title="<?=$banner['main_banner_title']?>">
                         </a>
@@ -24,7 +24,6 @@ Template Name: Шаблон главной страницы
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
-
             </div>
             </div>
         </div>
@@ -69,8 +68,7 @@ Template Name: Шаблон главной страницы
 
             <?php endif; ?>            
         </div>
-    </div>   
-
+    </div>
 </section>
 
 <section>

@@ -54,10 +54,7 @@ $basic_options_container = Container::make( 'theme_options', __( 'Theme options'
             ->set_width(33),
         Field::make( 'text', 'fb', __( 'Facebook', 'kstehno' ) )
             ->set_attribute( 'placeholder', 'facebook.com/example' )
-            ->set_width(33),
-        Field::make( 'text', 'cf7', __( 'Contact form', 'kstehno' ) )
-            ->set_attribute( 'placeholder', '[contact-form-7 id="1" title="Contact form 1"]' )  
-            ->set_width(33),
+            ->set_width(33),        
     ) )
     ->add_tab( __( 'Address', 'kstehno' ), array(
         Field::make( 'text', 'address_city', __( 'City', 'kstehno' ) )
@@ -94,4 +91,21 @@ $basic_options_container = Container::make( 'theme_options', __( 'Theme options'
                     ->set_attribute('max', '5')
                     ->set_width(10),
             ))
+    ) )
+    ->add_tab( __( 'Contact form', 'kstehno' ), array(
+        Field::make( 'text', 'cf_title', __( 'CF Title', 'kstehno' ) )
+            ->set_width(33),
+        Field::make( 'textarea', 'cf_subtitle', __( 'CF Subtitle', 'kstehno' ) )
+            ->set_width(33)
+            ->set_rows(1),
+        Field::make( 'text', 'cf_shortcode', __( 'CF Shortcode', 'kstehno' ) )
+            ->set_width(34)
+            ->set_attribute( 'placeholder', '[contact-form-7 id="1" title="Contact form 1"]' ),        
+    ) )
+    ->add_tab( __( 'Product page', 'kstehno' ), array(
+        Field::make( 'text', 'price_text', __( 'Price text', 'kstehno' ) )
+            ->set_width(33),      
+        Field::make( 'text', 'related_products_title', __( 'Related products title', 'kstehno' ) )
+            ->set_width(33),             
     ) );
+

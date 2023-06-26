@@ -10,7 +10,7 @@
         <?php wp_head();?>
         
     </head>
-    <body itemprop="mainContentOfPage">
+    <body <?php body_class(); ?> itemprop="mainContentOfPage">
         <div itemprop="isPartOf" itemscope itemtype="https://schema.org/WebSite">
             <link itemprop="url" href="<?= get_site_url() ?>" />
         </div>

@@ -5,6 +5,14 @@
     }
 }
 
+@media(max-width: 791px){
+    .horizontal_form {        
+        .wpcf7-form {  
+            gap: 8px;   
+        }
+    }
+}
+
 @media(max-width: 768px){
     .header_container{
 
@@ -105,6 +113,31 @@
             }
         }
     }
+
+    .horizontal_form {        
+        
+        .wpcf7-form {  
+            flex-wrap: wrap;   
+            .wpcf7-form-control-wrap{
+                width: 49%;
+
+                .wpcf7-form-control{
+                    height: 35px;
+
+                    textarea{
+                        padding-top: 5px;
+                    }
+                }
+            }
+            
+            .wpcf7-form-control{    
+                &.wpcf7-submit{
+                    width: 49%;
+                    height: 35px;
+                }
+            }     
+        }
+    }
 }
 
 @media(max-width: 600px){
@@ -171,6 +204,13 @@
             }
         }
     }
+
+    .horizontal_form {        
+        
+        .wpcf7-form {  
+            gap: 5px;                 
+        }
+    }    
 
     footer{    
         .footer_top{

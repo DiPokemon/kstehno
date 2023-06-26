@@ -4,6 +4,7 @@ $(document).ready(function () {
     var $featured_products = $(sliderWrap).find('.featured_products');
     var $advantages = $(sliderWrap).find('.advantages');
     var $testimonials = $(sliderWrap).find('.testimonials');
+    var $page_images = $(sliderWrap).find('.page_images_slider');
 
     $main_banner.slick({
       infinite: true,
@@ -112,5 +113,39 @@ $(document).ready(function () {
         }
       ]
     });
+    
+    $page_images.slick({
+      infinite: true,
+      autoplay: true,
+      dots: false,
+      arrows: false,
+      cssEase: 'linear',
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
   });
 })
