@@ -12,8 +12,8 @@
                         'post_type'           => 'product',
                         'post_status'         => 'publish',
                         'ignore_sticky_posts' => 1,
-                        'posts_per_page'      => $products,
-                        'orderby'             => $orderby,
+                        'posts_per_page'      => 8,
+                        'orderby'             => 'date',
                         'order'               => $order == 'asc' ? 'asc' : 'desc',
                         'tax_query'           => $tax_query // <===
                     ) );
