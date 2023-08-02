@@ -3,6 +3,38 @@
     .categories{
         grid-template-columns: 1fr 1fr 1fr;    
     }
+
+    body.archive {
+        ul.products{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            
+            .product{
+                width: 100%!important;
+                margin-right: 0!important;
+                margin-bottom: 0!important;
+            }
+        }
+    }
+
+    .about_container{     
+        gap: 20px;
+        
+        .about_right{           
+    
+            .about_link_wrap{                
+                min-height: 150px;
+                background-position-x: 60px;
+            }            
+        }
+    }
+
+    .buy_texts_container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
 }
 
 @media(max-width: 791px){
@@ -71,8 +103,7 @@
     }
 
 
-    .main_banner{
-    
+    .main_banner{    
         .slick-track{
             .banner{
                 img{
@@ -96,9 +127,7 @@
     }
 
     .featured_products{
-
-        .slick-track{           
-    
+        .slick-track{    
             .featured_product{    
                 .featured_product_img{
     
@@ -138,6 +167,36 @@
             }     
         }
     }
+
+    .archive{
+        .shop_grid{
+            position: relative;
+
+            .sidebar_shop{
+                position: absolute;
+                left: -400px;
+
+                &.active{
+                    left: 0;
+                }
+            }
+
+            .product_grid{
+                width: 100%;
+            }
+        }
+    }
+
+    .about_container{
+        display: flex;
+        flex-direction: column;
+    
+        .about_left, .about_right{
+            width: 100%;            
+        }
+        
+    }
+
 }
 
 @media(max-width: 600px){
@@ -205,12 +264,28 @@
         }
     }
 
+    body.archive {
+        ul.products{            
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .featured_products{
+        .slick-track{
+            display: block;
+        }
+    } 
+
     .horizontal_form {        
         
         .wpcf7-form {  
             gap: 5px;                 
         }
-    }    
+    }   
+    
+    .buy_texts_container{
+        grid-template-columns: 1fr 1fr;
+    }
 
     footer{    
         .footer_top{
@@ -261,5 +336,11 @@
 @media(max-width: 500px){
     .categories{
         grid-template-columns: 1fr;    
+    }
+}
+
+@media(max-width: 400px){
+    .buy_texts_container{
+        grid-template-columns: 1fr;
     }
 }

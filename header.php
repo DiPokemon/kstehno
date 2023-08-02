@@ -21,11 +21,12 @@
                         <div class="header_top_left">
                             <div class="logo_wrapper">
                                 <?php the_custom_logo() ?>
-                            </div>
-                            
+                            </div>                            
+                            <!--
                             <div class="city_list">
                                 Брянск                            
                             </div>
+                            -->
                         </div>
                         
                         <div class="header_contacts">
@@ -37,11 +38,11 @@
                         </div>  
                         <div class="header_actions">
                             <a onclick="openModal()" href="javascript:void(0)" class="search_icon_mob"><i class="fa-solid fa-magnifying-glass"></i></a>
-                            <a href="" class="btn_compare" data-title="Сравнение"><i class="fa-solid fa-code-compare"></i></a>
-                            <a href="" class="btn_favorites" data-title="Избранное"><i class="fa-regular fa-heart"></i></a>
+                            <!--<a href="" class="btn_compare" data-title="Сравнение"><i class="fa-solid fa-code-compare"></i></a>
+                            <a href="" class="btn_favorites" data-title="Избранное"><i class="fa-regular fa-heart"></i></a>-->
                             <!-- <a onclick="openCartPanel()" href="javascript:void(0)" class="btn_mini_cart" data-title="Корзина"><i class="fa-solid fa-cart-shopping"></i><?php //kstehno_woocommerce_cart_link() ?></a> -->
                             <a onclick="openCartPanel()" href="javascript:void(0)" class="btn_mini_cart" data-title="Корзина"><i class="fa-solid fa-cart-shopping"></i>
-                                <span class="cart-contents">
+                                <span class="cart-contents"> 
                                     <span class="count">
                                         <?= WC()->cart->get_cart_contents_count(); ?>
                                     </span>

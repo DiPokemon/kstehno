@@ -3,6 +3,7 @@
     require_once( get_template_directory().'/functions-parts/breadcrumbs.php' );
     require_once( get_template_directory().'/functions-parts/navmenu.php' );
     require_once( get_template_directory().'/functions-parts/crb_init.php' );
+	require_once( get_template_directory().'/functions-parts/widget-areas.php' );
 
 
 //Cuting excerpt for words number
@@ -136,3 +137,10 @@ function phone_wa($phone) {
 }
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+function my_custom_mime_types( $mimes ) {
+	$mimes['csv'] = 'text/csv';
+	unset( $mimes['exe'] );
+	 return $mimes;
+	}
+	add_filter( 'upload_mimes', 'my_custom_mime_types' );

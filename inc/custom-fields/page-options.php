@@ -71,3 +71,68 @@ Container::make( 'post_meta', __( 'Page fields', 'kstehno' ) )
                     ->set_width(35)
             ) ),
 	));
+
+Container::make( 'post_meta', __( 'About page fields', 'kstehno' ) )
+    ->show_on_template('about.php')
+    ->add_fields(array(
+        Field::make( 'rich_text', 'about_additional_content', __( 'Additional text', 'kstehno' ) ),           
+		Field::make( 'complex', 'about_links',  __('About links', 'kstehno') )
+            ->add_fields( 'about_links', __('Link', 'kstehno'), array(
+                Field::make( 'image', 'about_link_img', __( 'Image', 'kstehno' ) )
+                    ->set_value_type( 'url' )
+                    ->set_width(30),
+                Field::make( 'text', 'about_link_text', __( 'Text', 'kstehno' ) )
+                    ->set_width(35),
+                Field::make( 'text', 'about_link_url', __( 'Category URL', 'kstehno' ) )
+                    ->set_width(35),
+                Field::make( 'association', 'about_link_category', __( 'Category', 'kstehno' ) )
+                    ->set_max( 1 ) // максимальное количество – одна-единственная страна
+                    ->set_types( array(
+                        array(
+                            'type'      => 'term',
+                            'taxonomy' => 'product_cat',
+                        )
+                    ) ),
+            ) ),
+        Field::make( 'complex', 'about_icons',  __('About icons', 'kstehno') )
+            ->add_fields( 'about_icons_items', __('About_icons', 'kstehno'), array(
+                Field::make( 'text', 'about_icon', __( 'Icon code', 'kstehno' ) )
+                    ->set_attribute( 'placeholder', '<i class="fa-brands fa-whatsapp"></i>' )
+                    ->set_width(50),
+                Field::make( 'text', 'about_icon_text', __( 'Text', 'kstehno' ) )
+                    ->set_width(50),                
+            ) )
+	));
+
+Container::make( 'post_meta', __( 'Opt page fields', 'kstehno' ) )
+    ->show_on_template('opt.php')
+    ->add_fields(array(
+        Field::make( 'text', 'opt_btn_url', __( 'Button URL', 'kstehno' ) ), 
+        Field::make( 'text', 'opt_btn_text', __( 'Button text', 'kstehno' ) ), 
+        Field::make( 'complex', 'opt_icons',  __('Opt icons', 'kstehno') )
+            ->add_fields( 'opt_icons_items', __('opt_icons', 'kstehno'), array(
+                Field::make( 'text', 'opt_icon', __( 'Icon code', 'kstehno' ) )
+                    ->set_attribute( 'placeholder', '<i class="fa-brands fa-whatsapp"></i>' )
+                    ->set_width(50),
+                Field::make( 'text', 'opt_icon_text', __( 'Text', 'kstehno' ) )
+                    ->set_width(50),                
+            ) )     
+	));
+
+Container::make( 'post_meta', __( 'Buy and delivery fields', 'kstehno' ) )
+    ->show_on_template('buy_delivery.php')
+    ->add_fields(array(
+        Field::make( 'complex', 'buy_icons',  __('Opt icons', 'kstehno') )
+            ->add_fields( 'buy_icons_items', __('buy_icons', 'kstehno'), array(
+                Field::make( 'text', 'buy_icon', __( 'Icon code', 'kstehno' ) )
+                    ->set_attribute( 'placeholder', '<i class="fa-brands fa-whatsapp"></i>' )
+                    ->set_width(50),
+                Field::make( 'text', 'buy_icon_text', __( 'Text', 'kstehno' ) )
+                    ->set_width(50),                
+            ) ),
+        Field::make( 'complex', 'buy_texts',  __('Buy texts', 'kstehno') )
+            ->add_fields( 'buy_texts', __('Buy text item', 'kstehno'), array(
+                Field::make( 'textarea', 'buy_text', __( 'Text', 'kstehno' ) )                              
+            ) ), 
+        Field::make( 'rich_text', 'buy_additional_text', __( 'Additional text', 'kstehno' ) ),          
+	));

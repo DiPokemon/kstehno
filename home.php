@@ -31,7 +31,7 @@ Template Name: Шаблон главной страницы
 <?php endif; ?>
 
 <section>
-    <div class="container">
+    <div class="container categories_container">
         <div class="categories">
             <?php 
                 $parents = get_categories(array(
@@ -42,7 +42,11 @@ Template Name: Шаблон главной страницы
                 ));
             ?>
             <?php if(!empty($parents)): ?>
-                <?php foreach($parents as $parent) : ?>
+                 
+                <?php 
+                    $i_parents = 1;
+                    foreach($parents as $parent) : 
+                ?>
                     
                     <div class="category">
                         <a class="category_parent_link" href="<?= get_category_link($parent->term_id) ?>"><?= $parent->name; ?></a>
@@ -54,50 +58,42 @@ Template Name: Шаблон главной страницы
                                     'taxonomy'   =>  'product_cat',
                                     'hide_empty' => false
                                 )); 
+                                $i_child = 1;
                                 foreach ($child_categories as $child_category):
                             ?>
                             <li class="child_category">
                                 <a href="<?= get_category_link($child_category->term_id) ?>" class="child_category_link"><?= $child_category->name; ?></a>
                             </li>
+                            <?php if($i_child++ == 3) break; ?>
                             <?php endforeach; ?>
                         </ul>
 
                     </div>
-
+                    <?php if($i_parents++ == 8 ) break; ?>
                 <?php endforeach; ?>
 
             <?php endif; ?>            
         </div>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="slider_wrapper">
-            <div class="featured_products">                
-                    <?php
-                        $args = array(
-                            'featured' => true,
-                        );
-                        $featured_products = wc_get_products( $args );
-                    ?>
-                    <?php foreach ($featured_products as $featured_product) : ?>
-                        <a class="featured_product" href="<?= get_permalink( $featured_product->get_id() ); ?>" >
-                            <div class="featured_product_img">
-                                <?= $featured_product->get_image(); ?>
-                            </div>
-                            <div class="featured_product_content">
-                                <h3><?= $featured_product->get_name(); ?></h3>
-                                <div class="featured_product_desc">
-                                    <!--<?= $featured_product->get_description(); ?>-->
-                                </div>
-                            </div>                            
-                        </a>
-                    <?php endforeach; ?>     
-            </div>       
+        <div class="shop_link_wrapper">
+            <a href="<?= $shop_page_url ?>" class="shop_link btn">
+                <?php if($catalog_icon && $catalog_text) :?>
+                    <?= $catalog_icon.$catalog_text ?>
+                <?php elseif ($catalog_icon && !$catalog_text) : ?>
+                    <?= $catalog_icon.__('Каталог','kstehno') ?>
+                <?php elseif (!$catalog_icon && $catalog_text) : ?>
+                    <?= '<i class="fa-solid fa-gear"></i>'.$catalog_text ?>
+                <?php else: ?>
+                    <i class="fa-solid fa-gear"></i> <?= __('Каталог','kstehno') ?>
+                <?php endif; ?>
+            </a>
         </div>
     </div>
 </section>
+
+
+<?php get_template_part( 'template-parts/block', 'featured-products' ); ?>
+
+
 
 <?php if ($info_blocks) :?>
     <section>

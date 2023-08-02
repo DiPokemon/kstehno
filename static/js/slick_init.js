@@ -5,6 +5,9 @@ $(document).ready(function () {
     var $advantages = $(sliderWrap).find('.advantages');
     var $testimonials = $(sliderWrap).find('.testimonials');
     var $page_images = $(sliderWrap).find('.page_images_slider');
+    var $about_icons = $(sliderWrap).find('.about_icons');
+    var $opt_icons = $(sliderWrap).find('.opt_icons');
+    var $buy_icons = $(sliderWrap).find('.buy_icons');
 
     $main_banner.slick({
       infinite: true,
@@ -146,6 +149,106 @@ $(document).ready(function () {
         }
       ]
     });
+
+    $about_icons.slick({
+      infinite: true,
+      autoplay: true,
+      dots: false,
+      arrows: false,
+      cssEase: 'linear',
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
+    $opt_icons.slick({
+      infinite: true,
+      autoplay: true,
+      dots: false,
+      arrows: false,
+      cssEase: 'linear',
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
+    $buy_icons.slick({
+      infinite: true,
+      autoplay: true,
+      dots: false,
+      arrows: false,
+      cssEase: 'linear',
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+
 
   });
 })

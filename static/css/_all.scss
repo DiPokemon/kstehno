@@ -47,8 +47,14 @@ section{
     justify-content: center;
 }
 
+
+
 .flex{
     display: flex;
+}
+
+.half_column{
+    width: 50%;
 }
 
 .btn{
@@ -65,6 +71,13 @@ body *:not(.slick-track):not(.slick-list){
 //     transition: all 0.2s;
 // }
 
+section:not(:first-child){
+    margin: 50px 0;
+}
+
+section.related.products{
+    margin: 0;
+}
 
 .page_header{
     padding-top: 50px;

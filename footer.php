@@ -4,6 +4,9 @@
             <?php include 'template-parts/variables.php' ?>
             <div class="container">
                 <div class="footer_top">
+                    <div class="footer_logo_wrapper logo_wrapper">
+                        <?php the_custom_logo() ?>
+                    </div>
                     <div class="footer_top_left">
                             <?php
                                 $args = array(

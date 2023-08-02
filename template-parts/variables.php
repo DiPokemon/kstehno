@@ -66,4 +66,18 @@
   // Product page
   $price_text = carbon_get_theme_option( 'price_text' );
 
+  //About page
+  $about_additional_content = carbon_get_the_post_meta( 'about_additional_content' );
+  $about_links = carbon_get_the_post_meta( 'about_links' );
+  $about_icons = carbon_get_the_post_meta( 'about_icons' );
+  
+  //Opt page
+  $opt_btn_url = carbon_get_the_post_meta( 'opt_btn_url' );
+  $opt_btn_text = carbon_get_the_post_meta( 'opt_btn_text' );
+  $opt_icons = carbon_get_the_post_meta( 'opt_icons' );
+
+  //Buy and delivery page 
+  $buy_icons = carbon_get_the_post_meta( 'buy_icons' );
+  $buy_texts = carbon_get_the_post_meta( 'buy_texts' );
+  $buy_add_text = carbon_get_the_post_meta( 'buy_additional_text' );
 ?>
