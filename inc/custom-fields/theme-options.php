@@ -106,6 +106,8 @@ $basic_options_container = Container::make( 'theme_options', __( 'Theme options'
         Field::make( 'text', 'price_text', __( 'Price text', 'kstehno' ) )
             ->set_width(33),      
         Field::make( 'text', 'related_products_title', __( 'Related products title', 'kstehno' ) )
-            ->set_width(33),             
+            ->set_width(33),    
+        Field::make( 'text', 'upsells_products_title', __( 'Upsells products title', 'kstehno' ) )
+            ->set_width(33),           
     ) );
 

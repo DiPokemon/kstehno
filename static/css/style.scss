@@ -953,6 +953,55 @@
 
     .upsells{
         flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px -5px $black;
+        padding: 10px;
+
+        h2{
+            margin-bottom: 20px;
+        }
+
+        .product{
+            img{
+                object-fit: cover;
+            }
+
+            form{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;                
+
+                .quantity{
+                    width: 30%;
+
+                    .qty{
+                        width: 100%;
+                        border-radius: 5px;
+                        border: 1px solid #2467ef;
+                        padding-left: 5px;
+                    }
+                }
+
+                .button{
+                    width: 65%;
+                    height: 28px;
+                    background: linear-gradient(135deg, $blue 50%, $orange 50%);
+                    background-size: 300%;
+                    border: 1px solid $blue;
+                    border-radius: 5px;
+                    color: $white;
+
+
+                    &:hover{
+                        border: 1px solid $orange;
+                        color: $white;
+                        background-position: right;
+                    }
+                }
+
+                
+            }
+        }        
     }
 }
 
@@ -979,7 +1028,7 @@
         }
     }
 
-    .woocommerce-message{
+    .woocommerce-info{
         padding: 10px;
         border-radius: 5px;
         color: $white;
@@ -999,7 +1048,7 @@
         }
     }
 
-    .woocommerce-message{
+    .woocommerce-error{
         padding: 10px;
         border-radius: 5px;
         color: $white;
