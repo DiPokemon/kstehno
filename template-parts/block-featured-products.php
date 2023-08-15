@@ -44,14 +44,10 @@
                                                 <?= $product->get_image(); ?>
                                             </div>
                                             <div class="featured_product_content">
-                                                <h3 class="woocommerce-loop-product__title"><?= $product->get_name(); ?></h3>
-                                                <!--
-                                                    <div class="featured_product_desc">
-                                                        <?= $product->get_description(); ?>
-                                                    </div>
-                                                -->
+                                                <h3 class="woocommerce-loop-product__title"><?= $product->get_name(); ?></h3>                                                
                                             </div>                                                
                                         </a>
+                                        <a class="more_info" href="<?= get_permalink( $product->get_id()); ?>">Подробнее</a>
                                         <div class="add_to_cart">                                        
                                             <?= do_shortcode( '[add_to_cart id=' . $product->get_id() . ' class="price" style=""] ' ) ?>                            
                                         </div>

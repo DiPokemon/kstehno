@@ -59,6 +59,10 @@
   $info_blocks = carbon_get_the_post_meta( 'info_blocks' );
   $advantages = carbon_get_the_post_meta( 'advantages' );
   $testimonials = carbon_get_theme_option( 'testimonials' );
+  $main_opt_title = carbon_get_the_post_meta( 'main_opt_title' );
+  $main_opt_image = carbon_get_the_post_meta( 'main_opt_image' );
+  $main_opt_subtitle = carbon_get_the_post_meta( 'main_opt_subtitle' );
+  $main_opt_text = carbon_get_the_post_meta( 'main_opt_text' );
 
   //Pages
   $page_images = carbon_get_the_post_meta( 'page_images' );
@@ -68,13 +72,16 @@
 
   //About page
   $about_additional_content = carbon_get_the_post_meta( 'about_additional_content' );
-  $about_links = carbon_get_the_post_meta( 'about_links' );
+  //$about_links = carbon_get_the_post_meta( 'about_links' );
   $about_icons = carbon_get_the_post_meta( 'about_icons' );
+  $about_categories = carbon_get_the_post_meta( 'about_category' );
   
   //Opt page
-  $opt_btn_url = carbon_get_the_post_meta( 'opt_btn_url' );
-  $opt_btn_text = carbon_get_the_post_meta( 'opt_btn_text' );
-  $opt_icons = carbon_get_the_post_meta( 'opt_icons' );
+  $opt_images = carbon_get_the_post_meta( 'opt_images' );
+
+  //$opt_btn_url = carbon_get_the_post_meta( 'opt_btn_url' );
+  //$opt_btn_text = carbon_get_the_post_meta( 'opt_btn_text' );
+  //$opt_icons = carbon_get_the_post_meta( 'opt_icons' );
 
   //Buy and delivery page 
   $buy_icons = carbon_get_the_post_meta( 'buy_icons' );

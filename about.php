@@ -21,7 +21,7 @@
                 </div>
             <?php endif; ?>
         </div>
-        
+        <!--
         <?php if ($about_links): ?>
             <div class="about_right">
                 <?php foreach ($about_links as $about_link) : ?>                    
@@ -31,11 +31,14 @@
                         ?>
                             <?php 
                                 foreach ($categorys as $category){
-                                    $cat_link = get_term_link( (int)$category['id'], 'product_cat' ); 
+                                    $cat_id = (int)$category['id'];
+                                    $cat_link = get_term_link( $cat_id, 'product_cat' ); 
+                                    $thumbnail_id = get_term_meta( $cat_id, 'thumbnail_id', true );                     
+                                    $background_image = wp_get_attachment_url( $thumbnail_id );
                                 }
                             ?>
                         <?php endif; ?>                 
-                        <div class="about_link_wrap" style="background-image: url(<?= $about_link['about_link_img'] ?>);">
+                        <div class="about_link_wrap" style="background-image: url(<?= $background_image //$about_link['about_link_img'] ?>);">
                             <a class="about_link"  href="<?= $cat_link ?>">
                                 <?= $about_link['about_link_text'] ?>
                             </a>
@@ -45,6 +48,29 @@
                 <?php endforeach ?>
             </div>
         <?php endif; ?>
+        -->
+
+        <?php if ($about_categories): ?>
+            <div class="about_right">
+                <?php foreach ($about_categories as $about_category) : ?>                            
+                            <?php                           
+                                $cat_id = (int)$about_category['id'];
+                                $category = get_the_category_by_id($cat_id);
+                                $cat_link = get_term_link( $cat_id, 'product_cat' ); 
+                                $thumbnail_id = get_term_meta( $cat_id, 'thumbnail_id', true );                     
+                                $cat_image = wp_get_attachment_url( $thumbnail_id );                                
+                            ?>                                       
+                        <div class="about_link_wrap" style="background-image: url(<?= $cat_image //$about_link['about_link_img'] ?>);">
+                            <a class="about_link"  href="<?= $cat_link ?>">
+                                <?= $category ?>
+                            </a>
+                        </div>
+                        
+                        
+                <?php endforeach ?>
+            </div>
+        <?php endif; ?>
+
     </div>
 </section>
 

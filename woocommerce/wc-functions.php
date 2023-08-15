@@ -78,7 +78,7 @@ function kstehno_add_price_prefix( $price, $product ){
     return $price;
 }
 
-add_action('woocommerce_single_product_summary', 'kstehno_short_attributes', 30);
+add_action('woocommerce_single_product_summary', 'kstehno_short_attributes', 20);
 function kstehno_short_attributes(){
     global $product;
     ?>
@@ -94,7 +94,7 @@ function kstehno_short_attributes(){
                         if(++$i > 2) break;                                                    
                     endforeach;
             ?>   
-            <a href="#tab-title-additional_information">Подробнее</a>         
+            <a class="all_attributes" href="#tab-title-additional_information">Все характеристики</a>         
         </div>
     <?
 }
@@ -182,6 +182,7 @@ function kstehno_archive_wrapper_start(){
                                 <div class="category">
                                     <a class="category_parent_link" href="<?= get_category_link($parent->term_id) ?>"><?= $parent->name; ?></a>
 
+                                    <!--
                                     <ul class="child_categories_list">
                                         <?php 
                                             $child_categories = get_categories(array(
@@ -198,6 +199,7 @@ function kstehno_archive_wrapper_start(){
                                         <?php if($i_child++ == 3) break; ?>
                                         <?php endforeach; ?>
                                     </ul>
+                                    -->
 
                                 </div>
                                 <?php if($i_parents++ == 8 ) break; ?>
@@ -256,15 +258,7 @@ function kstehno_archive_wrapper_start(){
                 </div>    
             <?php endif; ?>
 
-            <?php
-            /**
-             * Hook: woocommerce_archive_description.
-             *
-             * @hooked woocommerce_taxonomy_archive_description - 10
-             * @hooked woocommerce_product_archive_description - 10
-             */
-            do_action( 'woocommerce_archive_description' );
-            ?>
+            
         </div>
     </section>
 	
@@ -277,7 +271,13 @@ endif;
 add_action( 'woocommerce_after_main_content', 'kstehno_archive_wrapper_end', 30 );
 function kstehno_archive_wrapper_end(){
 ?>
-                <?php get_template_part( 'template-parts/block', 'featured-products' ); ?>
+                <section>
+                    <div class="container">
+                        <?php do_action( 'woocommerce_archive_description' ); ?>
+                    </div>
+                </section>
+                
+                <?php //get_template_part( 'template-parts/block', 'featured-products' ); ?>
 				<div class="clearfix"> </div>
 			</div>
 	<?php

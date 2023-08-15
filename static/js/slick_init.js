@@ -6,8 +6,9 @@ $(document).ready(function () {
     var $testimonials = $(sliderWrap).find('.testimonials');
     var $page_images = $(sliderWrap).find('.page_images_slider');
     var $about_icons = $(sliderWrap).find('.about_icons');
-    var $opt_icons = $(sliderWrap).find('.opt_icons');
+    var $opt_images = $(sliderWrap).find('.opt_img_slider');
     var $buy_icons = $(sliderWrap).find('.buy_icons');
+    var $opt_products = $(sliderWrap).find('.opt_products');
 
     $main_banner.slick({
       infinite: true,
@@ -25,11 +26,18 @@ $(document).ready(function () {
       dots: false,
       arrows: false,
       cssEase: 'linear',
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 1,
       responsive: [
         {
           breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1
@@ -76,6 +84,16 @@ $(document).ready(function () {
           }
         }
       ]
+    });
+
+    $opt_products.slick({
+      infinite: true,
+      autoplay: true,
+      dots: false,
+      arrows: false,
+      cssEase: 'linear',
+      slidesToShow: 1,
+      slidesToScroll: 1,      
     });
 
     $testimonials.slick({
@@ -183,37 +201,14 @@ $(document).ready(function () {
       ]
     });
 
-    $opt_icons.slick({
+    $opt_images.slick({
       infinite: true,
-      autoplay: true,
-      dots: false,
+      autoplay: false,
+      dots: true,
       arrows: false,
       cssEase: 'linear',
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 500,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
+      slidesToShow: 1,
+      slidesToScroll: 1      
     });
 
     $buy_icons.slick({

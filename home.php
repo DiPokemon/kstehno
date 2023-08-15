@@ -29,7 +29,7 @@ Template Name: Шаблон главной страницы
         </div>
 </section>
 <?php endif; ?>
-
+                
 <section>
     <div class="container categories_container">
         <div class="categories">
@@ -41,32 +41,40 @@ Template Name: Шаблон главной страницы
                     'parent' => 0
                 ));
             ?>
+
             <?php if(!empty($parents)): ?>
                  
                 <?php 
                     $i_parents = 1;
                     foreach($parents as $parent) : 
+                    
+                    $thumbnail_id = get_term_meta( $parent->term_id, 'thumbnail_id', true ); 
+                    
+                    $background_image = wp_get_attachment_url( $thumbnail_id );
                 ?>
                     
-                    <div class="category">
-                        <a class="category_parent_link" href="<?= get_category_link($parent->term_id) ?>"><?= $parent->name; ?></a>
+                    <div class="category" style="background-image: url('<?= $background_image; ?>')">
+                        <div class="category_inner">
+                            <a class="category_parent_link" href="<?= get_category_link($parent->term_id) ?>"><?= $parent->name; ?></a>
 
-                        <ul class="child_categories_list">
-                            <?php 
-                                $child_categories = get_categories(array(
-                                    'parent' => $parent->term_id,
-                                    'taxonomy'   =>  'product_cat',
-                                    'hide_empty' => false
-                                )); 
-                                $i_child = 1;
-                                foreach ($child_categories as $child_category):
-                            ?>
-                            <li class="child_category">
-                                <a href="<?= get_category_link($child_category->term_id) ?>" class="child_category_link"><?= $child_category->name; ?></a>
-                            </li>
-                            <?php if($i_child++ == 3) break; ?>
-                            <?php endforeach; ?>
-                        </ul>
+                            <ul class="child_categories_list">
+                                <?php 
+                                    $child_categories = get_categories(array(
+                                        'parent' => $parent->term_id,
+                                        'taxonomy'   =>  'product_cat',
+                                        'hide_empty' => false
+                                    )); 
+                                    $i_child = 1;
+                                    foreach ($child_categories as $child_category):
+                                ?>
+                                <li class="child_category">
+                                    <a href="<?= get_category_link($child_category->term_id) ?>" class="child_category_link"><?= $child_category->name; ?></a>
+                                </li>
+                                <?php if($i_child++ == 8) break; ?>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                        
 
                     </div>
                     <?php if($i_parents++ == 8 ) break; ?>
@@ -200,6 +208,57 @@ Template Name: Шаблон главной страницы
     </section>
 
 <?php endif; ?>
+
+<section>
+    <div class="container opt_container">
+        <h2><?= $opt_product_title ?></h2>
+        <div class="opt_products_left" style="background-image:url('<?= $main_opt_image ?>')">
+            <div class="slider_wrapper">
+                <?php  
+                    $args = array(
+                        'post_type'      => 'product',
+                        'posts_per_page' => 8,
+                        'orderby' => 'rand',
+                    );
+
+                    $loop = new WP_Query( $args );
+                ?>
+                <div class="opt_products">
+                    <?php while ( $loop->have_posts() ) : 
+                        $loop->the_post(); 
+                        global $product;
+                    ?>                                
+                                    
+                    <div class="opt_product_wrapper">
+                        <a class="opt_product" href="<?= get_permalink() ?>" >
+                            <div class="opt_product_img">
+                                <?= $product->get_image(); ?>
+                            </div>
+                            <div class="opt_product_content">
+                                <h3 class="woocommerce-loop-product__title"><?= $product->get_name(); ?></h3>                                                
+                            </div>                                                
+                        </a>
+                                        
+                        <div class="add_to_cart">                                        
+                            <?= do_shortcode( '[add_to_cart id=' . $product->get_id() . ' class="price" style=""] ' ) ?>                            
+                        </div>
+                    </div>                                    
+                                    
+                    <?php 
+                        endwhile; 
+                        wp_reset_query();
+                    ?>
+                </div>  
+            </div>
+        </div>
+        <div class="opt_products_right">
+            <h3><?= $main_opt_subtitle ?></h3>
+            <p class="opt_products_text"><?= $main_opt_text ?></p>
+        </div>
+    </div>
+</section>
+
+
 
 
 <?php get_footer(); ?>

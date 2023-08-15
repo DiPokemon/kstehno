@@ -24,5 +24,7 @@ jQuery(document).ready(function(){
             }
         });
         jQuery(this).find('.woocommerce-loop-product__title').height(highestBox);
-    });
+    });    
 });
+
+
