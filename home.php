@@ -210,8 +210,7 @@ Template Name: Шаблон главной страницы
 <?php endif; ?>
 
 <section>
-    <div class="container opt_container">
-        <h2><?= $opt_product_title ?></h2>
+    <div class="container opt_container">        
         <div class="opt_products_left" style="background-image:url('<?= $main_opt_image ?>')">
             <div class="slider_wrapper">
                 <?php  
