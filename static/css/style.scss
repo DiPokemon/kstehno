@@ -2154,6 +2154,17 @@
     .left_column{
         width: 30%;
 
+        .contacts_row{
+            margin-bottom: 20px;
+            p{
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            a{
+                display: block;
+            }
+        }
+
     }
     .right_column{
         width: 70%;

@@ -292,6 +292,21 @@
         
     }
 
+    .contacts_container{
+        gap: 20px;
+    
+        .left_column{
+            width: 50%;    
+        }
+        .right_column{
+            width: 50%;
+    
+            #map{
+                height:300px;
+            }
+        }        
+    }
+
 }
 
 @media(max-width: 600px){
@@ -452,6 +467,22 @@
     
     .buy_texts_container{
         grid-template-columns: 1fr 1fr;
+    }
+
+    .contacts_container{
+        flex-direction: column;
+        gap: 20px;
+    
+        .left_column{
+            width: 100%;    
+        }
+        .right_column{
+            width: 100%;
+    
+            #map{
+                height:300px;
+            }
+        }        
     }
 
     footer{    
