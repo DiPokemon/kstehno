@@ -2018,6 +2018,7 @@
 
 
     .sidebar_shop{
+        display: none;
         max-width: 300px;
         width: 100%;
         border-right: 1px solid $gray;        
@@ -2035,7 +2036,7 @@
     }
 
     .product_grid{
-        width: 70%;
+        width: 100%;
 
         .woocommerce-result-count{
             display: none;

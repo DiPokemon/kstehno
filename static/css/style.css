@@ -2125,6 +2125,7 @@ section.related.products {
           justify-content: space-between;
 }
 .shop_grid .sidebar_shop {
+  display: none;
   max-width: 300px;
   width: 100%;
   border-right: 1px solid #F0F0F0;
@@ -2139,7 +2140,7 @@ section.related.products {
   border-color: #ffa500;
 }
 .shop_grid .product_grid {
-  width: 70%;
+  width: 100%;
 }
 .shop_grid .product_grid .woocommerce-result-count {
   display: none;
@@ -2945,6 +2946,9 @@ footer .footer_bottom a {
   }
   .buy_texts_container {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .shop_grid .product_grid .facetwp-facet-pagination {
+    margin-top: 20px;
   }
 }
 @media (max-width: 791px) {

@@ -93,6 +93,13 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    .shop_grid {
+        .product_grid{
+            .facetwp-facet-pagination{
+                margin-top: 20px;
+            }
+        }
+    } 
 
 }
 

@@ -60,7 +60,7 @@
                                 $thumbnail_id = get_term_meta( $cat_id, 'thumbnail_id', true );                     
                                 $cat_image = wp_get_attachment_url( $thumbnail_id );                                
                             ?>                                       
-                        <div class="about_link_wrap" style="background-image: url(<?= $cat_image //$about_link['about_link_img'] ?>);">
+                        <div class="about_link_wrap" style="background-image: url(<?= $cat_image ?>);">
                             <a class="about_link"  href="<?= $cat_link ?>">
                                 <?= $category ?>
                             </a>

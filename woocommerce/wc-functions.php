@@ -227,9 +227,12 @@ function kstehno_archive_wrapper_start(){
                             <?php 
                                 $i_parents = 1;
                                 foreach($parents as $parent) : 
+                                    $cat_id = $parent->term_id;                                    
+                                    $thumbnail_id = get_term_meta( $cat_id, 'thumbnail_id', true );                     
+                                    $cat_image = wp_get_attachment_url( $thumbnail_id );
                             ?>
                                 
-                                <div class="category">
+                                <div style="background-image: url(<?= $cat_image ?>);" class="category">
                                     <a class="category_parent_link" href="<?= get_category_link($parent->term_id) ?>"><?= $parent->name; ?></a>
 
                                     <ul class="child_categories_list">
