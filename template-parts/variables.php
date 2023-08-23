@@ -63,6 +63,11 @@
   $main_opt_image = carbon_get_the_post_meta( 'main_opt_image' );
   $main_opt_subtitle = carbon_get_the_post_meta( 'main_opt_subtitle' );
   $main_opt_text = carbon_get_the_post_meta( 'main_opt_text' );
+  $main_categories_title = carbon_get_the_post_meta( 'main_categories_title' );
+  $main_info_title = carbon_get_the_post_meta( 'main_info_title' );
+  $main_advantages_title = carbon_get_the_post_meta( 'main_advantages_title' );
+  $main_testimonials_title = carbon_get_the_post_meta( 'main_testimonials_title' );
+
 
   //Pages
   $page_images = carbon_get_the_post_meta( 'page_images' );

@@ -32,6 +32,7 @@ Template Name: Шаблон главной страницы
                 
 <section>
     <div class="container categories_container">
+        <h2><?= $main_categories_title ?></h2>  
         <div class="categories">
             <?php 
                 $parents = get_categories(array(
@@ -106,6 +107,7 @@ Template Name: Шаблон главной страницы
 <?php if ($info_blocks) :?>
     <section>
         <div class="container">
+            <h2><?= $main_info_title ?></h2>  
             <div class="slider_wrapper">
                 <?php foreach( $info_blocks as $info_block ) : ?>
                     <div class="info_block">
@@ -141,6 +143,7 @@ Template Name: Шаблон главной страницы
 <?php if ($advantages) :?>
     <section>
         <div class="container">
+            <h2><?= $main_advantages_title ?></h2>  
             <div class="slider_wrapper">
                 <div class="advantages">
                     <?php foreach( $advantages as $advantage ) : ?>
@@ -160,6 +163,7 @@ Template Name: Шаблон главной страницы
 <?php if ($testimonials) :?>
     <section>
         <div class="container">
+            <h2><?= $main_testimonials_title ?></h2>  
             <div class="slider_wrapper">
                 <div class="testimonials">
                     
@@ -210,7 +214,8 @@ Template Name: Шаблон главной страницы
 <?php endif; ?>
 
 <section>
-    <div class="container opt_container">        
+    <div class="container opt_container">
+        <h2><?= $main_opt_title ?></h2>    
         <div class="opt_products_left" style="background-image:url('<?= $main_opt_image ?>')">
             <div class="slider_wrapper">
                 <?php  

@@ -56,6 +56,16 @@ Container::make( 'post_meta', __( 'Main page fields', 'kstehno' ) )
                     ->set_width(50),                
             ) ),
 
+        
+        Field::make( 'text', 'main_categories_title', __( 'Categories title', 'kstehno' ) )                    
+            ->set_width(33),
+        Field::make( 'text', 'main_info_title', __( 'Info block title', 'kstehno' ) )                    
+            ->set_width(33),
+        Field::make( 'text', 'main_advantages_title', __( 'Advantages title', 'kstehno' ) )                    
+            ->set_width(33),
+        Field::make( 'text', 'main_testimonials_title', __( 'Testimonials title', 'kstehno' ) )                    
+            ->set_width(33),
+
         Field::make( 'text', 'main_opt_title', __( 'Opt title', 'kstehno' ) )                    
             ->set_width(30),
         Field::make( 'image', 'main_opt_image', __( 'Image', 'kstehno' ) )
