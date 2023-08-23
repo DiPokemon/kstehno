@@ -169,9 +169,13 @@ Template Name: Шаблон главной страницы
                             </div>                                                
                         </a>
                                         
-                        <div class="add_to_cart">                                        
-                            <?= do_shortcode( '[add_to_cart id=' . $product->get_id() . ' class="price" style=""] ' ) ?>                            
-                        </div>
+                        <?php if($product->get_price()) :?>
+                            <div class="add_to_cart">                                        
+                                <?= do_shortcode( '[add_to_cart id=' . $product->get_id() . ' class="price" style=""] ' ) ?>                            
+                            </div>
+                        <?php else: ?>
+                            <a href="<?= get_permalink( $product->get_id()); ?>" >Подробнее</a>
+                        <?php endif; ?>
                     </div>                                    
                                     
                     <?php 

@@ -50,9 +50,9 @@
                                         <!-- <a class="more_info" href="<?= get_permalink( $product->get_id()); ?>">Подробнее</a> -->
 
                                         <?php if($product->get_price()) :?>
-                                        <div class="add_to_cart">                                        
-                                            <?= do_shortcode( '[add_to_cart id=' . $product->get_id() . ' class="price" style=""] ' ) ?>                            
-                                        </div>
+                                            <div class="add_to_cart">                                        
+                                                <?= do_shortcode( '[add_to_cart id=' . $product->get_id() . ' class="price" style=""] ' ) ?>                            
+                                            </div>
                                         <?php else: ?>
                                             <a href="<?= get_permalink( $product->get_id()); ?>" >Подробнее</a>
                                         <?php endif; ?>
