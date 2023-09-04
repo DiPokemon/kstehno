@@ -2227,9 +2227,6 @@ section.related.products {
 .cart-collaterals .cart_totals table {
   border-collapse: collapse;
 }
-.cart-collaterals .cart_totals .shop_table {
-  width: 100%;
-}
 .cart-collaterals .cart_totals .shop_table .cart-subtotal,
 .cart-collaterals .cart_totals .shop_table .woocommerce-shipping-totals {
   display: none;
@@ -2239,7 +2236,6 @@ section.related.products {
 }
 .cart-collaterals .cart_totals td {
   border-bottom: 1px solid #F0F0F0;
-  padding-left: 45%;
   padding-bottom: 10px;
   padding-top: 10px;
 }
