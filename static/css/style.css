@@ -2245,8 +2245,6 @@ section.related.products {
 .cart-collaterals .cart_totals .wc-proceed-to-checkout .checkout-button {
   border-radius: 5px;
   display: block;
-  width: 40%;
-  float: right;
   margin-top: 15px;
   padding: 10px;
   font-weight: 500;
