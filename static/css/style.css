@@ -2165,6 +2165,59 @@ section.related.products {
 }
 
 /* === CART AND CHECKOUT === */
+.woocommerce-cart-form .cart-collaterals .cart_totals {
+  margin-top: 100px;
+}
+.woocommerce-cart-form .cart-collaterals .cart_totals table {
+  border-collapse: collapse;
+}
+.woocommerce-cart-form .cart-collaterals .cart_totals .shop_table {
+  width: 100%;
+}
+.woocommerce-cart-form .cart-collaterals .cart_totals .shop_table .cart-subtotal,
+.woocommerce-cart-form .cart-collaterals .cart_totals .shop_table .woocommerce-shipping-totals {
+  display: none;
+}
+.woocommerce-cart-form .cart-collaterals .cart_totals .shop_table .order-total th, .woocommerce-cart-form .cart-collaterals .cart_totals .shop_table .order-total td {
+  border-bottom: 0;
+}
+.woocommerce-cart-form .cart-collaterals .cart_totals td {
+  border-bottom: 1px solid #F0F0F0;
+  padding-left: 45%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.woocommerce-cart-form .cart-collaterals .cart_totals .woocommerce-shipping-destination {
+  color: #2467ef;
+}
+.woocommerce-cart-form .cart-collaterals .cart_totals .wc-proceed-to-checkout .checkout-button {
+  border-radius: 5px;
+  display: block;
+  width: 40%;
+  float: right;
+  margin-top: 15px;
+  padding: 10px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #2467ef 50%, #ffa500 50%);
+  background-size: 300%;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.woocommerce-cart-form .cart-collaterals .cart_totals .wc-proceed-to-checkout .checkout-button:hover {
+  color: #fff;
+  background-position: right;
+}
+.woocommerce-cart-form .cart-collaterals h2, .woocommerce-cart-form .cart-collaterals th {
+  color: #2467ef;
+}
+.woocommerce-cart-form .cart-collaterals th {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+.woocommerce-cart-form .cart-collaterals .woocommerce-Price-amount {
+  color: #ffa500;
+}
 .woocommerce-cart-form .woocommerce-cart-form__contents {
   width: 100%;
 }
@@ -2188,6 +2241,32 @@ section.related.products {
   height: 100%;
   width: 100%;
   border-radius: 50%;
+}
+.woocommerce-cart-form .woocommerce-cart-form__contents .cart_item .product-price,
+.woocommerce-cart-form .woocommerce-cart-form__contents .cart_item .product-subtotal {
+  color: #ffa500;
+}
+.woocommerce-cart-form .woocommerce-cart-form__contents .cart_item .input-text {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  color: #ffa500;
+  border-radius: 5px;
+  border-color: #2467ef;
+}
+.woocommerce-cart-form .woocommerce-cart-form__contents .actions .button {
+  background: linear-gradient(135deg, #2467ef 50%, #ffa500 50%);
+  background-size: 300%;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  float: right;
+  font-weight: 500;
+}
+.woocommerce-cart-form .woocommerce-cart-form__contents .actions .button:hover {
+  color: #fff;
+  background-position: right;
 }
 
 .woocommerce-checkout #customer_details,
@@ -2823,7 +2902,7 @@ footer .footer_bottom a {
 /* -- PRODUCT PAGE --*/
 /*-- FORM -- */
 .horizontal_form {
-  margin: 30px 0px;
+  margin: 70px 0px;
   border: 1px solid #F0F0F0;
   padding: 10px;
   border-radius: 10px;
@@ -2834,9 +2913,11 @@ footer .footer_bottom a {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 600;
+  color: #2467ef;
 }
 .horizontal_form .form_subtitle {
   font-weight: 500;
+  color: #2467ef;
 }
 .horizontal_form .wpcf7-form {
   margin-top: 20px;
@@ -2862,7 +2943,11 @@ footer .footer_bottom a {
 .horizontal_form .wpcf7-form .wpcf7-form-control-wrap .wpcf7-form-control.wpcf7-textarea {
   padding-top: 7px;
 }
+.horizontal_form .wpcf7-form .wpcf7-form-control {
+  padding-left: 10px;
+}
 .horizontal_form .wpcf7-form .wpcf7-form-control.wpcf7-submit {
+  color: #ffa500;
   width: 24%;
   border: 1px solid #ffa500;
   border-radius: 5px;
@@ -3111,6 +3196,12 @@ footer .footer_bottom a {
   }
   .contacts_container .right_column #map {
     height: 300px;
+  }
+  .woocommerce-cart-form .cart-collaterals .cart_totals td {
+    padding-left: 0;
+  }
+  .woocommerce-cart-form .cart-collaterals .cart_totals .wc-proceed-to-checkout .checkout-button {
+    width: 50% !important;
   }
 }
 @media (max-width: 600px) {

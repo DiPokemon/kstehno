@@ -314,6 +314,22 @@
         }        
     }
 
+    .woocommerce-cart-form{
+
+        .cart-collaterals{    
+            .cart_totals{    
+                td{                    
+                    padding-left: 0;
+                }
+
+                .wc-proceed-to-checkout{
+                    .checkout-button{
+                        width:50% !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 600px){

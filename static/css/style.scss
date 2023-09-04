@@ -2071,6 +2071,81 @@
 
 /* === CART AND CHECKOUT === */
 .woocommerce-cart-form{
+
+    .cart-collaterals{
+
+        .cart_totals{
+            margin-top:100px;
+
+            table{
+                border-collapse: collapse; 
+            }
+
+            .shop_table{
+                width:100%;
+
+                .cart-subtotal,
+                .woocommerce-shipping-totals{
+                    display: none;
+                }
+                
+                .order-total{
+                    th, td{
+                        border-bottom:0;
+                    }
+                }
+            }
+
+            td{
+                border-bottom: 1px solid $gray;
+                padding-left: 45%;
+                padding-bottom:10px;
+                padding-top:10px;
+            }
+
+            
+
+            .woocommerce-shipping-destination{
+                color: $blue;
+            }
+
+            .wc-proceed-to-checkout{
+                .checkout-button{
+                    border-radius:5px;
+                    display: block;
+                    width: 40%;
+                    float:right;
+                    margin-top:15px;
+                    padding: 10px; 
+                    font-weight:500;
+                    background: linear-gradient(135deg, $blue 50%, $orange 50%);
+                    background-size: 300%;
+                    color: $white; 
+                    text-align: center; 
+                    cursor: pointer; 
+
+                    &:hover{
+                        color: $white;
+                        background-position: right;
+                    }
+                }
+            }
+        }
+
+        h2, th{
+            color:$blue;
+        }
+
+        th{
+            border-bottom: 1px solid #ddd; 
+            padding: 15px; 
+        }
+
+        .woocommerce-Price-amount{
+            color:$orange;
+        }
+    }
+
     .woocommerce-cart-form__contents{
         width: 100%;
 
@@ -2102,7 +2177,39 @@
                     border-radius: 50%;
                 }
             }
+
+            .product-price,
+            .product-subtotal{
+                color: $orange;
+            }
+
+            .input-text{
+                width:50px;
+                height:40px;
+                text-align:center;
+                color:$orange;
+                border-radius:5px;
+                border-color:$blue;
+            }
             
+        }
+
+        .actions{
+            .button{
+                background: linear-gradient(135deg, $blue 50%, $orange 50%);
+                background-size: 300%;
+                color: $white;
+                padding: 10px;
+                border: none;
+                border-radius:5px;
+                float: right;
+                font-weight: 500;
+
+                &:hover{
+                    color: $white;
+                    background-position: right;
+                }
+            }
         }
         
     }
@@ -2852,7 +2959,7 @@ footer{
 /*-- FORM -- */
 
 .horizontal_form {
-    margin: 30px 0px;
+    margin: 70px 0px;
     border: 1px solid $gray;
     padding: 10px;
     border-radius: 10px;
@@ -2862,10 +2969,12 @@ footer{
         font-size: 20px;
         text-transform: uppercase;
         font-weight: 600;
+        color: $blue;
     }
 
     .form_subtitle{
         font-weight: 500;
+        color: $blue;
     }
 
     .wpcf7-form {
@@ -2891,8 +3000,10 @@ footer{
         }
         
         .wpcf7-form-control{
+            padding-left:10px;
 
             &.wpcf7-submit{
+                color: $orange;
                 width: 24%;
                 border: 1px solid $orange;
                 border-radius: 5px;
