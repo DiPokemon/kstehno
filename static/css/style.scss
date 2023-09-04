@@ -2162,6 +2162,10 @@
                 th, td{
                     border-bottom:0;
                 }
+
+                th{
+                    padding: 15px 15px 15px 0px;
+                }
             }
         }
 
@@ -2182,7 +2186,7 @@
             .checkout-button{
                 border-radius:5px;
                 display: block;
-                //width: 40%;
+                max-width: 300px;
                 //float:right;
                 margin-top:15px;
                 padding: 10px; 
