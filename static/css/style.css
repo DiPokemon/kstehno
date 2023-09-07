@@ -1158,6 +1158,7 @@ section.related.products {
   border-radius: 10px 10px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 200px;
 }
 .featured_products .slick-track .featured_product_wrapper .featured_product .featured_product_content {
   padding: 10px;
@@ -1377,6 +1378,7 @@ section.related.products {
   border-radius: 10px 10px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 200px;
 }
 .opt_container .opt_products_left .opt_products .slick-track .opt_product_wrapper .opt_product .opt_product_content {
   padding: 10px;
@@ -1758,6 +1760,7 @@ section.related.products {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 3px 3px 0px 0px;
+  height: 200px;
 }
 .products .product .woocommerce-loop-product__title {
   font-size: 16px;
@@ -2010,6 +2013,7 @@ section.related.products {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px 10px 0px 0px;
+  height: 200px;
 }
 .single-product .upsells .product h2,
 .single-product .related .product h2 {

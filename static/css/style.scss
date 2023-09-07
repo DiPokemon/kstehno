@@ -1008,6 +1008,7 @@
                     img{
                         border-radius: 10px 10px 0px 0px;
                         object-fit: cover;
+                        height: 200px;
                     }
                 }
 
@@ -1226,6 +1227,7 @@
                             img{
                                 border-radius: 10px 10px 0px 0px;
                                 object-fit: cover;
+                                height: 200px;
                             }
                         }
         
@@ -1594,6 +1596,7 @@
         img{
             object-fit: cover;
             border-radius: 3px 3px 0px 0px;
+            height: 200px;
         }
 
         .woocommerce-loop-product__title{
@@ -1897,6 +1900,7 @@
             img{
                 object-fit: cover;
                 border-radius: 10px 10px 0px 0px;
+                height: 200px;
             }
 
             h2{
