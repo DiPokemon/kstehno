@@ -41,7 +41,7 @@
                                     <div class="featured_product_wrapper">
                                         <a class="featured_product" href="<?= get_permalink( $product->get_id()); ?>" >
                                             <div class="featured_product_img">
-                                                <?= $product->get_image('woocommerce_gallery_thumbnail'); ?>
+                                                <?= $product->get_image('woocommerce_single'); ?>
                                             </div>
                                             <div class="featured_product_content">
                                                 <h3 class="woocommerce-loop-product__title"><?= $product->get_name(); ?></h3>                                                
