@@ -38,7 +38,7 @@ Template Name: Шаблон главной страницы
                 $parents = get_categories(array(
                     'hierarchical' => false,
                     'taxonomy'   =>  'product_cat',
-                    'hide_empty' => false,
+                    'hide_empty' => true,
                     'parent' => 0
                 ));
             ?>

@@ -15,7 +15,7 @@
                             $parents = get_categories(array(
                                 'hierarchical' => false,
                                 'taxonomy'   =>  'product_cat',
-                                'hide_empty' => false,
+                                'hide_empty' => true,
                                 'parent' => 0
                             ));
                         ?>
@@ -37,7 +37,7 @@
                                             $child_categories = get_categories(array(
                                                 'parent' => $parent->term_id,
                                                 'taxonomy'   =>  'product_cat',
-                                                'hide_empty' => false
+                                                'hide_empty' => true
                                             )); 
                                             $i_child = 1;
                                             foreach ($child_categories as $child_category):
@@ -45,7 +45,7 @@
                                         <li class="child_category">
                                             <a href="<?= get_category_link($child_category->term_id) ?>" class="child_category_link"><?= $child_category->name; ?></a>
                                         </li>
-                                        <?php if($i_child++ == 3) break; ?>
+                                        <?php //if($i_child++ == 3) break; ?>
                                         <?php endforeach; ?>
                                     </ul>
 

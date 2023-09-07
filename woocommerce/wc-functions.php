@@ -165,7 +165,7 @@ function kstehno_archive_wrapper_start(){
                             $parents = get_categories(array(
                                 'hierarchical' => false,
                                 'taxonomy'   =>  'product_cat',
-                                'hide_empty' => false,
+                                'hide_empty' => true,
                                 'parent' => $term->term_id
                             ));
                         
@@ -202,7 +202,7 @@ function kstehno_archive_wrapper_start(){
                                     -->
 
                                 </div>
-                                <?php if($i_parents++ == 8 ) break; ?>
+                                <?php //if($i_parents++ == 8 ) break; ?>
                             <?php endforeach; ?>
 
                         <?php endif; ?>
@@ -218,7 +218,7 @@ function kstehno_archive_wrapper_start(){
                             $parents = get_categories(array(
                                 'hierarchical' => false,
                                 'taxonomy'   =>  'product_cat',
-                                'hide_empty' => false,
+                                'hide_empty' => true,
                                 'parent' => 0
                             ));
                         ?>
