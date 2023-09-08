@@ -12,7 +12,7 @@
                                     'menu_class'      => 'menu_list',          
                                     'fallback_cb'     => 'wp_page_menu',            
                                     'link_class'     => 'menu_link',           
-                                    'theme_location'  => 'middle_menu',
+                                    'theme_location'  => 'main_menu',
                                     'add_li_class'    => 'menu_item',
                                     'echo'          => false,
                                 );

@@ -2515,6 +2515,7 @@ footer{
             .middle_menu{
                 .menu_list{
                     display: flex;
+                    flex-direction: column;
 
                     .menu-item{
 
@@ -2557,9 +2558,9 @@ footer{
             width: 40%;
             .footer_contacts{
                 display: flex;
-                //flex-direction: column;
+                flex-direction: column;
                 gap: 15px;
-                align-items: center;
+                align-items: flex-end;
                 .footer_phone-link{
 
                 }
