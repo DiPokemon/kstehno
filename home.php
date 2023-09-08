@@ -140,54 +140,56 @@ Template Name: Шаблон главной страницы
 <?php endif; ?>
 
 <section>
-    <div class="container opt_container">
-        <h2><?= $main_opt_title ?></h2>    
-        <div class="opt_products_left" style="background-image:url('<?= $main_opt_image ?>')">
-            <div class="slider_wrapper">
-                <?php  
-                    $args = array(
-                        'post_type'      => 'product',
-                        'posts_per_page' => 8,
-                        'orderby' => 'rand',
-                    );
+    <div class="container ">
+        <h2><?= $main_opt_title ?></h2>
+        <div class="opt_container">        
+            <div class="opt_products_left" style="background-image:url('<?= $main_opt_image ?>')">
+                <div class="slider_wrapper">
+                    <?php  
+                        $args = array(
+                            'post_type'      => 'product',
+                            'posts_per_page' => 8,
+                            'orderby' => 'rand',
+                        );
 
-                    $loop = new WP_Query( $args );
-                ?>
-                <div class="opt_products">
-                    <?php while ( $loop->have_posts() ) : 
-                        $loop->the_post(); 
-                        global $product;
-                    ?>                                
-                                    
-                    <div class="opt_product_wrapper">
-                        <a class="opt_product" href="<?= get_permalink() ?>" >
-                            <div class="opt_product_img">
-                                <?= $product->get_image(); ?>
-                            </div>
-                            <div class="opt_product_content">
-                                <h3 class="woocommerce-loop-product__title"><?= $product->get_name(); ?></h3>                                                
-                            </div>                                                
-                        </a>
-                                        
-                        <?php if($product->get_price()) :?>
-                            <div class="add_to_cart">                                        
-                                <?= do_shortcode( '[add_to_cart id=' . $product->get_id() . ' class="price" style=""] ' ) ?>                            
-                            </div>
-                        <?php else: ?>
-                            <a href="<?= get_permalink( $product->get_id()); ?>" >Подробнее</a>
-                        <?php endif; ?>
-                    </div>                                    
-                                    
-                    <?php 
-                        endwhile; 
-                        wp_reset_query();
+                        $loop = new WP_Query( $args );
                     ?>
-                </div>  
+                    <div class="opt_products">
+                        <?php while ( $loop->have_posts() ) : 
+                            $loop->the_post(); 
+                            global $product;
+                        ?>                                
+                                        
+                        <div class="opt_product_wrapper">
+                            <a class="opt_product" href="<?= get_permalink() ?>" >
+                                <div class="opt_product_img">
+                                    <?= $product->get_image(); ?>
+                                </div>
+                                <div class="opt_product_content">
+                                    <h3 class="woocommerce-loop-product__title"><?= $product->get_name(); ?></h3>                                                
+                                </div>                                                
+                            </a>
+                                            
+                            <?php if($product->get_price()) :?>
+                                <div class="add_to_cart">                                        
+                                    <?= do_shortcode( '[add_to_cart id=' . $product->get_id() . ' class="price" style=""] ' ) ?>                            
+                                </div>
+                            <?php else: ?>
+                                <a href="<?= get_permalink( $product->get_id()); ?>" >Подробнее</a>
+                            <?php endif; ?>
+                        </div>                                    
+                                        
+                        <?php 
+                            endwhile; 
+                            wp_reset_query();
+                        ?>
+                    </div>  
+                </div>
             </div>
-        </div>
-        <div class="opt_products_right">
-            <h3><?= $main_opt_subtitle ?></h3>
-            <p class="opt_products_text"><?= $main_opt_text ?></p>
+            <div class="opt_products_right">
+                <h3><?= $main_opt_subtitle ?></h3>
+                <p class="opt_products_text"><?= $main_opt_text ?></p>
+            </div>
         </div>
     </div>
 </section>

@@ -45,6 +45,13 @@ a:hover{
 section{
     display: flex;
     justify-content: center;
+
+    .container{
+        h2{
+            padding-bottom: 20px;
+            color:$orange;
+        }
+    }
 }
 
 

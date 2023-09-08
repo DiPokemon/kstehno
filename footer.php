@@ -29,7 +29,7 @@
                                 }
                                 echo $temp_menu;
                             ?>      
-                        </div>
+                        </div>                        
 
                         <div class="footer_top_middle">
                             <div class="logo_wrapper">
@@ -48,18 +48,20 @@
                                     <a href="tel:<?= $contacts_main_phone_href ?>" class="footer_phone-link"><i class="fa-solid fa-phone"></i><?= $contacts_main_phone_front ?></a>
                                     <a href="tel:<?= $contacts_main_phone_href ?>" class="footer_phone-link-mob"><i class="fa-solid fa-phone"></i></a>
                                 <?php endif; ?>
-                                <?php get_template_part( 'template-parts/socials' ); ?>  
+                                <?php get_template_part( 'template-parts/socials' ); ?>                                
                             </div>  
 
+                            <!--
                             <div class="footer_search">
                                 <?= do_shortcode('[aws_search_form]'); ?>
                             </div>
-
+                            -->
+                            <!--
                             <div class="footer_actions">
                                 <a onclick="openModal()" href="javascript:void(0)" class="search_icon_mob"><i class="fa-solid fa-magnifying-glass"></i></a>
-                                <!--<a href="" class="btn_compare" data-title="Сравнение"><i class="fa-solid fa-code-compare"></i></a>
-                                <a href="" class="btn_favorites" data-title="Избранное"><i class="fa-regular fa-heart"></i></a>-->
-                                <!-- <a onclick="openCartPanel()" href="javascript:void(0)" class="btn_mini_cart" data-title="Корзина"><i class="fa-solid fa-cart-shopping"></i><?php //kstehno_woocommerce_cart_link() ?></a> -->
+                                <a href="" class="btn_compare" data-title="Сравнение"><i class="fa-solid fa-code-compare"></i></a>
+                                <a href="" class="btn_favorites" data-title="Избранное"><i class="fa-regular fa-heart"></i></a>
+                                 <a onclick="openCartPanel()" href="javascript:void(0)" class="btn_mini_cart" data-title="Корзина"><i class="fa-solid fa-cart-shopping"></i><?php //kstehno_woocommerce_cart_link() ?></a>
                                 <a onclick="openCartPanel()" href="javascript:void(0)" class="btn_mini_cart" data-title="Корзина"><i class="fa-solid fa-cart-shopping"></i>
                                     <span class="cart-contents"> 
                                         <span class="count">
@@ -83,6 +85,7 @@
                                     <?= do_shortcode('[aws_search_form]'); ?>
                                 </div>
                             </div> 
+                            -->
                         </div>                                             
                     </div>
 

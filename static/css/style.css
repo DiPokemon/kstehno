@@ -145,6 +145,10 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
 }
+section .container h2 {
+  padding-bottom: 20px;
+  color: #ffa500;
+}
 
 .flex {
   display: -webkit-box;
