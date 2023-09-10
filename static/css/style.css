@@ -1076,8 +1076,6 @@ section.related.products {
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 12px -10px #000;
           box-shadow: 0px 0px 12px -10px #000;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: 200px;
@@ -1087,10 +1085,11 @@ section.related.products {
           backdrop-filter: blur(2px);
   padding: 10px;
   height: 100%;
+  border-radius: 10px;
 }
 .categories_container .categories .category:hover {
-  -webkit-box-shadow: 0px 0px 11px -5px #ffa500;
-          box-shadow: 0px 0px 11px -5px #ffa500;
+  -webkit-box-shadow: 0px 0px 12px -10px #ffa500;
+          box-shadow: 0px 0px 12px -10px #ffa500;
 }
 .categories_container .categories .category:hover .category_inner {
   -webkit-backdrop-filter: blur(2px) brightness(0.8);
