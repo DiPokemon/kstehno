@@ -946,7 +946,7 @@
                 box-shadow: 0px 0px 12px -10px $orange;
 
                 .category_inner{
-                    backdrop-filter: blur(2px) brightness(0.8);
+                    backdrop-filter: brightness(0.8);
                     color: $white;
                     border-radius: 10px;
                 }

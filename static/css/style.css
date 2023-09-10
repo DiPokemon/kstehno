@@ -1092,8 +1092,8 @@ section.related.products {
           box-shadow: 0px 0px 12px -10px #ffa500;
 }
 .categories_container .categories .category:hover .category_inner {
-  -webkit-backdrop-filter: blur(2px) brightness(0.8);
-          backdrop-filter: blur(2px) brightness(0.8);
+  -webkit-backdrop-filter: brightness(0.8);
+          backdrop-filter: brightness(0.8);
   color: #fff;
   border-radius: 10px;
 }
