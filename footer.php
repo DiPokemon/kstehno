@@ -48,7 +48,10 @@
                                     <a href="tel:<?= $contacts_main_phone_href ?>" class="footer_phone-link"><i class="fa-solid fa-phone"></i><?= $contacts_main_phone_front ?></a>
                                     <a href="tel:<?= $contacts_main_phone_href ?>" class="footer_phone-link-mob"><i class="fa-solid fa-phone"></i></a>
                                 <?php endif; ?>
-                                <?php get_template_part( 'template-parts/socials' ); ?>                                
+                                <?php get_template_part( 'template-parts/socials' ); ?>
+                                <div class="footer_address">                                    
+                                    <?= $address_city ?>, <?= $address_street ?>, <?= $address_building ?>
+                                </div>                              
                             </div>  
 
                             <!--

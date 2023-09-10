@@ -120,6 +120,8 @@
                         //width: 150px;
                         object-fit: contain;
                         height: auto;
+                        max-width:150px;
+                        margin: 0 auto;
                     }
                 }                
     
@@ -819,7 +821,11 @@
 
                     &::-webkit-scrollbar {
                         display: none;
-                    }                    
+                    }     
+                    
+                    .menu_link{
+                        white-space: nowrap;
+                    }
                 }
             }
 
