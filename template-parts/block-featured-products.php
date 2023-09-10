@@ -33,12 +33,12 @@
                     <div class="container">
                         <h2>Популярные товары</h2>
                         <div class="slider_wrapper ">
-                            <div class="featured_products">
+                            <div class="featured_products products">
                                 <?php foreach ($featured_products_arr as $featured_product): ?>
                                     <?php $product = wc_get_product( $featured_product ); ?>                                  
                                     
                                     
-                                    <div class="featured_product_wrapper">
+                                    <div class="featured_product_wrapper product">
                                         <a class="featured_product" href="<?= get_permalink( $product->get_id()); ?>" >
                                             <div class="featured_product_img">
                                                 <?= $product->get_image('woocommerce_single'); ?>
@@ -54,7 +54,7 @@
                                                 <?= do_shortcode( '[add_to_cart id=' . $product->get_id() . ' class="price" style=""] ' ) ?>                            
                                             </div>
                                         <?php else: ?>
-                                            <a href="<?= get_permalink( $product->get_id()); ?>" >Подробнее</a>
+                                            <a class="button" href="<?= get_permalink( $product->get_id()); ?>" >Подробнее</a>
                                         <?php endif; ?>
                                     </div>
                                     

@@ -154,13 +154,13 @@ Template Name: Шаблон главной страницы
 
                         $loop = new WP_Query( $args );
                     ?>
-                    <div class="opt_products">
+                    <div class="opt_products products">
                         <?php while ( $loop->have_posts() ) : 
                             $loop->the_post(); 
                             global $product;
                         ?>                                
                                         
-                        <div class="opt_product_wrapper">
+                        <div class="opt_product_wrapper product">
                             <a class="opt_product" href="<?= get_permalink() ?>" >
                                 <div class="opt_product_img">
                                     <?= $product->get_image(); ?>
@@ -175,7 +175,7 @@ Template Name: Шаблон главной страницы
                                     <?= do_shortcode( '[add_to_cart id=' . $product->get_id() . ' class="price" style=""] ' ) ?>                            
                                 </div>
                             <?php else: ?>
-                                <a href="<?= get_permalink( $product->get_id()); ?>" >Подробнее</a>
+                                <a class="button" href="<?= get_permalink( $product->get_id()); ?>" >Подробнее</a>
                             <?php endif; ?>
                         </div>                                    
                                         
