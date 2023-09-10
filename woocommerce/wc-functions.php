@@ -233,24 +233,26 @@ function kstehno_archive_wrapper_start(){
                             ?>
                                 
                                 <div style="background-image: url(<?= $cat_image ?>);" class="category">
-                                    <a class="category_parent_link" href="<?= get_category_link($parent->term_id) ?>"><?= $parent->name; ?></a>
+                                    <div class="category_inner">
+                                        <a class="category_parent_link" href="<?= get_category_link($parent->term_id) ?>"><?= $parent->name; ?></a>
 
-                                    <ul class="child_categories_list">
-                                        <?php 
-                                            $child_categories = get_categories(array(
-                                                'parent' => $parent->term_id,
-                                                'taxonomy'   =>  'product_cat',
-                                                'hide_empty' => false
-                                            )); 
-                                            $i_child = 1;
-                                            foreach ($child_categories as $child_category):
-                                        ?>
-                                        <li class="child_category">
-                                            <a href="<?= get_category_link($child_category->term_id) ?>" class="child_category_link"><?= $child_category->name; ?></a>
-                                        </li>
-                                        <?php if($i_child++ == 3) break; ?>
-                                        <?php endforeach; ?>
-                                    </ul>
+                                        <ul class="child_categories_list">
+                                            <?php 
+                                                $child_categories = get_categories(array(
+                                                    'parent' => $parent->term_id,
+                                                    'taxonomy'   =>  'product_cat',
+                                                    'hide_empty' => false
+                                                )); 
+                                                $i_child = 1;
+                                                foreach ($child_categories as $child_category):
+                                            ?>
+                                            <li class="child_category">
+                                                <a href="<?= get_category_link($child_category->term_id) ?>" class="child_category_link"><?= $child_category->name; ?></a>
+                                            </li>
+                                            <?php if($i_child++ == 3) break; ?>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </div>                                   
 
                                 </div>
                                 <?php if($i_parents++ == 8 ) break; ?>
