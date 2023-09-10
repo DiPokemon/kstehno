@@ -49,10 +49,11 @@
                                     <a href="tel:<?= $contacts_main_phone_href ?>" class="footer_phone-link-mob"><i class="fa-solid fa-phone"></i></a>
                                 <?php endif; ?>
                                 <?php get_template_part( 'template-parts/socials' ); ?>
-                                <div class="footer_address">                                    
-                                    <?= $address_city ?>, <?= $address_street ?>, <?= $address_building ?>
-                                </div>                              
-                            </div>  
+                                                            
+                            </div> 
+                            <div class="footer_address">                                    
+                                <?= $address_city ?>, <?= $address_street ?>, <?= $address_building ?>
+                            </div>   
 
                             <!--
                             <div class="footer_search">

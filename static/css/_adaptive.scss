@@ -159,39 +159,43 @@
         }
     }
 
-    .footer_top{
-        .footer_top_right{
-            .footer_contacts{
-                gap: 20px;
-
-                .footer_phone-link{
-                    display: none;
-                }
-
-                .footer_phone-link-mob{
-                    display: flex;
-                }                    
-
-                .socials_links{
-                    display: flex;
+    footer{
+        .footer_top{
+            .footer_top_right{
+                .footer_contacts{
                     gap: 20px;
-                    font-size: 24px;
-                }
+                    flex-direction: row;
 
-                a{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 24px;
-                    border: 1px solid $blue;
-                    border-radius: 50%;
-                    padding: 5px;
+                    .footer_phone-link{
+                        display: none;
+                    }
+
+                    .footer_phone-link-mob{
+                        display: flex;
+                    }                    
+
+                    .socials_links{
+                        display: flex;
+                        gap: 20px;
+                        font-size: 24px;
+                    }
+
+                    a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 40px;
+                        height: 40px;
+                        font-size: 24px;
+                        border: 1px solid $blue;
+                        border-radius: 50%;
+                        padding: 5px;
+                    }
                 }
             }
         }
     }
+    
     .main_banner{    
         .slick-track{
             .banner{
@@ -514,6 +518,7 @@
             .footer_top_left{
                 width: 100%;
                 margin-bottom: 20px;
+                justify-content: center;
 
                 .menu_list{
                     display: flex;
@@ -526,6 +531,12 @@
     
             .footer_top_middle{
                 width: 50%;
+
+                .logo_wrapper{
+                    img{
+                        max-width: 150px;
+                    }
+                }
             }
     
             .footer_top_right{
@@ -557,6 +568,14 @@
 @media(max-width: 500px){
     .categories{
         grid-template-columns: 1fr;    
+    }
+}
+
+@media(max-width: 450px){
+    .footer{
+        .footer_bottom{
+            flex-direction: column;
+        }
     }
 }
 

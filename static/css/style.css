@@ -3105,25 +3105,29 @@ footer .footer_bottom a {
   .header_container .header_wrapper .header_middle .header_search {
     max-width: 150px;
   }
-  .footer_top .footer_top_right .footer_contacts {
+  footer .footer_top .footer_top_right .footer_contacts {
     gap: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  .footer_top .footer_top_right .footer_contacts .footer_phone-link {
+  footer .footer_top .footer_top_right .footer_contacts .footer_phone-link {
     display: none;
   }
-  .footer_top .footer_top_right .footer_contacts .footer_phone-link-mob {
+  footer .footer_top .footer_top_right .footer_contacts .footer_phone-link-mob {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .footer_top .footer_top_right .footer_contacts .socials_links {
+  footer .footer_top .footer_top_right .footer_contacts .socials_links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 20px;
     font-size: 24px;
   }
-  .footer_top .footer_top_right .footer_contacts a {
+  footer .footer_top .footer_top_right .footer_contacts a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3383,6 +3387,9 @@ footer .footer_bottom a {
   footer .footer_top .footer_top_left {
     width: 100%;
     margin-bottom: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   footer .footer_top .footer_top_left .menu_list {
     display: -webkit-box;
@@ -3401,6 +3408,9 @@ footer .footer_bottom a {
   footer .footer_top .footer_top_middle {
     width: 50%;
   }
+  footer .footer_top .footer_top_middle .logo_wrapper img {
+    max-width: 150px;
+  }
   footer .footer_top .footer_top_right {
     width: 50%;
   }
@@ -3413,6 +3423,14 @@ footer .footer_bottom a {
 @media (max-width: 500px) {
   .categories {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 450px) {
+  .footer .footer_bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media (max-width: 400px) {
