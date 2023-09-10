@@ -29,14 +29,14 @@ jQuery(document).ready(function(){
 
 
 jQuery(document).ready(function(){
-    jQuery('.featured_products').each(function(){  
+    jQuery('.featured_products .slick-track').each(function(){  
         var highestBox = 0;
-        jQuery(this).find('.featured_product_wrapper ').each(function(){
+        jQuery(this).find('.featured_product_wrapper').each(function(){
             if(jQuery(this).height() > highestBox){  
                 highestBox = jQuery(this).height();  
             }
         });
-        jQuery(this).find('.featured_product_wrapper ').height(highestBox);
+        jQuery(this).find('.featured_product_wrapper').height(highestBox);
     });    
 });
 
