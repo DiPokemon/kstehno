@@ -861,10 +861,10 @@ section.related.products {
   padding: 10px 10px 10px 10px;
   position: fixed;
   z-index: 9;
-  right: -400px;
+  right: -550px;
   top: 0;
   bottom: 0;
-  width: 300px;
+  width: 500px;
   background-color: #fff;
   -webkit-box-shadow: 5px 0px 50px #F0F0F0;
           box-shadow: 5px 0px 50px #F0F0F0;
@@ -3473,5 +3473,10 @@ footer .footer_bottom a {
   }
   .header_container .header_wrapper .header_middle .header_actions .mini_cart_panel {
     width: 350px;
+  }
+}
+@media (max-width: 350px) {
+  .header_container .header_wrapper .header_middle .header_actions .mini_cart_panel {
+    width: 320px;
   }
 }/*# sourceMappingURL=style.css.map */

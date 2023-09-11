@@ -615,3 +615,17 @@
         }
     }
 }
+
+@media(max-width: 350px){
+    .header_container{
+        .header_wrapper{
+            .header_middle{
+                .header_actions{
+                   .mini_cart_panel {
+                    width: 320px;
+                   }
+                }
+            }
+        }
+    }
+}
