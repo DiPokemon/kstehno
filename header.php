@@ -130,7 +130,7 @@
                             ?>      
                         
                             <div class="header_actions">
-                                <a onclick="openModal()" href="javascript:void(0)" class="search_icon_mob"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                <a onclick="openModalMobile()" href="javascript:void(0)" class="search_icon_mob"><i class="fa-solid fa-magnifying-glass"></i></a>
                                 <!--<a href="" class="btn_compare" data-title="Сравнение"><i class="fa-solid fa-code-compare"></i></a>
                                 <a href="" class="btn_favorites" data-title="Избранное"><i class="fa-regular fa-heart"></i></a>-->
                                 <!-- <a onclick="openCartPanel()" href="javascript:void(0)" class="btn_mini_cart" data-title="Корзина"><i class="fa-solid fa-cart-shopping"></i><?php //kstehno_woocommerce_cart_link() ?></a> -->
@@ -150,9 +150,9 @@
                                     <?php woocommerce_mini_cart() ?>
                                 </div>
 
-                                <div  id="header_search_modal" class="search_modal_mob">
+                                <div  id="header_search_modal_mob" class="search_modal_mob">
                                     <div class="search_modal_close_wrapper">
-                                        <a class="search_modal_close" onclick="closeModal(event)" href="javascript:void(0)"><i class="fa-solid fa-xmark"></i></a>
+                                        <a class="search_modal_close" onclick="closeModalMobile(event)" href="javascript:void(0)"><i class="fa-solid fa-xmark"></i></a>
                                     </div>
                                     <?= do_shortcode('[aws_search_form]'); ?>
                                 </div>

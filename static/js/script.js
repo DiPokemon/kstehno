@@ -6,6 +6,14 @@ function closeModal() {
     document.getElementById("header_search_modal").classList.remove("active");
 }
 
+function openModalMobile() {
+    document.getElementById("header_search_modal_mob").classList.add("active");
+}
+
+function closeModalMobile() {
+    document.getElementById("header_search_modal_mob").classList.remove("active");
+}
+
 function openCartPanel() {
     document.getElementById("mini_cart_panel").classList.add("active");
 }
