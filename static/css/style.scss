@@ -183,6 +183,20 @@
                     }
                 }
 
+                .aws-search-result{
+                    width: 300px!important;
+
+                    .aws_result_content{
+                        .aws_result_excerpt{
+                            display: none;
+                        }
+                        .aws_result_price{
+                            color: $orange;
+                            font-weight: 500;
+                        }
+                    }
+                }
+
                 .header_actions{
                     display: flex;
                     gap: 20px;
@@ -2568,6 +2582,7 @@ footer{
 
         .footer_top_right{
             display: flex;
+            flex-direction: column;
             gap: 10px;
             justify-content: flex-end;
             width: 40%;

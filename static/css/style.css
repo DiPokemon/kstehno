@@ -378,6 +378,16 @@ section.related.products {
 .header_container .header_wrapper .header_top .header_top_right .header_search .aws-container .aws-search-form .aws-form-btn .aws-search-btn_icon:hover {
   color: #2467ef;
 }
+.header_container .header_wrapper .header_top .header_top_right .aws-search-result {
+  width: 300px !important;
+}
+.header_container .header_wrapper .header_top .header_top_right .aws-search-result .aws_result_content .aws_result_excerpt {
+  display: none;
+}
+.header_container .header_wrapper .header_top .header_top_right .aws-search-result .aws_result_content .aws_result_price {
+  color: #ffa500;
+  font-weight: 500;
+}
 .header_container .header_wrapper .header_top .header_top_right .header_actions {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2567,6 +2577,10 @@ footer .footer_top .footer_top_right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 10px;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
