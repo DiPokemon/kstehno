@@ -15,6 +15,14 @@ function closeCartPanel() {
 }
 
 
+function openCartPanelMobile() {
+    document.getElementById("mini_cart_panel_mob").classList.add("active");
+}
+
+function closeCartPanelMobile() {
+    document.getElementById("mini_cart_panel_mob").classList.remove("active");
+}
+
 jQuery(document).ready(function(){
     jQuery('.products').each(function(){  
         var highestBox = 0;

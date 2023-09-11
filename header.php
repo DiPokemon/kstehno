@@ -134,7 +134,7 @@
                                 <!--<a href="" class="btn_compare" data-title="Сравнение"><i class="fa-solid fa-code-compare"></i></a>
                                 <a href="" class="btn_favorites" data-title="Избранное"><i class="fa-regular fa-heart"></i></a>-->
                                 <!-- <a onclick="openCartPanel()" href="javascript:void(0)" class="btn_mini_cart" data-title="Корзина"><i class="fa-solid fa-cart-shopping"></i><?php //kstehno_woocommerce_cart_link() ?></a> -->
-                                <a onclick="openCartPanel()" href="javascript:void(0)" class="btn_mini_cart" data-title="Корзина"><i class="fa-solid fa-cart-shopping"></i>
+                                <a onclick="openCartPanelMobile()" href="javascript:void(0)" class="btn_mini_cart" data-title="Корзина"><i class="fa-solid fa-cart-shopping"></i>
                                     <span class="cart-contents"> 
                                         <span class="count">
                                             <?= WC()->cart->get_cart_contents_count(); ?>
@@ -145,7 +145,7 @@
                                 <div id="mini_cart_panel" class="mini_cart_panel">
                                     <div class="mini_cart_top">
                                         <span>Корзина</span>
-                                        <a onclick="closeCartPanel()" href="javascript:void(0)" class="close_mini_cart"><i class="fa-solid fa-xmark"></i></a>
+                                        <a onclick="closeCartPanelMobile()" href="javascript:void(0)" class="close_mini_cart"><i class="fa-solid fa-xmark"></i></a>
                                     </div>                                
                                     <?php woocommerce_mini_cart() ?>
                                 </div>
