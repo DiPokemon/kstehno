@@ -142,7 +142,7 @@
                                     </span>
                                 </a>
                             
-                                <div id="mini_cart_panel" class="mini_cart_panel">
+                                <div id="mini_cart_panel_mob" class="mini_cart_panel">
                                     <div class="mini_cart_top">
                                         <span>Корзина</span>
                                         <a onclick="closeCartPanelMobile()" href="javascript:void(0)" class="close_mini_cart"><i class="fa-solid fa-xmark"></i></a>
