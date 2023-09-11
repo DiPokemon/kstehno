@@ -3334,9 +3334,7 @@ footer .footer_bottom a {
   }
   .header_container .header_wrapper .header_middle .middle_menu .menu_list {
     width: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    gap: 10px;
   }
   .header_container .header_wrapper .header_middle .middle_menu .menu_list .menu_item::after {
     display: none;
