@@ -323,6 +323,12 @@
 
     .woocommerce-cart-form{
 
+        .product-thumbnail{
+            .attachment-woocommerce_thumbnail{
+                margin: 0 auto;
+            }
+        }
+
         .cart-collaterals{    
             .cart_totals{    
                 td{                    
