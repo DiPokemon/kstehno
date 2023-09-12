@@ -2142,6 +2142,12 @@
                 color: $orange;
             }
 
+            .product-thumbnail{
+                &::before{
+                    display: none;
+                }
+            }
+
             .input-text{
                 width:50px;
                 height:40px;

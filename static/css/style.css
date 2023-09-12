@@ -2224,6 +2224,9 @@ section.related.products {
 .woocommerce-cart-form .woocommerce-cart-form__contents .cart_item .product-subtotal {
   color: #ffa500;
 }
+.woocommerce-cart-form .woocommerce-cart-form__contents .cart_item .product-thumbnail::before {
+  display: none;
+}
 .woocommerce-cart-form .woocommerce-cart-form__contents .cart_item .input-text {
   width: 50px;
   height: 40px;
