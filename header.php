@@ -59,10 +59,15 @@
 
                         <div class="header_top_right">
                             <div class="header_contacts">
+                                <?php if($contacts_mail) : ?>
+                                    <a href="mailto:<?= $contacts_mail ?>" class="header_mail-link"><?= $contacts_mail ?></a>
+                                <?php endif; ?>
+                                <!--
                                 <?php if($contacts_main_phone_href) : ?>
                                     <a href="tel:<?= $contacts_main_phone_href ?>" class="header_phone-link"><i class="fa-solid fa-phone"></i><?= $contacts_main_phone_front ?></a>
                                     <a href="tel:<?= $contacts_main_phone_href ?>" class="header_phone-link-mob"><i class="fa-solid fa-phone"></i></a>
                                 <?php endif; ?>
+                                -->
                                 <?php get_template_part( 'template-parts/socials' ); ?>  
                             </div>  
 

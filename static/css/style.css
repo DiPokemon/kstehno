@@ -2222,7 +2222,7 @@ section.related.products {
 }
 .woocommerce-cart-form .woocommerce-cart-form__contents .cart_item .product-remove {
   border-radius: 50%;
-  border: 1px solid;
+  border: 1px solid #2467ef;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
