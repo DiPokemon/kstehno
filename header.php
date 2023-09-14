@@ -60,7 +60,8 @@
                         <div class="header_top_right">
                             <div class="header_contacts">
                                 <?php if($contacts_mail) : ?>
-                                    <a href="mailto:<?= $contacts_mail ?>" class="header_mail-link"><?= $contacts_mail ?></a>
+                                    <a href="mailto:<?= $contacts_mail ?>" class="header_mail-link"><i class="fa-solid fa-envelope"></i><?= $contacts_mail ?></a>
+                                    <a href="mailto:<?= $contacts_mail ?>" class="header_mail-link-mob"><i class="fa-solid fa-envelope"></i></a>
                                 <?php endif; ?>
                                 <!--
                                 <?php if($contacts_main_phone_href) : ?>

@@ -121,11 +121,13 @@
                     .header_contacts{
                         gap: 20px;
     
-                        .header_phone-link{
+                        .header_phone-link,
+                        .header_mail-link{
                             display: none;
                         }
     
-                        .header_phone-link-mob{
+                        .header_phone-link-mob,
+                        .header_mail-link-mob{
                             display: flex;
                         }                    
     
