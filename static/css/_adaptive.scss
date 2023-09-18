@@ -101,6 +101,28 @@
         }
     } 
 
+    .woocommerce-checkout{
+        #customer_details,
+        #order_review_heading,
+        #order_review{
+            width: 100%
+        }
+
+        // #order_review{
+        //     .woocommerce-checkout-review-order-table{
+        //         .product-name{
+        //             width: 70%;
+        //         }
+        //     }
+        // }
+
+        #order_review_heading{
+            margin-top: 30px;
+        }
+    }
+
+     
+
 }
 
 @media(max-width: 791px){

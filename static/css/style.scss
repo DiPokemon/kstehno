@@ -143,6 +143,11 @@
                     .header_phone-link{
     
                     }
+                    .header_phone-link-mob{
+                        i{
+                            padding-right:5px;
+                        }
+                    }
                     .header_phone-link-mob,
                     .header_mail-link-mob{
                         display: none;
@@ -2308,6 +2313,103 @@
     label{
         display: block;
     }
+
+    #order_review{
+        table{
+            border-spacing: 0;
+            width: 100%;
+            margin: 10px 0 1.41575em;
+            border-collapse: separate;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px -5px $black;
+
+            thead{
+                tr{
+                    th{
+                        color: $orange;
+                        border-bottom: 1px solid $gray;
+                    }
+                }
+            }
+
+            td, th{
+                padding: 1em 1.41575em;
+                text-align: left;
+                vertical-align: top;
+            }
+            th{
+                font-weight: 600;
+            }
+        }
+
+
+        .woocommerce-checkout-review-order-table{
+            .product-name{
+                width: 70%;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+        }
+    }
+
+    
+        
+
+        form.woocommerce-checkout{
+            .woocommerce-billing-fields__field-wrapper{
+                margin: 10px 0px;
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px -5px $black;
+
+                .form-row{
+                    padding-top:10px;
+                }
+            }
+
+            .form-row{
+                input, 
+                textarea,
+                select{
+                    width: 100%;
+                    border-radius: 5px;
+                    border: 1px solid $blue;
+                }
+            } 
+        }
+    
+    
+
+    #payment{
+        .wc_payment_methods{
+            display: none;
+        }
+
+        .woocommerce-terms-and-conditions-wrapper{
+            padding-bottom: 10px;
+        }
+
+        .button{
+            padding: 10px;   
+            background: linear-gradient(135deg, $blue 50%, $orange 50%);
+            background-size: 300%;
+            border: 1px solid $blue;
+            background-position: left;
+            transition:all .5s;
+            border-radius: 5px;
+            color: $white;
+            font-weight: 600;
+        
+                &:hover{
+                    border: 1px solid $orange;
+                    color: $white;
+                    background-position: right;
+                }            
+        }
+        
+    }
+
+
 }
 
 /* CONTACTS PAGE */

@@ -38,6 +38,11 @@ Template Name: Шаблон "Контакты"
                 </div>
             <?php endif ?> 
             <?php get_template_part( 'template-parts/socials' ); ?>
+            <?php if (the_content()): ?>
+                <div class="contacts_text">
+                    <?= the_content(); ?>
+                </div>
+            <?php endif; ?>
         </div>
         <div class="right_column">
             <div class="map_wrapper" id="map" data-address="<?= $address_city ?>, <?= $address_street ?>, <?= $address_building ?>" data-latitude="<?= $address_latitude ?>" data-longitude="<?= $address_longitude ?>" data-name="<?= $org_name ?>" data-phonefront="<?= $contacts_main_phone_front ?>" data-phonehref="<?= $contacts_main_phone_href ?>"></div>             
