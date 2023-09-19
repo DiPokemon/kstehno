@@ -74,8 +74,11 @@ function kstehno_wrapper_product_main_info_end(){
 add_filter( 'woocommerce_get_price_html', 'kstehno_add_price_prefix', 99, 2 );
  
 function kstehno_add_price_prefix( $price, $product ){
-    $price = 'от ' . $price;
-    return $price;
+    if($price){
+       $price = 'от ' . $price;
+        return $price; 
+    }
+    
 }
 
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
