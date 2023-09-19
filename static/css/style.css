@@ -352,6 +352,9 @@ section.related.products {
 .header_container .header_wrapper .header_top .header_top_right .header_contacts .header_phone-link-mob i {
   padding-right: 5px;
 }
+.header_container .header_wrapper .header_top .header_top_right .header_contacts .header_mail-link i {
+  padding-right: 5px;
+}
 .header_container .header_wrapper .header_top .header_top_right .header_contacts .header_phone-link-mob,
 .header_container .header_wrapper .header_top .header_top_right .header_contacts .header_mail-link-mob {
   display: none;
@@ -2019,6 +2022,10 @@ section.related.products {
   border: 1px solid #ffa500;
   color: #fff;
   background-position: right;
+}
+.single-product .product_main_info .woocommerce-tabs .woocommerce-Tabs-panel table.woocommerce-product-attributes .woocommerce-product-attributes-item .woocommerce-product-attributes-item__label {
+  text-align: left;
+  padding-right: 20px;
 }
 .single-product .upsells,
 .single-product .related {

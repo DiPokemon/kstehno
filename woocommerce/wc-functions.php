@@ -78,6 +78,21 @@ function kstehno_add_price_prefix( $price, $product ){
     return $price;
 }
 
+add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
+function change_existing_currency_symbol( $currency_symbol, $currency ) {
+     switch( $currency ) {
+          case 'RUB': $currency_symbol = 'руб.'; break;
+     }
+     return $currency_symbol;
+}
+
+// для пустой цены выводить "цена по запросу"
+function my_price_replace($price, $_product) {
+    if ($_product->get_price() == 0)  return __( 'Цена по запросу.' );
+    return $price;
+}
+add_filter( 'woocommerce_empty_price_html', 'my_price_replace', 1, 2 );
+
 add_action('woocommerce_single_product_summary', 'kstehno_short_attributes', 20);
 function kstehno_short_attributes(){
     global $product;
@@ -91,7 +106,7 @@ function kstehno_short_attributes(){
                         $attribute_value = $product->get_attribute( $attribute_name );
                         $attribute_label = wc_attribute_label( $attribute_name );
                         echo '<div class="short_attribute"><span class="attribute_label">'.$attribute_label.': </span><span class="attribute_value">'.$attribute_value.'</span></div>';
-                        if(++$i > 2) break;                                                    
+                        //if(++$i > 2) break;                                                    
                     endforeach;
             ?>   
             <a class="all_attributes" href="#tab-title-additional_information">Все характеристики</a>         
@@ -249,13 +264,13 @@ function kstehno_archive_wrapper_start(){
                                             <li class="child_category">
                                                 <a href="<?= get_category_link($child_category->term_id) ?>" class="child_category_link"><?= $child_category->name; ?></a>
                                             </li>
-                                            <?php if($i_child++ == 3) break; ?>
+                                            <?php //if($i_child++ == 3) break; ?>
                                             <?php endforeach; ?>
                                         </ul>
                                     </div>                                   
 
                                 </div>
-                                <?php if($i_parents++ == 8 ) break; ?>
+                                <?php //if($i_parents++ == 8 ) break; ?>
                             <?php endforeach; ?>
 
                         <?php endif; ?>            

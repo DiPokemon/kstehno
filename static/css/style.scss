@@ -148,6 +148,11 @@
                             padding-right:5px;
                         }
                     }
+                    .header_mail-link{
+                        i{
+                            padding-right: 5px;
+                        }
+                    }
                     .header_phone-link-mob,
                     .header_mail-link-mob{
                         display: none;
@@ -1910,6 +1915,16 @@
                         }
                     }
                 }
+
+                table.woocommerce-product-attributes{
+                    .woocommerce-product-attributes-item{
+                        .woocommerce-product-attributes-item__label{
+                            text-align: left;
+                            padding-right: 20px;
+                        }
+                    }
+                }
+
             }
         }
     

@@ -54,6 +54,7 @@
                                                 <?= do_shortcode( '[add_to_cart id=' . $product->get_id() . ' class="price" style=""] ' ) ?>                            
                                             </div>
                                         <?php else: ?>
+                                            <span class="no_price">Цена по запросу</span>
                                             <a class="button" href="<?= get_permalink( $product->get_id()); ?>" >Подробнее</a>
                                         <?php endif; ?>
                                     </div>
