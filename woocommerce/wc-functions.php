@@ -74,17 +74,20 @@ function kstehno_wrapper_product_main_info_end(){
 add_filter( 'woocommerce_get_price_html', 'kstehno_add_price_prefix', 99, 2 );
  
 function kstehno_add_price_prefix( $price, $product ){
-    if($price){
-       $price = 'от ' . $price;
+    if(!($product->get_price())){
+        return __( 'Цена по запросу.' );
+        
+    }
+    else{
+        $price = 'от ' . $price;
         return $price; 
     }
-    
 }
 
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
 function change_existing_currency_symbol( $currency_symbol, $currency ) {
      switch( $currency ) {
-          case 'RUB': $currency_symbol = 'руб.'; break;
+          case 'RUB': $currency_symbol = ' руб.'; break;
      }
      return $currency_symbol;
 }
@@ -321,7 +324,7 @@ function kstehno_archive_content_wrapper_end(){
 	<?php endif;
 }
 
-add_action( 'woocommerce_after_main_content', 'kstehno_archive_facet_pagination', 5 );
+add_action( 'woocommerce_after_main_content', 'kstehno_archive_facet_pagination', 6 );
 function kstehno_archive_facet_pagination(){
     if ( ! is_product() ) :
 	?>

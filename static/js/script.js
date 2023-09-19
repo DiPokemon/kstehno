@@ -44,6 +44,8 @@ jQuery(document).ready(function(){
 });
 
 
+
+
 jQuery(document).ready(function(){
     jQuery('.featured_products .slick-track').each(function(){  
         var highestBox = 0;
