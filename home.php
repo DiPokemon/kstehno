@@ -56,26 +56,31 @@ Template Name: Шаблон главной страницы
                     
                     <div class="category" style="background-image: url('<?= $background_image; ?>')">
                         <div class="category_inner">
-                            <a class="category_parent_link" href="<?= get_category_link($parent->term_id) ?>"><?= $parent->name; ?></a>
+                        <a class="category_parent_link" href="<?= get_category_link($parent->term_id) ?>"><?= $parent->name; ?></a>
 
-                            <ul class="child_categories_list">
-                                <?php 
-                                    $child_categories = get_categories(array(
-                                        'parent' => $parent->term_id,
-                                        'taxonomy'   =>  'product_cat',
-                                        'hide_empty' => false
-                                    )); 
-                                    $i_child = 1;
-                                    foreach ($child_categories as $child_category):
-                                ?>
-                                <li class="child_category">
-                                    <a href="<?= get_category_link($child_category->term_id) ?>" class="child_category_link"><?= $child_category->name; ?></a>
-                                </li>
-                                <?php if($i_child++ == 8) break; ?>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
-                        
+                        <ul class="child_categories_list">
+                             <?php 
+                                 $child_categories = get_categories(array(
+                                 'parent' => $parent->term_id,
+                                 'taxonomy' => 'product_cat',
+                                'hide_empty' => false
+                                )); 
+                             $i_child = 1;
+                            foreach ($child_categories as $child_category):
+                         ?>
+                        <li class="child_category">
+                        <a href="<?= get_category_link($child_category->term_id) ?>" class="child_category_link"><?= $child_category->name; ?></a>
+                        </li>
+                    <?php if($i_child++ == 8) break; ?>
+                    <?php endforeach; ?>
+        
+                    <?php if (count($child_categories) > 8) : ?>
+                        <li class="child_category">
+                        <a href="<?= get_category_link($parent->term_id) ?>" class="child_category_link child_category_link_points">...</a>
+                        </li>
+                    <?php endif; ?>
+    </ul>
+</div>
 
                     </div>
                     <?php if($i_parents++ == 8 ) break; ?>

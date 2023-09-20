@@ -349,6 +349,9 @@ section.related.products {
       -ms-flex-align: center;
           align-items: center;
 }
+.header_container .header_wrapper .header_top .header_top_right .header_contacts .header_contacts_grid {
+  display: grid;
+}
 .header_container .header_wrapper .header_top .header_top_right .header_contacts .header_phone-link-mob i {
   padding-right: 5px;
 }
@@ -1141,6 +1144,9 @@ section.related.products {
 .categories_container .categories .category .child_categories_list .child_category {
   padding-bottom: 5px;
 }
+.categories_container .categories .category .child_categories_list .child_category .child_category_link_points {
+  font-size: 30px;
+}
 .categories_container .shop_link_wrapper {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1351,7 +1357,8 @@ section.related.products {
   -webkit-box-shadow: 0px 0px 11px -5px #ffa500;
           box-shadow: 0px 0px 11px -5px #ffa500;
 }
-.advantages .advantage.slick-slide:hover i, .advantages .advantage.slick-slide:hover .advantage_text {
+.advantages .advantage.slick-slide:hover i,
+.advantages .advantage.slick-slide:hover .advantage_text {
   color: #ffa500;
 }
 
@@ -1651,7 +1658,8 @@ section.related.products {
   -webkit-box-shadow: 0px 0px 11px -5px #ffa500;
           box-shadow: 0px 0px 11px -5px #ffa500;
 }
-.about_icons .about_icon.slick-slide:hover i, .about_icons .about_icon.slick-slide:hover .about_icons_text {
+.about_icons .about_icon.slick-slide:hover i,
+.about_icons .about_icon.slick-slide:hover .about_icons_text {
   color: #ffa500;
 }
 
@@ -1767,7 +1775,8 @@ section.related.products {
   -webkit-box-shadow: 0px 0px 11px -5px #ffa500;
           box-shadow: 0px 0px 11px -5px #ffa500;
 }
-.buy_icons .buy_icon.slick-slide:hover i, .buy_icons .buy_icon.slick-slide:hover .buy_icons_text {
+.buy_icons .buy_icon.slick-slide:hover i,
+.buy_icons .buy_icon.slick-slide:hover .buy_icons_text {
   color: #ffa500;
 }
 
@@ -1992,7 +2001,8 @@ section.related.products {
 .single-product .product_main_info .woocommerce-tabs .woocommerce-Tabs-panel .woocommerce-Reviews .comment-form-rating {
   padding-top: 10px;
 }
-.single-product .product_main_info .woocommerce-tabs .woocommerce-Tabs-panel .woocommerce-Reviews .comment-form-rating .stars a, .single-product .product_main_info .woocommerce-tabs .woocommerce-Tabs-panel .woocommerce-Reviews .comment-form-rating .stars a:hover {
+.single-product .product_main_info .woocommerce-tabs .woocommerce-Tabs-panel .woocommerce-Reviews .comment-form-rating .stars a,
+.single-product .product_main_info .woocommerce-tabs .woocommerce-Tabs-panel .woocommerce-Reviews .comment-form-rating .stars a:hover {
   color: #ffa500;
 }
 .single-product .product_main_info .woocommerce-tabs .woocommerce-Tabs-panel .woocommerce-Reviews .comment-form-comment {
@@ -2292,7 +2302,8 @@ section.related.products {
 .cart-collaterals .cart_totals .shop_table .woocommerce-shipping-totals {
   display: none;
 }
-.cart-collaterals .cart_totals .shop_table .order-total th, .cart-collaterals .cart_totals .shop_table .order-total td {
+.cart-collaterals .cart_totals .shop_table .order-total th,
+.cart-collaterals .cart_totals .shop_table .order-total td {
   border-bottom: 0;
 }
 .cart-collaterals .cart_totals .shop_table .order-total th {
@@ -2323,7 +2334,8 @@ section.related.products {
   color: #fff;
   background-position: right;
 }
-.cart-collaterals h2, .cart-collaterals th {
+.cart-collaterals h2,
+.cart-collaterals th {
   color: #2467ef;
 }
 .cart-collaterals th {
@@ -2375,7 +2387,8 @@ section.related.products {
   color: #ffa500;
   border-bottom: 1px solid #F0F0F0;
 }
-.woocommerce-checkout #order_review table td, .woocommerce-checkout #order_review table th {
+.woocommerce-checkout #order_review table td,
+.woocommerce-checkout #order_review table th {
   padding: 1em 1.41575em;
   text-align: left;
   vertical-align: top;
@@ -3199,6 +3212,9 @@ footer .footer_bottom a {
   .header_container .header_wrapper .header_top .header_top_right .header_contacts {
     gap: 20px;
   }
+  .header_container .header_wrapper .header_top .header_top_right .header_contacts .header_contacts_grid {
+    display: contents;
+  }
   .header_container .header_wrapper .header_top .header_top_right .header_contacts .header_phone-link,
   .header_container .header_wrapper .header_top .header_top_right .header_contacts .header_mail-link {
     display: none;
@@ -3354,7 +3370,8 @@ footer .footer_bottom a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .about_container .about_left, .about_container .about_right {
+  .about_container .about_left,
+  .about_container .about_right {
     width: 100%;
   }
   .contacts_container {
