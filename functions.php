@@ -144,3 +144,6 @@ function my_custom_mime_types( $mimes ) {
 	 return $mimes;
 	}
 	add_filter( 'upload_mimes', 'my_custom_mime_types' );
+
+//убирате ошибку в schema - query-input 
+	add_filter( 'disable_wpseo_json_ld_search', '__return_true' );
