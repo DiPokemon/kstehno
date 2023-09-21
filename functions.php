@@ -145,5 +145,13 @@ function my_custom_mime_types( $mimes ) {
 	}
 	add_filter( 'upload_mimes', 'my_custom_mime_types' );
 
-//убирате ошибку в schema - query-input 
-	add_filter( 'disable_wpseo_json_ld_search', '__return_true' );
+//убирает ошибку в schema - query-input 
+	add_filter( 'aioseo_schema_output', 'aioseo_filter_schema_output' );
+	function aioseo_filter_schema_output( $graphs ) {
+		foreach ( $graphs as $index => $graph ) {
+		if ( 'WebSite' === $graph['@type'] ) {
+		unset( $graphs[ $index ]['potentialAction']["query-input"] );
+		}
+	}
+	return $graphs;
+	}
