@@ -1744,8 +1744,16 @@
 
 /* === CATEGORY PAGE === */
 
+.facetwp-pager {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding: 0px;
+}
+
 .shop_grid {
     display: flex;
+    position: relative;
     gap: 30px;
     justify-content: space-between;
     .sidebar_shop {
@@ -1785,11 +1793,6 @@
             }
         }
     }
-}
-
-.facetwp-pager {
-    text-align: center;
-    margin-top: 20px;
 }
 
 .archive.woocommerce {
