@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php include 'template-parts/variables.php' ?>
-<html lang="ru" itemscope itemtype="http://schema.org/WebPage">
+<html lang="ru" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile# fb: http://ogp.me/ns/fb#" itemscope itemtype="http://schema.org/WebPage">
     <head itemscope itemtype="http://schema.org/WPHeader">
         <link itemprop="url" href="<?= $currenturl ?>" />
         <meta charset="<?php bloginfo('charset'); ?>">
