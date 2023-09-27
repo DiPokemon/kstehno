@@ -1,4 +1,14 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const facetwpPages = document.querySelectorAll('.facetwp-page');
 
+        facetwpPages.forEach(page => {
+            page.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    });
+</script>
         </main>
         <footer itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/WPFooter">
             <?php include 'template-parts/variables.php' ?>
