@@ -37,8 +37,13 @@ function filter_wp_nav_menu($nav_menu,$args) {
 		$node->setAttribute("itemscope","");
 		$node->setAttribute("itemtype","http://schema.org/ItemList");
     }
-    foreach($x->query("//ul") as $node) {
+    foreach($x->query("//ul") as $node) {        
         $node->setAttribute("itemprop","about");
+		$node->setAttribute("itemscope","");
+		$node->setAttribute("itemtype","http://schema.org/ItemList");
+    }
+    foreach($x->query('//ul[contains(@class,"sub-menu")]') as $node) {        
+        $node->setAttribute("itemprop","itemListElement");
 		$node->setAttribute("itemscope","");
 		$node->setAttribute("itemtype","http://schema.org/ItemList");
     }

@@ -170,7 +170,8 @@
                         <div class="header_burger">
                             <span></span>
                         </div>
-                        <?php
+                        
+                        <?php /*
                             $args = array(
                                 'container'       => 'nav',          
                                 'container_class' => 'header_menu menu',           
@@ -193,7 +194,9 @@
                                 }
                             }
                             echo $temp_menu;
+                            */
                         ?>
+                        
                         
                         <div class="shop_link_wrapper">
                             <a href="/catalog/" class="shop_link btn">

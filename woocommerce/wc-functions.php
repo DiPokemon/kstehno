@@ -172,34 +172,24 @@ function kstehno_archive_wrapper_start(){
 
             <?php if ( is_product_category() ) :?>
                 <div class="container categories_container">
-                    <div class="categories">
-                
+                    <div class="categories">                
                 
                     <?php 
                         $term = get_queried_object();
                         $taxonomy = $term->taxonomy;
-
                         //$parents = get_term_children( $term->term_id, $taxonomy);
-
-                       
-                            
                             $parents = get_categories(array(
                                 'hierarchical' => false,
                                 'taxonomy'   =>  'product_cat',
                                 'hide_empty' => true,
                                 'parent' => $term->term_id
-                            ));
-                        
-                                                
-                    ?>              
-                    
-                        <?php if(!empty($parents)): ?>
-                            
+                            ));               
+                    ?>
+                        <?php if(!empty($parents)): ?>                            
                             <?php 
                                 $i_parents = 1;
                                 foreach($parents as $parent) : 
-                            ?>
-                                
+                            ?>                                
                                 <div class="category">
                                     <a class="category_parent_link" href="<?= get_category_link($parent->term_id) ?>"><?= $parent->name; ?></a>
 
@@ -234,8 +224,7 @@ function kstehno_archive_wrapper_start(){
             <?php if(is_shop()): ?>
                 <div class="container categories_container">
                     <div class="categories">
-                        <?php 
-                            
+                        <?php                             
                             $parents = get_categories(array(
                                 'hierarchical' => false,
                                 'taxonomy'   =>  'product_cat',
@@ -243,16 +232,14 @@ function kstehno_archive_wrapper_start(){
                                 'parent' => 0
                             ));
                         ?>
-                        <?php if(!empty($parents)): ?>
-                            
+                        <?php if(!empty($parents)): ?>                            
                             <?php 
                                 $i_parents = 1;
                                 foreach($parents as $parent) : 
                                     $cat_id = $parent->term_id;                                    
                                     $thumbnail_id = get_term_meta( $cat_id, 'thumbnail_id', true );                     
                                     $cat_image = wp_get_attachment_url( $thumbnail_id );
-                            ?>
-                                
+                            ?>                                
                                 <div style="background-image: url(<?= $cat_image ?>);" class="category">
                                     <div class="category_inner">
                                         <a class="category_parent_link" href="<?= get_category_link($parent->term_id) ?>"><?= $parent->name; ?></a>
@@ -283,7 +270,6 @@ function kstehno_archive_wrapper_start(){
                     </div>
                 </div>    
             <?php endif; ?>
-
             
         </div>
     </section>
