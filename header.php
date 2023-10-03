@@ -171,7 +171,7 @@
                             <span></span>
                         </div>
                         
-                        <?php /*
+                        <?php
                             $args = array(
                                 'container'       => 'nav',          
                                 'container_class' => 'header_menu menu',           
@@ -194,7 +194,7 @@
                                 }
                             }
                             echo $temp_menu;
-                            */
+                            
                         ?>
                         
                         
