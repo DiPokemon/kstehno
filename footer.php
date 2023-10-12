@@ -3,6 +3,7 @@
         <footer itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/WPFooter">
             <?php include 'template-parts/variables.php' ?>
             <div class="container">
+            <p class="work_only">Работаем только с юридическими лицами и индивидуальными предпринимателями.</p>
                     <div class="footer_top">
                         <div class="footer_top_left">
                             <?php
@@ -30,7 +31,7 @@
                                 echo $temp_menu;
                             ?>      
                         </div>                        
-
+<!--  -->
                         <div class="footer_top_middle">
                             <div class="logo_wrapper">
                                 <?php the_custom_logo() ?>
