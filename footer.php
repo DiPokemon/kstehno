@@ -3,7 +3,6 @@
         <footer itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/WPFooter">
             <?php include 'template-parts/variables.php' ?>
             <div class="container">
-            <p class="work_only">Работаем только с юридическими лицами и индивидуальными предпринимателями.</p>
                     <div class="footer_top">
                         <div class="footer_top_left">
                             <?php
