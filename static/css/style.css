@@ -3147,6 +3147,13 @@ footer .footer_bottom a {
   display: none;
 }
 
+.work_only {
+  font-size: 12px;
+  text-align: center;
+  padding: 20px;
+  color: #2467ef;
+}
+
 @media (max-width: 1024px) {
   .header_container .header_wrapper .header_top .header_top_right {
     width: unset;

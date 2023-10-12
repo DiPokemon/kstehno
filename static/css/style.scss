@@ -886,7 +886,7 @@
                     }
                     padding: 10px;
                 }
-                .no_price{
+                .no_price {
                     color: $orange;
                     box-shadow: none;
                     border: none;
@@ -2716,6 +2716,13 @@ footer {
 
 #ship-to-different-address {
     display: none;
+}
+
+.work_only {
+    font-size: 12px;
+    text-align: center;
+    padding: 20px;
+    color: $blue;
 }
 
 @import "adaptive";
