@@ -3150,7 +3150,8 @@ footer .footer_bottom a {
 .work_only {
   font-size: 12px;
   text-align: center;
-  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
   color: #2467ef;
 }
 
