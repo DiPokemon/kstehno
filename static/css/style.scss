@@ -2228,7 +2228,7 @@
 }
 
 footer {
-    border-top: 1px solid $gray;
+    // border-top: 1px solid $gray;
     padding-top: 10px;
     .footer_top {
         padding-bottom: 15px;
@@ -2719,11 +2719,16 @@ footer {
 }
 
 .work_only {
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    color: $blue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: $white;
+    background: $blue;
+}
+
+.work_only_footer {
+    margin-bottom: 20px;
 }
 
 @import "adaptive";

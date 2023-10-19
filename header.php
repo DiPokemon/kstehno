@@ -14,11 +14,12 @@
         <div itemprop="isPartOf" itemscope itemtype="https://schema.org/WebSite">
             <link itemprop="url" href="<?= get_site_url() ?>" />
         </div>
-        <header itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WPHeader">      
+        <header itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WPHeader">  
+        <p class="work_only">Работаем только с юридическими лицами и индивидуальными предпринимателями.</p>  
             <div class="header_container">
+            
                 <div class="header_wrapper container">
                     <div class="header_top">
-
                         <div class="header_top_left">
                             <?php
                                 $args = array(
