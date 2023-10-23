@@ -75,7 +75,7 @@ add_filter( 'woocommerce_get_price_html', 'kstehno_add_price_prefix', 99, 2 );
  
 function kstehno_add_price_prefix( $price, $product ){
     if(!($product->get_price())){
-        return __( 'Цена по запросу.' );
+        return __( 'Цена по запросу' );
         
     }
     else{
@@ -94,7 +94,7 @@ function change_existing_currency_symbol( $currency_symbol, $currency ) {
 
 // для пустой цены выводить "цена по запросу"
 function my_price_replace($price, $_product) {
-    if ($_product->get_price() == 0)  return __( 'Цена по запросу.' );
+    if ($_product->get_price() == 0)  return __( 'Цена по запросу' );
     return $price;
 }
 add_filter( 'woocommerce_empty_price_html', 'my_price_replace', 1, 2 );
