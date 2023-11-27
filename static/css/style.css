@@ -3623,6 +3623,9 @@ footer .footer_bottom a {
   .categories {
     grid-template-columns: 1fr;
   }
+  .menu-item-home .menu_link span {
+    display: none;
+  }
 }
 @media (max-width: 450px) {
   .header_container .header_wrapper .header_middle .header_actions .mini_cart_panel {

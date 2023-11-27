@@ -504,6 +504,9 @@
     .categories {
         grid-template-columns: 1fr;
     }
+    .menu-item-home .menu_link span {
+        display: none;
+    }
 }
 
 @media(max-width: 450px) {
