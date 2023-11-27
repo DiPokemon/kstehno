@@ -3675,4 +3675,7 @@ footer .footer_bottom a {
   .header_actions {
     gap: 1px !important;
   }
+  .header_middle {
+    gap: 2px !important;
+  }
 }/*# sourceMappingURL=style.css.map */
