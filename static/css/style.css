@@ -3671,7 +3671,7 @@ footer .footer_bottom a {
     font-size: 12px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 400px) {
   .header_actions {
     gap: 1px !important;
   }
