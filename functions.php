@@ -156,23 +156,3 @@ function my_custom_mime_types( $mimes ) {
 	return $graphs;
 	}
 
-// Отключаем генерацию ссылок на REST API в шапке HTML
-remove_action('wp_head', 'rest_output_link_wp_head', 10);
-remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
-
-// Отключаем REST API
-add_filter('rest_authentication_errors', function ($result) {
-    if (!empty($result)) {
-        return $result;
-    }
-
-    // Запрещаем доступ к REST API для всех пользователей
-    return new WP_Error('rest_forbidden', __('REST API is restricted.'), array('status' => 401));
-});
-
-// Запрещаем REST API для неавторизованных пользователей
-add_action('init', function () {
-    if (!is_user_logged_in() && (isset($_SERVER['REQUEST_URI']) && strpos($_SERVER['REQUEST_URI'], '/wp-json/') !== false)) {
-        wp_die('REST API is disabled for non-logged-in users.');
-    }
-});
