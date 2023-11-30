@@ -3160,6 +3160,23 @@ footer .footer_bottom a {
   margin-bottom: 20px;
 }
 
+.woocommerce-loop-product__title {
+  height: 110px !important;
+}
+
+.page-title-text {
+  font-size: 13em;
+  text-align: center;
+}
+
+.rd-serch-container-item {
+  text-align: center;
+}
+
+.no_page {
+  text-align: center;
+}
+
 @media (max-width: 1024px) {
   .header_container .header_wrapper .header_top .header_top_right {
     width: unset;
@@ -3239,6 +3256,9 @@ footer .footer_bottom a {
   }
 }
 @media (max-width: 768px) {
+  .page-title-text {
+    font-size: 6em;
+  }
   .header_container .header_wrapper .header_top .header_top_right .header_contacts {
     gap: 20px;
   }
