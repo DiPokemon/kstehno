@@ -2,6 +2,16 @@
 <?php include 'template-parts/variables.php' ?>
 <html lang="ru" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile# fb: http://ogp.me/ns/fb#" itemscope itemtype="http://schema.org/WebPage">
     <head itemscope itemtype="http://schema.org/WPHeader">
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WVBZ75349V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WVBZ75349V');
+</script>
+<!--  -->
         <link itemprop="url" href="<?= $currenturl ?>" />
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
