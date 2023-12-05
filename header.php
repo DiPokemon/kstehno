@@ -11,7 +11,7 @@
 
   gtag('config', 'G-WVBZ75349V');
 </script>
-<!--  -->
+
         <link itemprop="url" href="<?= $currenturl ?>" />
         <meta charset="<?php bloginfo('charset'); ?>">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
