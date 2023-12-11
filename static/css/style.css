@@ -3703,7 +3703,7 @@ footer .footer_bottom a {
     gap: 2px !important;
   }
 }
-@media (max-width: 1125px) {
+@media (max-width: 1225px) {
   #aws-search-result-1 {
     left: 85% !important;
   }
