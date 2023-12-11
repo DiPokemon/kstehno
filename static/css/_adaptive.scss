@@ -594,3 +594,9 @@
         gap: 2px !important;
     }
 }
+
+@media(max-width: 1125px) {
+    #aws-search-result-1 {
+        left: 85% !important;
+    }
+}
