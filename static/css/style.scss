@@ -2070,6 +2070,38 @@
             }
         }
     }
+
+    &.woocommerce-order-received {
+        .woocommerce-order{
+           .woocommerce-thankyou-order-received{
+                font-weight: 500;
+                margin-bottom: 10px;
+            } 
+            .order_details{
+                li{
+                    padding-bottom: 5px;
+                }
+                margin-bottom: 10px;
+            }
+
+            .woocommerce-order-details{
+                flex-direction: column;
+
+                .woocommerce-table{
+                    thead{
+                        tr{
+                            th{
+                                padding: 10px 0px;
+                            }
+                        }
+                    }
+                    th{
+                        text-align: left
+                    }
+                }
+            }
+        }
+    }
 }
 
 

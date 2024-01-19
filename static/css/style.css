@@ -2459,6 +2459,28 @@ section.related.products {
   color: #fff;
   background-position: right;
 }
+.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-received {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.woocommerce-checkout.woocommerce-order-received .woocommerce-order .order_details {
+  margin-bottom: 10px;
+}
+.woocommerce-checkout.woocommerce-order-received .woocommerce-order .order_details li {
+  padding-bottom: 5px;
+}
+.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table thead tr th {
+  padding: 10px 0px;
+}
+.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table th {
+  text-align: left;
+}
 
 /* CONTACTS PAGE */
 .contacts_container {
