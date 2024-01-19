@@ -160,3 +160,7 @@ remove_action('wp_head', 'rest_output_link_wp_head', 10);
 remove_action('template_redirect', 'rest_output_link_header', 11);
 // Удаление ссылок на oembed
 remove_action('wp_head', 'wp_oembed_add_discovery_links');
+
+
+add_filter( 'wpcf7_form_elements', 'do_shortcode' );
+add_shortcode( 'page_title', 'get_the_title' );

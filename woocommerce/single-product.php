@@ -59,6 +59,12 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_sidebar' );
 	?>
 
+	<section id="contact_form">
+		<div class="container">
+			<?php get_template_part( 'template-parts/block', 'form' ); ?>
+		</div>
+	</section>
+
 <?php
 get_footer( 'shop' );
 

@@ -74,8 +74,9 @@ function kstehno_wrapper_product_main_info_end(){
 add_filter( 'woocommerce_get_price_html', 'kstehno_add_price_prefix', 99, 2 );
  
 function kstehno_add_price_prefix( $price, $product ){
-    if(!($product->get_price())){
-        return __( 'Цена по запросу' );
+    if(!($product->get_price()) && !(is_admin())){
+        echo __( 'Цена по запросу' );
+        echo '<br><a href="#contact_form" class="btn">Узнать цену</a>';
         
     }
     else{
