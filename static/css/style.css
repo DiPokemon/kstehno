@@ -2478,6 +2478,12 @@ section.related.products {
 .woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table thead tr th {
   padding: 10px 0px;
 }
+.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table tbody tr {
+  border-bottom: 1px solid #F0F0F0;
+}
+.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table tbody tr td {
+  padding: 10px 0px;
+}
 .woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table th {
   text-align: left;
 }
