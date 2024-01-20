@@ -2073,6 +2073,9 @@
 
     &.woocommerce-order-received {
         .woocommerce-order{
+            
+
+
            .woocommerce-thankyou-order-received{
                 font-weight: 500;
                 margin-bottom: 10px;
@@ -2109,6 +2112,12 @@
                     }
 
                 }
+
+                .woocommerce-customer-details{
+                    .woocommerce-columns{
+                        
+                    }
+                } 
             }
         }
     }
