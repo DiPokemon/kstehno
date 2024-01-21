@@ -3304,6 +3304,15 @@ footer .footer_bottom a {
   .woocommerce-checkout.woocommerce-order-received .woocommerce-order {
     grid-template-columns: 1fr;
   }
+  .woocommerce-checkout.woocommerce-order-received .woocommerce-customer-details {
+    grid-column: span 1;
+  }
+  .woocommerce-checkout.woocommerce-order-received .woocommerce-customer-details .woocommerce-columns {
+    gap: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 @media (max-width: 791px) {
   .horizontal_form .wpcf7-form {
