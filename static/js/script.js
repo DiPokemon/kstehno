@@ -66,3 +66,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+jQuery(document).ready(function ($) {
+    $('form.checkout').on('checkout_place_order', function() {
+        // Получаем текущий текст кнопки "Place Order"
+        var currentButtonText = $('#place_order').text();
+
+        // Заменяем текст кнопки на GIF-изображение + текущий текст
+        $('#place_order').html('<img src="..\preloader.gif" alt="Loading" /> ' + currentButtonText);
+    });
+});

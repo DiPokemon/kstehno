@@ -163,6 +163,12 @@ section .container h2 {
 .btn {
   background: linear-gradient(135deg, #2467ef 50%, #ffa500 50%);
   background-size: 300%;
+  cursor: pointer;
+}
+
+.button,
+button {
+  cursor: pointer;
 }
 
 body *:not(.slick-track):not(.slick-list) {
@@ -2502,12 +2508,6 @@ section.related.products {
 }
 .woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-customer-details .woocommerce-columns {
   gap: 30px;
-}
-
-.processing .blockOverlay {
-  background-image: url("..preloader.gif") !important;
-  background-position: center 30% !important;
-  background-repeat: no-repeat !important;
 }
 
 /* CONTACTS PAGE */

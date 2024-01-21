@@ -67,6 +67,12 @@ section{
 .btn{
     background: linear-gradient(135deg, $blue 50%, $orange 50%);
     background-size: 300%;
+    cursor: pointer;
+}
+
+.button,
+button{
+    cursor: pointer;
 }
 
 
