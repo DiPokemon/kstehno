@@ -76,17 +76,10 @@ defined( 'ABSPATH' ) || exit;
                 </ul>
                 <?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
             </div>
-
-			
-
 		<?php endif; ?>
 
-        <div class="half_column">
-            <?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
-        </div>
-
-		
-		
+      
+        <?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>	
 
 	<?php else : ?>
 

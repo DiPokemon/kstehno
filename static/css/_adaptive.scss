@@ -99,6 +99,14 @@
             margin-top: 30px;
         }
     }
+
+    .woocommerce-checkout{
+        &.woocommerce-order-received{
+            .woocommerce-order{
+                flex-direction: column;
+            }
+        }
+    } 
 }
 
 @media(max-width: 791px) {

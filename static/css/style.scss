@@ -2106,6 +2106,9 @@
                             td{
                                 padding: 10px 0px;
                                 
+                                &.woocommerce-table__product-name{
+                                    padding: 10px 10px 10px 0px;
+                                }
                             }
                         }
                     }
