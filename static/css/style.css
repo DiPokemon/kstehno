@@ -3304,10 +3304,10 @@ footer .footer_bottom a {
   .woocommerce-checkout.woocommerce-order-received .woocommerce-order {
     grid-template-columns: 1fr;
   }
-  .woocommerce-checkout.woocommerce-order-received .woocommerce-customer-details {
+  .woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-customer-details {
     grid-column: span 1;
   }
-  .woocommerce-checkout.woocommerce-order-received .woocommerce-customer-details .woocommerce-columns {
+  .woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-customer-details .woocommerce-columns {
     gap: 10px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;

@@ -104,16 +104,16 @@
         &.woocommerce-order-received{
             .woocommerce-order{
                 grid-template-columns: 1fr;
-            }
 
-            .woocommerce-customer-details{
-                grid-column: span 1;
-
-                .woocommerce-columns{
-                    gap: 10px;
-                    justify-content: space-between;
+                .woocommerce-customer-details{
+                    grid-column: span 1;
+    
+                    .woocommerce-columns{
+                        gap: 10px;
+                        justify-content: space-between;
+                    }
                 }
-            }
+            }            
         }
     } 
 }
