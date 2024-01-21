@@ -2098,15 +2098,17 @@
                     thead{
                         tr{
                             th{
+                                width: 70%;
                                 padding: 10px 0px;
                             }
                         }
                     }
                     tbody{
                         tr{
-                            border-bottom: 1px solid $gray;
+                            
                             td{
                                 padding: 10px 0px;
+                                border-bottom: 1px solid $gray;
                                 
                                 &.woocommerce-table__product-name{
                                     padding: 10px 10px 10px 0px;
@@ -2123,6 +2125,10 @@
 
             .woocommerce-customer-details{
                 grid-column: span 2;
+
+                .woocommerce-columns{
+                    gap: 30px;
+                }
             } 
         }
 

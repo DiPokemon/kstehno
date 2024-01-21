@@ -103,7 +103,7 @@
     .woocommerce-checkout{
         &.woocommerce-order-received{
             .woocommerce-order{
-                flex-direction: column;
+                grid-template-columns: 1fr;
             }
         }
     } 
