@@ -2460,9 +2460,8 @@ section.related.products {
   background-position: right;
 }
 .woocommerce-checkout.woocommerce-order-received .woocommerce-order {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 .woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-received {
@@ -2496,6 +2495,10 @@ section.related.products {
 .woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-order-details .woocommerce-table th {
   text-align: left;
 }
+.woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-customer-details {
+  grid-column: span 2;
+}
+
 /* CONTACTS PAGE */
 .contacts_container {
   display: -webkit-box;

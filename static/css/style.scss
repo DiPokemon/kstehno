@@ -2073,7 +2073,8 @@
 
     &.woocommerce-order-received {
         .woocommerce-order{
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 30px;
             
 
@@ -2082,6 +2083,7 @@
                 font-weight: 500;
                 margin-bottom: 10px;
             } 
+
             .order_details{
                 li{
                     padding-bottom: 5px;
@@ -2116,15 +2118,15 @@
                         text-align: left
                     }
 
-                }
-
-                .woocommerce-customer-details{
-                    .woocommerce-columns{
-                        
-                    }
-                } 
+                }                
             }
+
+            .woocommerce-customer-details{
+                grid-column: span 2;
+            } 
         }
+
+
     }
 }
 
