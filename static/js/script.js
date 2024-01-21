@@ -73,6 +73,6 @@ jQuery(document).ready(function ($) {
         var currentButtonText = $('#place_order').text();
 
         // Заменяем текст кнопки на GIF-изображение + текущий текст
-        $('#place_order').html('<img src="../preloader.gif" alt="Loading" /> ' + currentButtonText);
+        $('#place_order').html('<img src="/wp-content/themes/kstehno/static/preloader.gif" alt="Loading" /> ' + currentButtonText);
     });
 });
