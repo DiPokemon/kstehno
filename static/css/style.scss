@@ -2063,6 +2063,15 @@
             border-radius: 5px;
             color: $white;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img{
+                width: 15px;
+                height: 15px;
+            }
+
             &:hover {
                 border: 1px solid $orange;
                 color: $white;

@@ -74,5 +74,6 @@ jQuery(document).ready(function ($) {
 
         // Заменяем текст кнопки на GIF-изображение + текущий текст
         $('#place_order').html('<img src="/wp-content/themes/kstehno/static/preloader.gif" alt="Loading" /> ' + currentButtonText);
+        $('#place_order').prop('disabled', true);
     });
 });

@@ -2459,6 +2459,17 @@ section.related.products {
   border-radius: 5px;
   color: #fff;
   font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.woocommerce-checkout #payment .button img {
+  width: 15px;
+  height: 15px;
 }
 .woocommerce-checkout #payment .button:hover {
   border: 1px solid #ffa500;
