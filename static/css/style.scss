@@ -2137,6 +2137,12 @@
     }
 }
 
+.processing .blockOverlay {
+    background-image:url('..\preloader.gif') !important;
+    background-position: center 30% !important;
+    background-repeat: no-repeat !important;
+}
+
 
 /* CONTACTS PAGE */
 
