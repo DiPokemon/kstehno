@@ -2459,6 +2459,12 @@ section.related.products {
   color: #fff;
   background-position: right;
 }
+.woocommerce-checkout.woocommerce-order-received .woocommerce-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
 .woocommerce-checkout.woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-received {
   font-weight: 500;
   margin-bottom: 10px;
