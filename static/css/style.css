@@ -3243,10 +3243,6 @@ footer .footer_bottom a {
   text-align: center;
 }
 
-#aws-search-result-1 {
-  left: 75% !important;
-}
-
 @media (max-width: 1024px) {
   .header_container .header_wrapper .header_top .header_top_right {
     width: unset;
@@ -3784,5 +3780,17 @@ footer .footer_bottom a {
 @media (max-width: 1225px) {
   #aws-search-result-1 {
     left: 70% !important;
+  }
+}
+.header_search.mob {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .header_search.desc {
+    display: none;
+  }
+  .header_search.mob {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
