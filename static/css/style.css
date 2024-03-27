@@ -3243,7 +3243,7 @@ footer .footer_bottom a {
   text-align: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1130px) {
   .header_container .header_wrapper .header_top .header_top_right {
     width: unset;
     max-width: 50%;
@@ -3782,15 +3782,8 @@ footer .footer_bottom a {
     left: 70% !important;
   }
 }
-.header_search.mob {
-  display: none;
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 1130px) {
   .header_search.desc {
     display: none;
-  }
-  .header_search.mob {
-    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

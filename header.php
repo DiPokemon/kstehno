@@ -87,10 +87,6 @@
                                 <?php get_template_part( 'template-parts/socials' ); ?>  
                             </div>  
 
-                            <div class="header_search mob">
-                                <?= do_shortcode('[aws_search_form]'); ?>
-                            </div>
-
                             <div class="header_actions">
                                 <a onclick="openModal()" href="javascript:void(0)" class="search_icon_mob"><i class="fa-solid fa-magnifying-glass"></i></a>
                                 <!--<a href="" class="btn_compare" data-title="Сравнение"><i class="fa-solid fa-code-compare"></i></a>
