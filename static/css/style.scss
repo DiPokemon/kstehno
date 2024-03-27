@@ -108,7 +108,7 @@
                 display: flex;
                 gap: 10px;
                 justify-content: flex-end;
-                width: 40%;
+                width: 25%;
                 .header_contacts {
                     display: flex;
                     //flex-direction: column;
@@ -1507,8 +1507,7 @@
                 //text-decoration: underline;
                 color: $orange;
                 font-size: 24px;
-
-                a{
+                a {
                     font-size: 16px;
                     font-weight: 400;
                     padding: 5px;
@@ -2066,12 +2065,10 @@
             display: flex;
             align-items: center;
             gap: 10px;
-
-            img{
+            img {
                 width: 15px;
                 height: 15px;
             }
-
             &:hover {
                 border: 1px solid $orange;
                 color: $white;
@@ -2079,74 +2076,58 @@
             }
         }
     }
-
     &.woocommerce-order-received {
-        .woocommerce-order{
+        .woocommerce-order {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
-            
-
-
-           .woocommerce-thankyou-order-received{
+            .woocommerce-thankyou-order-received {
                 font-weight: 500;
                 margin-bottom: 10px;
-            } 
-
-            .order_details{
-                li{
+            }
+            .order_details {
+                li {
                     padding-bottom: 5px;
                 }
                 margin-bottom: 10px;
             }
-
-            .woocommerce-order-details{
+            .woocommerce-order-details {
                 flex-direction: column;
-
-                .woocommerce-table{
-                    thead{
-                        tr{
-                            th{
+                .woocommerce-table {
+                    thead {
+                        tr {
+                            th {
                                 width: 70%;
                                 padding: 10px 0px;
                             }
                         }
                     }
-                    tbody{
-                        tr{
-                            
-                            td{
+                    tbody {
+                        tr {
+                            td {
                                 padding: 10px 0px;
                                 border-bottom: 1px solid $gray;
-                                
-                                &.woocommerce-table__product-name{
+                                &.woocommerce-table__product-name {
                                     padding: 10px 10px 10px 0px;
                                 }
                             }
                         }
                     }
-                    th{
+                    th {
                         text-align: left
                     }
-
-                }                
+                }
             }
-
-            .woocommerce-customer-details{
+            .woocommerce-customer-details {
                 grid-column: span 2;
                 justify-content: flex-start;
-
-                .woocommerce-columns{
+                .woocommerce-columns {
                     gap: 30px;
                 }
-            } 
+            }
         }
-
-
     }
 }
-
-
 
 
 /* CONTACTS PAGE */

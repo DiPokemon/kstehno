@@ -67,7 +67,9 @@
                             </div>
                             -->
                         </div>
-
+                        <div class="header_search">
+                                <?= do_shortcode('[aws_search_form]'); ?>
+                            </div>
                         <div class="header_top_right">
                             <div class="header_contacts">
                                 <div class="header_contacts_grid">
@@ -84,9 +86,7 @@
                                 <?php get_template_part( 'template-parts/socials' ); ?>  
                             </div>  
 
-                            <div class="header_search">
-                                <?= do_shortcode('[aws_search_form]'); ?>
-                            </div>
+                            
 
                             <div class="header_actions">
                                 <a onclick="openModal()" href="javascript:void(0)" class="search_icon_mob"><i class="fa-solid fa-magnifying-glass"></i></a>
