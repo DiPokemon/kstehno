@@ -104,7 +104,7 @@ Template Name: Шаблон главной страницы
     </div>
 </section>
 
-
+<!-- верхний блок -->
 <?php get_template_part( 'template-parts/block', 'featured-products' ); ?>
 
 
@@ -144,8 +144,9 @@ Template Name: Шаблон главной страницы
     </section>
 <?php endif; ?>
 
+<!-- слайдер нижний -->
 <section>
-    <div class="container ">
+    <div class="container">
         <h2><?= $main_opt_title ?></h2>
         <div class="opt_container">        
             <div class="opt_products_left" style="background-image:url('<?= $main_opt_image ?>')">
@@ -155,6 +156,14 @@ Template Name: Шаблон главной страницы
                             'post_type'      => 'product',
                             'posts_per_page' => 8,
                             'orderby' => 'rand',
+                            'tax_query'      => array(
+                                array(
+                                    'taxonomy' => 'product_cat',
+                                    'field'    => 'slug',
+                                    'terms'    => 'metallorezhushhij-instrument',
+                                    'operator' => 'IN', // Используйте 'IN' для поиска товаров в указанной категории
+                                ),
+                            ),
                         );
 
                         $loop = new WP_Query( $args );
@@ -198,6 +207,8 @@ Template Name: Шаблон главной страницы
         </div>
     </div>
 </section>
+
+
 
 <?php if ($advantages) :?>
     <section>

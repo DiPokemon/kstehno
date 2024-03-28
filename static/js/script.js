@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function($) {
     $('form.checkout').on('checkout_place_order', function() {
         // Получаем текущий текст кнопки "Place Order"
         var currentButtonText = $('#place_order').text();
