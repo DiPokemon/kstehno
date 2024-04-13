@@ -81,6 +81,7 @@
                                 
                                 <?php if($contacts_main_phone_href) : ?>
                                     <a href="tel:<?= $contacts_main_phone_href ?>" class="header_phone-link"><i class="fa-solid fa-phone"></i><?= $contacts_main_phone_front ?></a>
+                                    <a href="tel:<?= $contacts_add_phone_href ?>" class="header_phone-link"><i class="fa-solid fa-phone"></i><?= $contacts_add_phone_front ?></a>
                                     <a href="tel:<?= $contacts_main_phone_href ?>" class="header_phone-link-mob"><i class="fa-solid fa-phone"></i></a>
                                 <?php endif; ?>
                                 </div>
