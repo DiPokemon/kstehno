@@ -100,4 +100,10 @@
 
 <?php get_template_part( 'template-parts/block', 'featured-products' ); ?>
 
+<section>
+    <div class="container">
+        <?php get_template_part( 'template-parts/block', 'form' ); ?>
+    </div>
+</section>
+
 <?php get_footer(); ?>
