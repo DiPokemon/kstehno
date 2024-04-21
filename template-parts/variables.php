@@ -92,4 +92,8 @@
   $buy_icons = carbon_get_the_post_meta( 'buy_icons' );
   $buy_texts = carbon_get_the_post_meta( 'buy_texts' );
   $buy_add_text = carbon_get_the_post_meta( 'buy_additional_text' );
+
+  // City page
+  $city_name = carbon_get_the_post_meta( 'city_name' );
+  $city_delivery_text = carbon_get_the_post_meta( 'city_delivery_text' );
 ?>

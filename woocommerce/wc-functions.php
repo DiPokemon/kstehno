@@ -166,7 +166,17 @@ function kstehno_archive_wrapper_start(){
 	<section>
         <div class="container page_header woocommerce-products-header">
             <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-                <h1 class="page_title woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+                <h1 class="page_title woocommerce-products-header__title page-title">
+                    <?php
+                        if(isset($_GET['city'])) {
+                            $city_name = $_GET['city'];
+                            echo woocommerce_page_title() . ' ' . $city_name;
+                        } else {
+                            woocommerce_page_title();
+                        }
+                    ?>
+                    
+                </h1>
             <?php endif; ?>
 
             <?php if (function_exists('breadcrumbs')) breadcrumbs(); ?> 

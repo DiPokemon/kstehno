@@ -146,3 +146,10 @@ Container::make( 'post_meta', __( 'Buy and delivery fields', 'kstehno' ) )
         Field::make( 'rich_text', 'buy_additional_text', __( 'Additional text', 'kstehno' ) ),          
 	));
 
+Container::make( 'post_meta', __( 'City page fields', 'kstehno' ) )
+    ->show_on_template('city.php')
+    ->add_fields(array(   
+        Field::make( 'text', 'city_name', __( 'City name', 'kstehno' ) ),    
+        Field::make( 'rich_text', 'city_delivery_text', __( 'Delivery text', 'kstehno' ) ),          
+	));
+

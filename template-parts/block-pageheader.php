@@ -2,7 +2,9 @@
 <?php if ( is_product() ) : ?>
     <section>
         <div class="container page_header">
-            <h1 class="page_title"><?php the_title(); ?></h1>
+            <h1 class="page_title">
+                <?php the_title(); ?>                 
+            </h1>
             <?php 
                 woocommerce_breadcrumb( $args = array(
                     'delimiter'   => ' / ',
