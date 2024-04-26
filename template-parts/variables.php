@@ -96,4 +96,5 @@
   // City page
   $city_name = carbon_get_the_post_meta( 'city_name' );
   $city_delivery_text = carbon_get_the_post_meta( 'city_delivery_text' );
+  $city_delivery_text_two = carbon_get_the_post_meta( 'city_delivery_text_two' );
 ?>

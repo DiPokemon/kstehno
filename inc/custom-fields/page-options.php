@@ -150,6 +150,6 @@ Container::make( 'post_meta', __( 'City page fields', 'kstehno' ) )
     ->show_on_template('city.php')
     ->add_fields(array(   
         Field::make( 'text', 'city_name', __( 'City name', 'kstehno' ) ),    
-        Field::make( 'rich_text', 'city_delivery_text', __( 'Delivery text', 'kstehno' ) ),          
+        Field::make( 'rich_text', 'city_delivery_text', __( 'Delivery text', 'kstehno' ) ),   
+        Field::make( 'rich_text', 'city_delivery_text_two', __( 'Delivery text two', 'kstehno' ) ),        
 	));
-

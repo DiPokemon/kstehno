@@ -102,6 +102,14 @@
 
 <section>
     <div class="container">
+        <div class="content">
+            <?= $city_delivery_text_two ?>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
         <?php get_template_part( 'template-parts/block', 'form' ); ?>
     </div>
 </section>
