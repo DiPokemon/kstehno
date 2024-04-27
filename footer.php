@@ -184,5 +184,32 @@
         </footer>    
     </body>
 </html>
-
+<div class="main-block">
+<div class="each-block">
+    <div class="iconka-block">ВЫБРАТЬ ГОРОД<i class="fa fa-envelope-o icon_all icon_mail" aria-hidden="true"></i></div>
+    <div class="textLine-Out">
+        <div class="textLine-Out">
+            <a href="/krasnodar/" class="textLine-Iner">Краснодар</a>
+        </div>
+        <div class="textLine-Out">
+            <a href="/simferopol/" class="textLine-Iner">Симферополь</a>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const textLineOut = document.querySelector(".textLine-Out");
+    document.querySelector(".iconka-block").addEventListener("mouseenter", function() {
+        setTimeout(() => {
+            textLineOut.style.transform = "translateX(calc(-100% + 4px))";
+        }, 500);
+    });
+    document.querySelector(".iconka-block").addEventListener("mouseleave", function() {
+        setTimeout(() => {
+            textLineOut.style.transform = "translateX(0)";
+        }, 4000);
+    });
+});
+</script>
 <?php wp_footer(); ?>

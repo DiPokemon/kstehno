@@ -252,45 +252,10 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/95432537" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
-        </header>
-        <div class="main-block">
+</header>
 
-<div class="each-block">
-    <div class="iconka-block">ВЫБРАТЬ ГОРОД<i class="fa fa-envelope-o icon_all icon_mail" aria-hidden="true"></i></div>
-    <div class="textLine-Out">
-        <div class="textLine-Out">
-            <a href="/krasnodar/" class="textLine-Iner">Краснодар</a>
-        </div>
-        <div class="textLine-Out">
-            <a href="/simferopol/" class="textLine-Iner">Симферополь</a>
-        </div>
-    </div>
-</div>
 
-</div>
-        <main role="main">
+<main role="main">
 
 
 
-        <style>
-   
-</style>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const textLineOut = document.querySelector(".textLine-Out");
-
-        // Добавление задержки перед применением трансформации при наведении курсора
-        document.querySelector(".iconka-block").addEventListener("mouseenter", function() {
-            setTimeout(() => {
-                textLineOut.style.transform = "translateX(calc(-100% + 4px))";
-            }, 500); // Задержка в миллисекундах (в данном случае 500 миллисекунд)
-        });
-
-        // Сброс трансформации при уводе курсора с задержкой
-        document.querySelector(".iconka-block").addEventListener("mouseleave", function() {
-            setTimeout(() => {
-                textLineOut.style.transform = "translateX(0)";
-            }, 3000); // Задержка в миллисекундах (в данном случае 500 миллисекунд)
-        });
-    });
-</script>
