@@ -2237,7 +2237,11 @@ section.related.products {
 }
 
 .archive.woocommerce .categories_container {
-  padding: 50px 0px;
+  padding: 10px 0px;
+}
+
+.page_header {
+  padding-bottom: 5px;
 }
 
 /* === CART AND CHECKOUT === */
